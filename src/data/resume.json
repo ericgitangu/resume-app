@@ -1,0 +1,29 @@
+{
+  "name": "Eric Gitangu",
+  "nickname": "Deveric",
+  "title": "Software Engineer Architect",
+  "subtitle": "Full-Stack Engineer | Backend & Cloud-Native Architect",
+  "tagline": "Building scalable backend systems that connect communities",
+  "location": {
+    "primary": "Nairobi, Kenya",
+    "secondary": "Kennesaw, GA, USA"
+  },
+  "contact": {
+    "phone": "+254 708 078 997",
+    "email": "developer.ericgitangu@gmail.com",
+    "linkedin": "https://linkedin.com/in/ericgitangu",
+    "github": "https://github.com/ericgitangu",
+    "portfolio": "https://developer.ericgitangu.com"
+  },
+  "summary": "Full-stack software engineer with 10+ years of experience and strong backend expertise, architecting and delivering scalable, high-performance applications across telecommunications, fintech, and enterprise platforms. Expert in Python, Node.js, and Java with deep experience in APIs, microservices, and event-driven architectures powering billing, subscription, and payment systems. Proven track record managing PostgreSQL, MongoDB, DynamoDB, and Redis at scale with replication, sharding, and high-availability configurations. Proficient in React/Next.js for frontend delivery. Currently based in Nairobi, Kenya, passionate about building technology that connects communities across Africa.",
+  "highlights": [
+    "10+ years full-stack with backend focus",
+    "Expert Python, Node.js, Java developer",
+    "Microservices & event-driven architect",
+    "Billing & payment systems specialist",
+    "Web3/Blockchain certified developer",
+    "Based in Nairobi, Kenya"
+  ],
+  "yearsOfExperience": 10,
+  "certificationsCount": 80
+}

@@ -1,0 +1,186 @@
+{
+  "positions": [
+    {
+      "id": "ignite-2025",
+      "company": "Ignite Energy Access",
+      "role": "Team Lead",
+      "type": "Lead",
+      "location": "Nairobi, Kenya",
+      "startDate": "2025-10",
+      "endDate": null,
+      "current": true,
+      "description": "Leading automation initiatives and performance optimization for energy access infrastructure serving communities across Africa.",
+      "achievements": [
+        "Lead automation initiatives and performance optimization for energy access infrastructure",
+        "Drive technical roadmap for scalable platform architecture supporting C2B & B2B operations",
+        "Implement real-time monitoring and data pipelines for network intelligence"
+      ],
+      "technologies": ["Python", "Node.js", "PostgreSQL", "Redis", "Kafka", "AWS"],
+      "level": 5
+    },
+    {
+      "id": "engie-2025",
+      "company": "ENGIE Energy Access",
+      "role": "Team Lead",
+      "type": "Lead",
+      "location": "Nairobi, Kenya",
+      "startDate": "2025-05",
+      "endDate": "2025-10",
+      "current": false,
+      "description": "Led automation and process optimization efforts for C2B & B2B platform operations across multiple African markets.",
+      "achievements": [
+        "Led automation and process optimization for C2B & B2B platform operations across African markets",
+        "Architected event-driven systems for billing, customer management, and operational workflows",
+        "Integrated SQL and NoSQL databases for low-latency analytics and multi-tenant scalability"
+      ],
+      "technologies": ["Python", "Ruby", "PostgreSQL", "Redis", "RabbitMQ", "Kubernetes"],
+      "level": 5
+    },
+    {
+      "id": "vishnu-2024",
+      "company": "Vishnu Systems, Inc.",
+      "role": "Director of Engineering / Lead Engineer",
+      "type": "Director",
+      "location": "Atlanta, GA",
+      "startDate": "2024-01",
+      "endDate": "2025-08",
+      "current": false,
+      "description": "Oversaw AI/ML security product lines for healthcare providers, leveraging AWS serverless architectures and Kubernetes orchestration.",
+      "achievements": [
+        "Oversaw AI/ML security product lines for healthcare providers",
+        "Architected event-driven microservices with SQS/SNS and Kinesis for real-time data pipelines",
+        "Built subscription and billing systems with multi-tenant architecture",
+        "Reduced deployment cycles through streamlined CI/CD and DevSecOps scanning"
+      ],
+      "technologies": ["React", "Node.js", "Python", "AWS Lambda", "DynamoDB", "Kubernetes", "Docker"],
+      "level": 5
+    },
+    {
+      "id": "bawbab-2023",
+      "company": "Baw Bab Technologies, Inc.",
+      "role": "Lead Software Engineer",
+      "type": "Lead",
+      "location": "Seattle, WA / Nairobi, Kenya",
+      "startDate": "2023-04",
+      "endDate": "2025-08",
+      "current": false,
+      "description": "Developed digital address logistics platform for last-mile delivery, piloted in Nairobi, Kenya.",
+      "achievements": [
+        "Developed digital address logistics platform for last-mile delivery in Nairobi pilot",
+        "Integrated real-time event streams (Kafka, Azure) and geo-based microservices",
+        "Established containerized deployments with Docker and Kubernetes",
+        "Applied advanced algorithms (Dijkstra's, A*) for route optimization"
+      ],
+      "technologies": ["React", "Node.js", "Python", "Kafka", "Azure", "MongoDB", "Docker", "Kubernetes"],
+      "level": 5
+    },
+    {
+      "id": "rga-2022",
+      "company": "Reinsurance Group of America (RGA)",
+      "role": "Senior Software Engineer",
+      "type": "Senior",
+      "location": "Remote",
+      "startDate": "2022-01",
+      "endDate": "2022-07",
+      "current": false,
+      "description": "Modernized legacy monolith into microservices architecture using Node.js, Angular/React, and AWS ECS.",
+      "achievements": [
+        "Modernized legacy monolith into microservices (Node, Angular/React, AWS ECS)",
+        "Optimized data-intensive workflows using advanced algorithms",
+        "Deployed robust CI/CD pipeline using AWS CodePipeline + Jenkins"
+      ],
+      "technologies": ["React", "Angular", "Node.js", "AWS ECS", "PostgreSQL", "MongoDB"],
+      "level": 4
+    },
+    {
+      "id": "deveric-2019",
+      "company": "Deveric Technologies (Freelance)",
+      "role": "Lead Software Engineer",
+      "type": "Lead",
+      "location": "Nairobi, Kenya / Remote",
+      "startDate": "2019-01",
+      "endDate": "2022-02",
+      "current": false,
+      "description": "Delivered fintech and e-commerce solutions for local businesses across Kenya using MEAN/MERN stack.",
+      "achievements": [
+        "Delivered fintech and e-commerce solutions for local businesses across Kenya",
+        "Built scalable C2B & B2B SaaS products with REST/GraphQL APIs and Redis caching",
+        "Architected payment platform integrations with multiple PSPs and multi-currency support",
+        "Mentored junior developers in data structures and DevOps best practices"
+      ],
+      "technologies": ["React", "Node.js", "MongoDB", "PostgreSQL", "Redis", "AWS", "GCP"],
+      "level": 4
+    },
+    {
+      "id": "vecima-2018",
+      "company": "Vecima Networks Inc.",
+      "role": "Software Engineer",
+      "type": "Engineer",
+      "location": "Peachtree City, GA",
+      "startDate": "2018-01",
+      "endDate": "2019-01",
+      "current": false,
+      "description": "Contributed to telecommunications network management tools and product development lifecycle.",
+      "achievements": [
+        "Contributed to telecommunications network management tools",
+        "Developed features supporting OSS/BSS workflows including provisioning",
+        "Introduced CI/CD pipelines using Jenkins and Docker"
+      ],
+      "technologies": ["Python", "Java", "PostgreSQL", "Jenkins", "Docker"],
+      "level": 3
+    },
+    {
+      "id": "veracode-2015",
+      "company": "Veracode",
+      "role": "Software Engineer",
+      "type": "Engineer",
+      "location": "Burlington, MA",
+      "startDate": "2015-12",
+      "endDate": "2018-01",
+      "current": false,
+      "description": "Built and enhanced security integrations for real-time vulnerability scanning.",
+      "achievements": [
+        "Built and enhanced security integrations for real-time vulnerability scanning",
+        "Re-architected core modules using Spring Boot, Docker, and Kubernetes",
+        "Collaborated with security teams to fix CVEs using TDD"
+      ],
+      "technologies": ["Java", "Spring Boot", "Python", "Docker", "Kubernetes", "C#"],
+      "level": 3
+    },
+    {
+      "id": "ibm-2013",
+      "company": "IBM",
+      "role": "Software Engineer (Co-op)",
+      "type": "Intern",
+      "location": "Littleton, MA",
+      "startDate": "2013-09",
+      "endDate": "2014-05",
+      "current": false,
+      "description": "Contributed to WebSphere Portlet Factory test automation and build pipeline optimization.",
+      "achievements": [
+        "Contributed to WebSphere Portlet Factory test automation",
+        "Improved regression coverage and reduced manual QA",
+        "Optimized build pipelines to accelerate release schedules"
+      ],
+      "technologies": ["Java", "Ant", "Maven", "Jenkins"],
+      "level": 1
+    }
+  ],
+  "education": [
+    {
+      "id": "umass-2011",
+      "institution": "University of Massachusetts at Lowell",
+      "degree": "Bachelor of Science in Computer Science",
+      "minor": "Mathematics",
+      "startDate": "2011-09",
+      "endDate": "2015-05",
+      "honors": [
+        "Microsoft Scholarship Recipient (2012-2013)",
+        "Google Scholarship Recipient (2011-2012)",
+        "Dean's List (2011-2015)",
+        "Omicron Delta Kappa (ODK) Honor Society"
+      ],
+      "level": 0
+    }
+  ]
+}

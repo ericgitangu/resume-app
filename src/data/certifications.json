@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "name": "Blockchain & Web3",
+      "certifications": [
+        { "name": "Blockchain Specialization", "issuer": "Coursera", "year": 2022 },
+        { "name": "Smart Contracts", "issuer": "Coursera", "year": 2022 },
+        { "name": "Decentralized Applications (DApps)", "issuer": "Coursera", "year": 2022 },
+        { "name": "Blockchain Platforms", "issuer": "Coursera", "year": 2022 }
+      ]
+    },
+    {
+      "name": "Backend & Full-Stack",
+      "certifications": [
+        { "name": "Meta Back-End Developer Specialization", "issuer": "Meta/Coursera", "year": 2023 },
+        { "name": "Meta React Specialization", "issuer": "Meta/Coursera", "year": 2023 },
+        { "name": "Node.js Essential Training", "issuer": "LinkedIn Learning", "year": 2022 },
+        { "name": "Django Web Framework", "issuer": "Coursera", "year": 2022 },
+        { "name": "Building APIs with Swagger and OpenAPI", "issuer": "LinkedIn Learning", "year": 2022 },
+        { "name": "Learning GraphQL", "issuer": "LinkedIn Learning", "year": 2022 },
+        { "name": "Spring Boot Microservices", "issuer": "LinkedIn Learning", "year": 2021 }
+      ]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "certifications": [
+        { "name": "Kubernetes: Microservices", "issuer": "LinkedIn Learning", "year": 2023 },
+        { "name": "AWS for Developers", "issuer": "LinkedIn Learning", "year": 2022 },
+        { "name": "Learning Amazon Web Services (AWS)", "issuer": "LinkedIn Learning", "year": 2022 },
+        { "name": "Getting Started with ECS", "issuer": "LinkedIn Learning", "year": 2022 }
+      ]
+    },
+    {
+      "name": "Data Engineering & AI/ML",
+      "certifications": [
+        { "name": "Rust for Data Engineering", "issuer": "Duke/Coursera", "year": 2024 },
+        { "name": "Rust for DevOps", "issuer": "Duke/Coursera", "year": 2024 },
+        { "name": "Rust for MLOps", "issuer": "Duke/Coursera", "year": 2024 },
+        { "name": "Rust Fundamentals", "issuer": "Duke/Coursera", "year": 2024 },
+        { "name": "Introduction to TensorFlow for AI, ML, and Deep Learning", "issuer": "DeepLearning.AI", "year": 2023 },
+        { "name": "Build Basic GANs", "issuer": "DeepLearning.AI", "year": 2023 }
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "certifications": [
+        { "name": "Python (Basic)", "issuer": "HackerRank", "year": 2022 },
+        { "name": "Python (Intermediate)", "issuer": "HackerRank", "year": 2022 },
+        { "name": "Java (Basic)", "issuer": "HackerRank", "year": 2022 },
+        { "name": "Java (Intermediate)", "issuer": "HackerRank", "year": 2022 },
+        { "name": "C++ (Basic)", "issuer": "HackerRank", "year": 2022 },
+        { "name": "Go Programming Specialization", "issuer": "UC Irvine/Coursera", "year": 2023 },
+        { "name": "Rust Programming Specialization", "issuer": "Duke/Coursera", "year": 2024 }
+      ]
+    },
+    {
+      "name": "Security",
+      "certifications": [
+        { "name": "Web Security: OAuth and OpenID Connect", "issuer": "LinkedIn Learning", "year": 2022 },
+        { "name": "Ethical Hacking with JavaScript", "issuer": "LinkedIn Learning", "year": 2022 },
+        { "name": "JavaScript Security Essentials", "issuer": "LinkedIn Learning", "year": 2022 }
+      ]
+    }
+  ],
+  "totalCount": 80,
+  "featured": [
+    "Blockchain Specialization",
+    "Meta Back-End Developer Specialization",
+    "Meta React Specialization",
+    "Kubernetes: Microservices",
+    "Rust for Data Engineering",
+    "TensorFlow for AI/ML"
+  ]
+}

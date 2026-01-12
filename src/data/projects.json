@@ -1,0 +1,149 @@
+{
+  "projects": [
+    {
+      "id": "interactive-resume",
+      "name": "Interactive Resume with AI Chatbot",
+      "description": "Modern interactive resume with AI-powered chatbot, career visualizations, and downloadable formats",
+      "longDescription": "Next.js 16 resume app featuring AI chatbot for Q&A, career progression charts, skills visualizations, and PDF/Word generation.",
+      "technologies": ["Next.js", "TypeScript", "AI/LLM", "Recharts", "Tailwind CSS", "Fly.io"],
+      "category": "AI/ML",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/resume-app",
+      "demo": "https://resume.ericgitangu.com",
+      "featured": true
+    },
+    {
+      "id": "powerhub-qa-mobile",
+      "name": "PowerHub QA Mobile Dashboard",
+      "description": "Mobile-first QA dashboard for monitoring PowerHub solar energy infrastructure across Africa",
+      "longDescription": "React Native-inspired mobile dashboard for QA engineers to monitor K6 performance tests, health checks, and system metrics.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Chart.js", "PostgreSQL", "Fly.io"],
+      "category": "Enterprise",
+      "year": 2026,
+      "github": null,
+      "demo": "https://powerhub-qa-mobile.fly.dev",
+      "featured": true
+    },
+    {
+      "id": "deveric-blog",
+      "name": "Deveric Tech Blog",
+      "description": "Technical blog covering software engineering, AI/ML, cloud architecture, and development practices",
+      "longDescription": "Full-featured blog platform with Ghost CMS, custom theming, and Fly.io deployment with PostgreSQL.",
+      "technologies": ["Ghost", "Node.js", "PostgreSQL", "Docker", "Fly.io"],
+      "category": "Content",
+      "year": 2025,
+      "github": null,
+      "demo": "https://deveric-blog.fly.dev",
+      "featured": true
+    },
+    {
+      "id": "elimuai",
+      "name": "ElimuAI",
+      "description": "AI-powered learning platform with ElizaOS, Next.js, and AWS Serverless",
+      "longDescription": "Educational platform leveraging AI to provide personalized learning experiences using modern serverless architecture.",
+      "technologies": ["Next.js", "TypeScript", "AWS Lambda", "DynamoDB", "OpenAI"],
+      "category": "AI/ML",
+      "year": 2025,
+      "github": "https://github.com/ericgitangu/elimuai",
+      "demo": null,
+      "featured": false
+    },
+    {
+      "id": "paygohub",
+      "name": "PayGoHub",
+      "description": "Solar Pay-As-You-Go platform managing customer payments, loans, and installations for energy access in Africa",
+      "longDescription": "Comprehensive platform for managing solar pay-as-you-go services including customer management, payment processing, loan tracking, and installation scheduling.",
+      "technologies": ["ASP.NET Core", "C#", "PostgreSQL", "Redis", "Azure"],
+      "category": "Fintech",
+      "year": 2024,
+      "github": null,
+      "demo": null,
+      "featured": false
+    },
+    {
+      "id": "refleckt",
+      "name": "Refleckt Journal",
+      "description": "AI-powered journaling app with sentiment analysis, insights, and PWA support",
+      "longDescription": "Serverless Rust-based journaling application featuring AI-driven sentiment analysis and personalized insights.",
+      "technologies": ["Rust", "Next.js", "AWS", "OpenAI", "PostgreSQL"],
+      "category": "AI/ML",
+      "year": 2024,
+      "github": "https://github.com/ericgitangu/refleckt",
+      "demo": "https://reflect.ericgitangu.com",
+      "featured": true
+    },
+    {
+      "id": "vishnu-systems",
+      "name": "Vishnu Systems AI/ML Scanner",
+      "description": "AI/ML vulnerability scanner for medical applications and devices",
+      "longDescription": "Security scanning platform using machine learning to identify vulnerabilities in healthcare software and medical devices.",
+      "technologies": ["Python", "TensorFlow", "AWS", "React", "Node.js"],
+      "category": "Security/AppSec",
+      "year": 2024,
+      "github": null,
+      "demo": null,
+      "featured": false
+    },
+    {
+      "id": "deveric",
+      "name": "Deveric Portfolio",
+      "description": "Personal portfolio showcasing projects, blog, certifications, and professional journey",
+      "longDescription": "Next.js 13 portfolio with MDX content management, Upstash Redis for analytics, and Vercel deployment.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "MDX", "Upstash Redis", "Vercel"],
+      "category": "Portfolio",
+      "year": 2023,
+      "github": "https://github.com/ericgitangu/deveric",
+      "demo": "https://developer.ericgitangu.com",
+      "featured": true
+    },
+    {
+      "id": "bawbab",
+      "name": "BawBab Digital Address Platform",
+      "description": "C2B & B2B logistics infrastructure for last-mile delivery in Africa",
+      "longDescription": "Digital addressing system enabling accurate delivery to non-traditional addresses in African urban and rural areas.",
+      "technologies": ["React", "Node.js", "Azure", "Kafka", "MongoDB", "Kubernetes"],
+      "category": "Enterprise",
+      "year": 2023,
+      "github": null,
+      "demo": null,
+      "featured": false
+    },
+    {
+      "id": "inventory-system",
+      "name": "Inventory Management System",
+      "description": "PWA with Next.js, Tailwind CSS, and TypeScript for inventory tracking",
+      "longDescription": "Progressive web app for managing inventory with offline support and real-time sync.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+      "category": "Enterprise",
+      "year": 2023,
+      "github": "https://github.com/ericgitangu/inventory-app",
+      "demo": null,
+      "featured": false
+    },
+    {
+      "id": "web3-dapp",
+      "name": "Web3 Crypto-Blockchain DApp",
+      "description": "Decentralized application supporting ETH, SOL, BTC with smart contracts and oracles",
+      "longDescription": "Full-featured cryptocurrency DApp with wallet integration, smart contract interactions, and multi-chain support.",
+      "technologies": ["Next.js", "Solidity", "Web3.js", "thirdWeb", "Sanity"],
+      "category": "Blockchain",
+      "year": 2022,
+      "github": "https://github.com/ericgitangu/web3-dapp",
+      "demo": null,
+      "featured": false
+    },
+    {
+      "id": "headless-ecommerce",
+      "name": "Headless eCommerce",
+      "description": "Next.js/Swell JAMStack implementation with full checkout and billing integration",
+      "longDescription": "Modern e-commerce platform using headless architecture for flexibility and performance.",
+      "technologies": ["Next.js", "Swell", "Stripe", "Tailwind CSS"],
+      "category": "E-commerce",
+      "year": 2022,
+      "github": "https://github.com/ericgitangu/headless-ecommerce",
+      "demo": null,
+      "featured": false
+    }
+  ],
+  "categories": ["All", "AI/ML", "Enterprise", "Content", "Portfolio", "Fintech", "Blockchain", "E-commerce", "Security/AppSec"]
+}

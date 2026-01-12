@@ -1,0 +1,86 @@
+{
+  "categories": [
+    {
+      "name": "Backend & APIs",
+      "skills": [
+        { "name": "Python", "level": 95, "years": 10, "certifications": ["HackerRank Python", "Django Web Framework", "Meta Back-End Developer"] },
+        { "name": "Node.js", "level": 95, "years": 8, "certifications": ["Node.js Essential Training"] },
+        { "name": "Java", "level": 85, "years": 8, "certifications": ["HackerRank Java", "Spring Boot"] },
+        { "name": "Go", "level": 70, "years": 3, "certifications": ["Go Programming Specialization"] },
+        { "name": "Rust", "level": 65, "years": 2, "certifications": ["Rust Specialization (Duke)"] },
+        { "name": "GraphQL", "level": 85, "years": 4, "certifications": ["Learning GraphQL"] },
+        { "name": "REST APIs", "level": 95, "years": 10, "certifications": [] }
+      ]
+    },
+    {
+      "name": "Databases & Data",
+      "skills": [
+        { "name": "PostgreSQL", "level": 92, "years": 8, "certifications": [] },
+        { "name": "MongoDB", "level": 88, "years": 7, "certifications": [] },
+        { "name": "Redis", "level": 88, "years": 6, "certifications": [] },
+        { "name": "DynamoDB", "level": 82, "years": 4, "certifications": ["AWS for Developers"] },
+        { "name": "MySQL", "level": 85, "years": 8, "certifications": [] },
+        { "name": "Kafka", "level": 80, "years": 4, "certifications": [] },
+        { "name": "RabbitMQ", "level": 75, "years": 3, "certifications": [] }
+      ]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "skills": [
+        { "name": "AWS", "level": 92, "years": 7, "certifications": ["AWS for Developers"] },
+        { "name": "Kubernetes", "level": 88, "years": 5, "certifications": ["Kubernetes: Microservices"] },
+        { "name": "Docker", "level": 92, "years": 6, "certifications": [] },
+        { "name": "GCP", "level": 78, "years": 4, "certifications": [] },
+        { "name": "Azure", "level": 78, "years": 4, "certifications": [] },
+        { "name": "CI/CD", "level": 90, "years": 8, "certifications": [] },
+        { "name": "Terraform", "level": 72, "years": 3, "certifications": [] }
+      ]
+    },
+    {
+      "name": "Frontend",
+      "skills": [
+        { "name": "React", "level": 92, "years": 7, "certifications": ["Meta React Specialization"] },
+        { "name": "Next.js", "level": 88, "years": 5, "certifications": [] },
+        { "name": "TypeScript", "level": 90, "years": 6, "certifications": ["HackerRank JavaScript"] },
+        { "name": "Angular", "level": 75, "years": 4, "certifications": [] },
+        { "name": "Vue.js", "level": 70, "years": 2, "certifications": [] },
+        { "name": "Tailwind CSS", "level": 85, "years": 4, "certifications": [] }
+      ]
+    },
+    {
+      "name": "Architecture & Systems",
+      "skills": [
+        { "name": "Microservices", "level": 92, "years": 7, "certifications": ["Kubernetes: Microservices"] },
+        { "name": "Event-Driven", "level": 88, "years": 5, "certifications": [] },
+        { "name": "System Design", "level": 90, "years": 8, "certifications": [] },
+        { "name": "Multi-tenant", "level": 85, "years": 5, "certifications": [] },
+        { "name": "API Design", "level": 92, "years": 8, "certifications": [] }
+      ]
+    },
+    {
+      "name": "Web3 & Blockchain",
+      "skills": [
+        { "name": "Solidity", "level": 70, "years": 2, "certifications": ["Blockchain Specialization", "Smart Contracts"] },
+        { "name": "DApps", "level": 70, "years": 2, "certifications": ["Decentralized Applications"] },
+        { "name": "Web3.js", "level": 65, "years": 2, "certifications": [] }
+      ]
+    },
+    {
+      "name": "AI/ML",
+      "skills": [
+        { "name": "TensorFlow", "level": 70, "years": 3, "certifications": ["TensorFlow for AI/ML"] },
+        { "name": "PyTorch", "level": 65, "years": 2, "certifications": ["GANs (DeepLearning.AI)"] },
+        { "name": "LLMs", "level": 75, "years": 2, "certifications": [] }
+      ]
+    }
+  ],
+  "radarData": [
+    { "skill": "Backend", "value": 95 },
+    { "skill": "Databases", "value": 90 },
+    { "skill": "Cloud", "value": 90 },
+    { "skill": "DevOps", "value": 88 },
+    { "skill": "Architecture/Systems Design", "value": 95 },
+    { "skill": "Frontend", "value": 85 },
+    { "skill": "Leadership", "value": 88 }
+  ]
+}
