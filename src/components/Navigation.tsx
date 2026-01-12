@@ -79,7 +79,7 @@ export default function Navigation() {
               }}
             >
               <img
-                src="/favicon.webp"
+                src="/favicon.png"
                 alt="Eric Gitangu"
                 className="w-8 h-8 rounded-full object-cover"
               />

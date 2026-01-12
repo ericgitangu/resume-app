@@ -5,11 +5,14 @@
   "subtitle": "Full-Stack Engineer | Backend & Cloud-Native Architect",
   "tagline": "Building scalable backend systems that connect communities",
   "location": {
-    "primary": "Nairobi, Kenya",
-    "secondary": "Kennesaw, GA, USA"
+    "primary": "Atlanta, GA",
+    "secondary": "Nairobi, Kenya"
   },
   "contact": {
-    "phone": "+254 708 078 997",
+    "phone": {
+      "primary": "+1 (978) 710-9475",
+      "secondary": "+254 708 078 997"
+    },
     "email": "developer.ericgitangu@gmail.com",
     "linkedin": "https://linkedin.com/in/ericgitangu",
     "github": "https://github.com/ericgitangu",
