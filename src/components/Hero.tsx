@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Github, Linkedin, Globe, Mail, MapPin, MessageCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Github, Linkedin, Globe, Mail, MapPin, MessageCircle, Plane, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import resumeData from "@/data/resume.json";
 
@@ -22,7 +23,7 @@ const roles = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-20 sm:pt-24 md:pt-28">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10" />
 
@@ -52,17 +53,19 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-16 sm:py-20 pt-24 sm:pt-20">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Location badge */}
+          {/* Animated Location badge with plane */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-secondary/50 text-secondary-foreground mb-6 sm:mb-8"
+            className="mb-6 sm:mb-8"
           >
-            <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span className="text-xs sm:text-sm font-medium">{resumeData.location.primary}</span>
+            <AnimatedLocation
+              locations={[resumeData.location.primary, resumeData.location.secondary]}
+              phones={[resumeData.contact.phone.primary, resumeData.contact.phone.secondary]}
+            />
           </motion.div>
 
           {/* Name */}
@@ -152,57 +155,171 @@ export default function Hero() {
               </a>
             ))}
           </motion.div>
+
+          {/* Scroll indicator - inline with content for visibility */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: [0, 8, 0] }}
+            transition={{
+              opacity: { duration: 0.5, delay: 0.8 },
+              y: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+            }}
+            className="mt-6 sm:mt-8 flex flex-col items-center gap-2"
+          >
+            <span className="text-xs text-muted-foreground/70">Scroll to explore</span>
+            <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/40 flex justify-center pt-2">
+              <motion.div
+                className="w-1.5 h-2.5 rounded-full bg-primary/60"
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
-          <div className="w-1 h-2 rounded-full bg-muted-foreground/50" />
-        </div>
-      </motion.div>
     </section>
   );
 }
 
-// TypeWriter component
+// TypeWriter component with smooth, readable animations
 function TypeWriter({ words }: { words: string[] }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % words.length);
+    }, 3500); // 3.5 seconds per word: 0.5s fade in + 2.5s visible + 0.5s fade out
+
+    return () => clearInterval(interval);
+  }, [words.length]);
+
   return (
-    <motion.div className="text-lg sm:text-2xl md:text-3xl font-semibold text-foreground/80">
-      {words.map((word, index) => (
+    <div className="text-lg sm:text-2xl md:text-3xl font-semibold text-foreground/80 relative h-10 sm:h-12">
+      <AnimatePresence mode="wait">
         <motion.span
-          key={word}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          key={currentIndex}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
           transition={{
             duration: 0.5,
-            delay: index * 3,
-            repeat: Infinity,
-            repeatDelay: words.length * 3 - 0.5,
+            ease: "easeInOut",
           }}
-          className="absolute left-1/2 -translate-x-1/2"
-          style={{
-            animationDelay: `${index * 3}s`,
-          }}
+          className="absolute inset-0 flex items-center justify-center"
         >
-          <motion.span
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: index * 3 + 2.5,
-              repeat: Infinity,
-              repeatDelay: words.length * 3 - 0.5,
-            }}
-          >
-            {word}
-          </motion.span>
+          {words[currentIndex]}
         </motion.span>
-      ))}
-    </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// Animated location component with plane flying between cities
+function AnimatedLocation({ locations, phones }: { locations: string[]; phones: string[] }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      // After plane animation completes, switch location
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % locations.length);
+        setIsTransitioning(false);
+      }, 1500); // Plane flight duration
+    }, 5000); // Switch every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [locations.length]);
+
+  return (
+    <div className="inline-flex flex-row items-center gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-secondary/50 text-secondary-foreground relative overflow-hidden">
+      {/* Location section */}
+      <div className="flex items-center gap-1.5 relative">
+        <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
+        <div className="relative min-w-[85px] sm:min-w-[110px] h-5 flex items-center justify-center">
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={`loc-${currentIndex}`}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="text-xs sm:text-sm font-medium absolute whitespace-nowrap"
+            >
+              {locations[currentIndex]}
+            </motion.span>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="w-px h-4 bg-border/50" />
+
+      {/* Phone section */}
+      <div className="flex items-center gap-1.5 relative">
+        <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
+        <div className="relative min-w-[115px] sm:min-w-[140px] h-5 flex items-center justify-center">
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={`phone-${currentIndex}`}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="text-xs sm:text-sm font-medium absolute whitespace-nowrap"
+            >
+              {phones[currentIndex]}
+            </motion.span>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Flying plane animation */}
+      <AnimatePresence>
+        {isTransitioning && (
+          <motion.div
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={{
+              x: "100%",
+              opacity: [0, 1, 1, 0],
+              y: [0, -12, -12, 0]
+            }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 1.5,
+              ease: "easeInOut",
+              opacity: { times: [0, 0.15, 0.85, 1] }
+            }}
+            className="absolute inset-0 flex items-center justify-center pointer-events-none z-10"
+          >
+            <Plane className="w-5 h-5 sm:w-6 sm:h-6 text-primary drop-shadow-md" style={{ transform: "rotate(-35deg)" }} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Contrail effect behind plane */}
+      <AnimatePresence>
+        {isTransitioning && (
+          <motion.div
+            initial={{ scaleX: 0, originX: 0 }}
+            animate={{
+              scaleX: [0, 1, 1],
+              opacity: [0, 0.4, 0]
+            }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 1.5,
+              ease: "easeInOut",
+              opacity: { times: [0, 0.5, 1] }
+            }}
+            className="absolute inset-y-0 left-0 right-0 flex items-center pointer-events-none"
+            style={{ top: "calc(50% - 6px)" }}
+          >
+            <div className="h-[2px] w-full bg-gradient-to-r from-primary/30 via-primary/20 to-transparent rounded-full" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

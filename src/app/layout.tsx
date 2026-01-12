@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://resume.ericgitangu.com"),
   title: "Eric Gitangu | Software Engineer Architect",
   description:
     "Full-stack Software Engineer Architect with 10+ years of backend-focused expertise. Expert in Python, Node.js, Java, PostgreSQL, MongoDB, Redis, Kafka, AWS, Kubernetes. Specializing in microservices, event-driven architectures, billing systems, and Web3/blockchain. Based in Nairobi, Kenya.",
@@ -65,11 +66,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: "/favicon.webp",
-    shortcut: "/favicon.webp",
-    apple: "/favicon.webp",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -80,9 +76,9 @@ export const metadata: Metadata = {
       "Full-stack Software Engineer Architect with 10+ years of backend-focused expertise in Python, Node.js, Java, cloud-native architectures, and Web3. Based in Nairobi, Kenya.",
     images: [
       {
-        url: "/favicon.webp",
-        width: 400,
-        height: 400,
+        url: "/favicon.png",
+        width: 256,
+        height: 256,
         alt: "Eric Gitangu - Software Engineer Architect",
       },
     ],
@@ -92,7 +88,7 @@ export const metadata: Metadata = {
     title: "Eric Gitangu | Software Engineer Architect",
     description:
       "Full-stack Software Engineer Architect with 10+ years of backend-focused expertise. Based in Nairobi, Kenya.",
-    images: ["/favicon.webp"],
+    images: ["/favicon.png"],
     creator: "@ericgitangu",
   },
   alternates: {
@@ -109,8 +105,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.webp" type="image/webp" />
-        <link rel="apple-touch-icon" href="/favicon.webp" />
         <meta name="theme-color" content="#6366f1" />
       </head>
       <body
