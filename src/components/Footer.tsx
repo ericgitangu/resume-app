@@ -5,11 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Phone, Plane } from "lucide-react";
 import resumeData from "@/data/resume.json";
 
+const titles = ["Lead", "Architect"];
+
 export default function Footer() {
   return (
     <footer className="py-8 px-4 sm:px-6 border-t border-border">
       <div className="container mx-auto max-w-6xl text-center text-muted-foreground text-sm">
-        <p className="font-medium">Eric Gitangu - Senior Software Engineer</p>
+        <AnimatedTitle />
 
         <div className="mt-3 flex justify-center">
           <AnimatedFooterLocation
@@ -131,5 +133,45 @@ function AnimatedFooterLocation({ locations, phones }: { locations: string[]; ph
         )}
       </AnimatePresence>
     </div>
+  );
+}
+
+function AnimatedTitle() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % titles.length);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <p className="font-medium">
+      Eric Gitangu - Software Engineering{" "}
+      <span className="relative inline-block min-w-[75px]">
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={currentIndex}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="inline-block"
+            style={{
+              background: currentIndex === 0
+                ? "linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%)"
+                : "linear-gradient(135deg, #06b6d4 0%, #0ea5e9 50%, #3b82f6 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            {titles[currentIndex]}
+          </motion.span>
+        </AnimatePresence>
+      </span>
+    </p>
   );
 }
