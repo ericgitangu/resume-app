@@ -1,6 +1,30 @@
 {
   "projects": [
     {
+      "id": "secure-messenger-desktop",
+      "name": "Secure Messenger Desktop",
+      "description": "Electron + React + TypeScript secure messenger with real-time WebSocket sync, AES-256-GCM encryption, SQLite storage, and Prometheus/Grafana observability",
+      "longDescription": "Production-grade secure messenger client featuring Electron 40, React 19, Redux Toolkit, SQLite with WAL mode, AES-256-GCM encryption, virtualized lists, WebSocket real-time sync, and built-in Prometheus/Grafana monitoring. 81 tests including Pact contract testing.",
+      "technologies": ["Electron", "React", "TypeScript", "SQLite", "Redux Toolkit", "WebSocket", "AES-256-GCM", "Prometheus", "Fly.io"],
+      "category": "Security/AppSec",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/secure-messenger-desktop",
+      "demo": "https://secure-messenger-desktop.fly.dev",
+      "featured": true
+    },
+    {
+      "id": "unicorns",
+      "name": "UniCorns - Multi-Tenant SaaS Super-App",
+      "description": "Comprehensive multi-tenant business platform for African SMBs with 5 Rust microservices, healthcare EMR, M-Pesa payments, and AI features",
+      "longDescription": "Full-stack super-app supporting healthcare, retail, and professional services with Rust Lambda backend, Next.js frontend, native Android app, Claude AI integration, and M-Pesa/Airtel Money payments.",
+      "technologies": ["Rust", "AWS Lambda", "DynamoDB", "Next.js", "Kotlin", "Claude AI", "M-Pesa"],
+      "category": "Enterprise",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/unicorns",
+      "demo": "https://unicorns.ericgitangu.com",
+      "featured": true
+    },
+    {
       "id": "interactive-resume",
       "name": "Interactive Resume with AI Chatbot",
       "description": "Modern interactive resume with AI-powered chatbot, career visualizations, and downloadable formats",
