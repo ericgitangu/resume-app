@@ -1,6 +1,18 @@
 {
   "projects": [
     {
+      "id": "wave-application",
+      "name": "Wave Application — ML Engineer",
+      "description": "Full-stack polyglot submission for Wave's Senior ML Engineer role with Next.js 16 PWA, Rust+PyO3 Lambda backend, and AWS CDK infrastructure",
+      "longDescription": "Ships a working product as the application itself. Next.js 16 dashboard with real-time health probes, persistent Upstash Redis submissions, and manual Wave API trigger. Rust+PyO3 backend on AWS Lambda with Bedrock (Claude 3 Haiku sentiment, Titan Embeddings), SageMaker (XLM-RoBERTa 20-language detection), and EventBridge fan-out. 4 CDK stacks, CI/CD with auto-resume submission.",
+      "technologies": ["Next.js", "Rust", "Python", "AWS CDK", "Bedrock", "SageMaker", "Upstash Redis", "Fly.io", "TypeScript"],
+      "category": "AI/ML",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/wave",
+      "demo": "https://wave-apply.ericgitangu.com",
+      "featured": true
+    },
+    {
       "id": "secure-messenger-desktop",
       "name": "Secure Messenger Desktop",
       "description": "Electron + React + TypeScript secure messenger with real-time WebSocket sync, AES-256-GCM encryption, SQLite storage, and Prometheus/Grafana observability",
