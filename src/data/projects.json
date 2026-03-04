@@ -1,6 +1,18 @@
 {
   "projects": [
     {
+      "id": "bsd-engine",
+      "name": "BSD Engine — Business Services Diagnostic",
+      "description": "Full-stack business diagnostics platform with Rust scoring engine, Next.js 16 dashboard, Recharts visualizations, and AI narrative generation via AWS Bedrock",
+      "longDescription": "Assesses operational execution maturity across 7 weighted indicators using a 23-question Likert-scale survey. Rust backend scores responses, classifies severity, and generates rich visual reports (radar, bar, area, gap, pie charts) plus AI-powered executive narratives via Bedrock Claude Haiku. Shareable report URLs with OG images, dark-themed print/PDF export with BSD branding.",
+      "technologies": ["Rust", "Axum", "Next.js", "TypeScript", "Recharts", "AWS Bedrock", "AWS CDK", "Fly.io", "Tailwind CSS"],
+      "category": "Enterprise",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/bsd-engine",
+      "demo": "https://bsd-engine-web.fly.dev",
+      "featured": false
+    },
+    {
       "id": "wave-application",
       "name": "Wave Application — ML Engineer",
       "description": "Full-stack polyglot submission for Wave's Senior ML Engineer role with Next.js 16 PWA, Rust+PyO3 Lambda backend, and AWS CDK infrastructure",
@@ -178,6 +190,18 @@
       "year": 2022,
       "github": "https://github.com/ericgitangu/headless-ecommerce",
       "demo": null,
+      "featured": false
+    },
+    {
+      "id": "paul-ledama-memorial",
+      "name": "Paul Ledama Sekento Memorial",
+      "description": "A loving tribute website celebrating the life of Paul Ledama Sekento (1983–2026) with biography, tributes, gallery, and funeral programme",
+      "longDescription": "Memorial website honoring Paul Ledama Sekento, built with Next.js 15, Tailwind CSS v4, and next-themes. Features biography, tributes from family and friends, photo gallery, hymns, and funeral service programme. PWA-enabled with offline support, deployed on Fly.io.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "next-themes", "PWA", "Fly.io"],
+      "category": "Portfolio",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/paul-ledama-memorial",
+      "demo": "https://paul-ledama-memorial.fly.dev",
       "featured": false
     }
   ],
