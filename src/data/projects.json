@@ -1,6 +1,18 @@
 {
   "projects": [
     {
+      "id": "pawa-cloud",
+      "name": "PawaCloud Assistant — AI Cloud Advisor",
+      "description": "AI chatbot with Gemini 2.5 Flash, Rust+PyO3 text processing, SSE streaming, Google OAuth, and PostgreSQL persistence on GCP Cloud Run",
+      "longDescription": "Full-stack AI advisory chatbot streaming responses in real time via SSE. Python FastAPI backend with Rust+PyO3 text processing (50-100x faster than pure Python), Google Gemini 2.5 Flash for generation, PostgreSQL (Neon) for persistent cross-device chat history, and HMAC-signed Bearer tokens for cross-origin auth. Next.js 16 PWA frontend with TailwindCSS v4, live status dashboard with latency charts and PyO3 benchmarks. Deployed on Cloud Run africa-south1 + Fly.io JNB with Terraform IaC.",
+      "technologies": ["Python", "FastAPI", "Rust", "PyO3", "Gemini AI", "Next.js", "TailwindCSS", "PostgreSQL", "Google Cloud", "Cloud Run", "Terraform", "Docker", "Fly.io", "OAuth"],
+      "category": "AI/ML",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/pawa-cloud",
+      "demo": "https://pawacloud-web.fly.dev",
+      "featured": true
+    },
+    {
       "id": "bsd-engine",
       "name": "BSD Engine — Business Services Diagnostic",
       "description": "Full-stack business diagnostics platform with Rust scoring engine, Next.js 16 dashboard, Recharts visualizations, and AI narrative generation via AWS Bedrock",
