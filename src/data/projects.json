@@ -13,6 +13,18 @@
       "featured": true
     },
     {
+      "id": "unirides",
+      "name": "UniRides — Ride-Sharing Reimagined",
+      "description": "Production-grade ride-sharing platform with 5 Google Maps APIs, real-time tracking, Kenyan market-rate pricing, and FastAPI backend on GCP Cloud Run",
+      "longDescription": "Full-stack Uber/Bolt-class ride-sharing app for the Kenyan market. Next.js 16 PWA frontend with satellite map view, Google Places Autocomplete for pickup/dropoff, Directions API route polylines, Distance Matrix live ETA with dynamic polling (3s active, 10s accepted), and client-side fare calculation using post-2025 Kenyan market rates (KES 35/km aligned with Bolt/Uber after the 50% fare increase). FastAPI backend with async SQLAlchemy 2.0, Neon PostgreSQL, Upstash Redis, JWT auth, WebSocket ride tracking, and structured logging. Deployed on Fly.io (frontend) + GCP Cloud Run (backend) with scale-to-zero for $0 idle cost.",
+      "technologies": ["Next.js", "TypeScript", "TailwindCSS", "Google Maps Platform", "FastAPI", "Python", "SQLAlchemy", "PostgreSQL", "Redis", "WebSocket", "GCP Cloud Run", "Fly.io", "Docker", "NextAuth", "Zustand"],
+      "category": "Enterprise",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/unirides",
+      "demo": "https://unirides.fly.dev",
+      "featured": true
+    },
+    {
       "id": "bsd-engine",
       "name": "BSD Engine — Business Services Diagnostic",
       "description": "Full-stack business diagnostics platform with Rust scoring engine, Next.js 16 dashboard, Recharts visualizations, and AI narrative generation via AWS Bedrock",
