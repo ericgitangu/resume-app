@@ -25,6 +25,18 @@
       "featured": true
     },
     {
+      "id": "lendstream",
+      "name": "LendStream",
+      "description": "Polyglot micro-lending platform — Java, Clojure, React, Kafka, CQRS",
+      "longDescription": "Event-driven micro-lending platform with CQRS, transactional outbox, and dual-mode event broker (Kafka locally, QStash in cloud). Java 21 handles loan lifecycle and SOAP/CBS integration. Clojure handles credit scoring through pure functional pipelines. React/TypeScript dashboard with portfolio analytics. Runs on Docker Compose (15 containers with full APM) or GCP Cloud Run at $0-3/month.",
+      "technologies": ["Java 21", "Spring Boot", "Clojure", "React", "TypeScript", "Kafka", "QStash", "PostgreSQL", "Redis", "Docker", "Terraform", "GCP Cloud Run", "Prometheus", "Grafana"],
+      "category": "Fintech",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/lendstream",
+      "demo": "https://nanolend-app.vercel.app",
+      "featured": true
+    },
+    {
       "id": "bsd-engine",
       "name": "BSD Engine — Business Services Diagnostic",
       "description": "Full-stack business diagnostics platform with Rust scoring engine, Next.js 16 dashboard, Recharts visualizations, and AI narrative generation via AWS Bedrock",
