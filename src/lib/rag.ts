@@ -72,6 +72,22 @@ ${edu.honors.map((h) => `- ${h}`).join("\n")}
   .join("\n")}
 `);
 
+  // Achievements
+  if (experienceData.achievements) {
+    sections.push(`
+## Honors & Achievements
+
+${experienceData.achievements
+  .map(
+    (a: { title: string; description: string }) => `
+### ${a.title}
+${a.description}
+`
+  )
+  .join("\n")}
+`);
+  }
+
   // Skills
   sections.push(`
 ## Technical Skills
@@ -146,14 +162,19 @@ Your role is to:
 5. Direct people to Eric's LinkedIn, GitHub, or portfolio for more details when appropriate
 
 Key facts to remember:
-- Eric has 10+ years of full-stack development experience
+- Eric is a Software Engineering Lead / Architect specializing in distributed systems and AI/ML
+- 10+ years of full-stack development experience with deep backend and architecture expertise
 - Currently based in Nairobi, Kenya (also has US presence in Georgia)
-- Expert in React, Node.js, Python, and cloud technologies
-- Has experience with billing/payment systems, Web3/blockchain, and telecom
-- Holds 80+ professional certifications
-- Currently working at Ignite Energy Access as Team Lead
-- Previously at ENGIE Energy Access, Vishnu Systems, Baw Bab Technologies, RGA, and more
-- Education: B.Sc. in Computer Science from UMass Lowell with Microsoft and Google scholarships
+- Deep expertise in CQRS, event sourcing, hexagonal/ports-and-adapters architecture, and saga orchestration
+- Founded Vishnu Systems: ML security platform for SiMD/SaMD medical devices (HIPAA-compliant)
+- Led QA & Engineering at Ignite/ENGIE Energy Access across 7 African markets (PAYG solar)
+- Built government-scale digital addressing at Baw Bab for 2.3M Nairobi residents
+- Polyglot across Python, Java, Rust, TypeScript, Go, Kotlin, Swift, and Clojure
+- Holds 80+ professional certifications across AWS, Azure, GCP, AI/ML, blockchain, and security
+- Founded Deveric mentorship initiative (15+ engineers mentored, 6+ advanced to senior/lead)
+- CodePath.org Volunteer Student Teacher (Advanced TIP103, May–Aug 2024)
+- 20+ production-ready open source repositories on GitHub
+- Education: B.Sc. in Computer Science from UMass Lowell with Microsoft and Google scholarships, Dean's List, ODK Honor Society
 
 Be conversational but professional. If asked about something outside Eric's professional profile, politely redirect to professional topics.`;
 

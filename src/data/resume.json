@@ -1,32 +1,33 @@
 {
   "name": "Eric Gitangu",
   "nickname": "Deveric",
-  "title": "Software Engineer Architect",
-  "subtitle": "Full-Stack Engineer | Backend & Cloud-Native Architect",
-  "tagline": "Building scalable backend systems that connect communities",
+  "title": "Software Engineering Lead / Architect — Distributed Systems and AI/ML",
+  "subtitle": "Distributed Systems Architect | Backend & Cloud-Native Engineering Lead",
+  "tagline": "Architecting event-driven distributed systems across healthcare ML, fintech, energy access, and government-scale infrastructure",
   "location": {
-    "primary": "Atlanta, GA",
-    "secondary": "Nairobi, Kenya"
+    "primary": "Nairobi, Kenya",
+    "secondary": "Atlanta, GA"
   },
   "contact": {
     "phone": {
-      "primary": "+1 (978) 710-9475",
-      "secondary": "+254 708 078 997"
+      "primary": "+254 708 078 997",
+      "secondary": "+1 (978) 710-9475"
     },
-    "email": "developer.ericgitangu@gmail.com",
+    "email": "deveric@unicorns.run",
     "linkedin": "https://linkedin.com/in/ericgitangu",
     "github": "https://github.com/ericgitangu",
     "portfolio": "https://developer.ericgitangu.com"
   },
-  "summary": "Full-stack software engineer with 10+ years of experience and strong backend expertise, architecting and delivering scalable, high-performance applications across telecommunications, fintech, and enterprise platforms. Expert in Python, Node.js, and Java with deep experience in APIs, microservices, and event-driven architectures powering billing, subscription, and payment systems. Proven track record managing PostgreSQL, MongoDB, DynamoDB, and Redis at scale with replication, sharding, and high-availability configurations. Proficient in React/Next.js for frontend delivery. Currently based in Nairobi, Kenya, passionate about building technology that connects communities across Africa.",
+  "summary": "Software Engineering Lead and Architect with 10+ years shipping event-driven distributed systems across healthcare ML, fintech, energy access, and government-scale infrastructure. Deep expertise in CQRS, event sourcing, hexagonal/ports-and-adapters, and saga orchestration — applied at Vishnu Systems (ML security for SiMD/SaMD medical devices), Ignite/ENGIE Energy Access (PAYG solar across 7 African markets), Baw Bab Technologies (digital addressing for 2.3M Nairobi residents), and Unicorns (multi-tenant SaaS super-app). Polyglot across Python, Java, Rust, TypeScript, Go, Kotlin, Swift, and Clojure. Founded Deveric mentorship initiative (15+ engineers mentored) and hold 80+ validated technical certifications.",
   "highlights": [
-    "10+ years full-stack with backend focus",
-    "Expert Python, Node.js, Java developer",
-    "Microservices & event-driven architect",
-    "Billing & payment systems specialist",
-    "Web3/Blockchain certified developer",
-    "Based in Nairobi, Kenya"
+    "10+ years shipping distributed systems at scale",
+    "Healthcare ML & medical device security (Vishnu Systems)",
+    "Fintech & PAYG solar across 7 African markets (Ignite/ENGIE)",
+    "Government-scale digital addressing (2.3M residents)",
+    "Polyglot: Python, Java, Rust, TypeScript, Go, Kotlin, Swift, Clojure",
+    "80+ certifications | 15+ engineers mentored"
   ],
   "yearsOfExperience": 10,
-  "certificationsCount": 80
+  "certificationsCount": 80,
+  "resumeUrl": "https://resume.ericgitangu.com"
 }

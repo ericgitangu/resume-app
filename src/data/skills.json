@@ -1,15 +1,62 @@
 {
   "categories": [
     {
+      "name": "Architecture & Systems",
+      "skills": [
+        { "name": "Microservices", "level": 92, "years": 7, "certifications": ["Kubernetes: Microservices"] },
+        { "name": "Event-Driven", "level": 88, "years": 5, "certifications": [] },
+        { "name": "CQRS", "level": 85, "years": 4, "certifications": [] },
+        { "name": "Event Sourcing", "level": 85, "years": 4, "certifications": [] },
+        { "name": "Saga Orchestration", "level": 82, "years": 3, "certifications": [] },
+        { "name": "Hexagonal / Ports & Adapters", "level": 85, "years": 4, "certifications": [] },
+        { "name": "DDD", "level": 85, "years": 5, "certifications": [] },
+        { "name": "System Design", "level": 90, "years": 8, "certifications": [] },
+        { "name": "Multi-tenant", "level": 85, "years": 5, "certifications": [] },
+        { "name": "API Design", "level": 92, "years": 8, "certifications": [] },
+        { "name": "BFF Pattern", "level": 80, "years": 3, "certifications": [] },
+        { "name": "Railway-Oriented Programming", "level": 78, "years": 2, "certifications": [] },
+        { "name": "Actor Model", "level": 75, "years": 2, "certifications": [] },
+        { "name": "CRDTs", "level": 72, "years": 2, "certifications": [] },
+        { "name": "Transactional Outbox", "level": 82, "years": 3, "certifications": [] },
+        { "name": "Circuit Breakers", "level": 85, "years": 4, "certifications": [] }
+      ]
+    },
+    {
       "name": "Backend & APIs",
       "skills": [
         { "name": "Python", "level": 95, "years": 10, "certifications": ["HackerRank Python", "Django Web Framework", "Meta Back-End Developer"] },
         { "name": "Node.js", "level": 95, "years": 8, "certifications": ["Node.js Essential Training"] },
         { "name": "Java", "level": 85, "years": 8, "certifications": ["HackerRank Java", "Spring Boot"] },
-        { "name": "Go", "level": 70, "years": 3, "certifications": ["Go Programming Specialization"] },
-        { "name": "Rust", "level": 65, "years": 2, "certifications": ["Rust Specialization (Duke)"] },
+        { "name": "Rust", "level": 82, "years": 4, "certifications": ["Rust Specialization (Duke)"] },
+        { "name": "Go", "level": 75, "years": 3, "certifications": ["Go Programming Specialization"] },
+        { "name": "Scala", "level": 65, "years": 2, "certifications": [] },
+        { "name": "Clojure", "level": 70, "years": 2, "certifications": [] },
+        { "name": "C/C++", "level": 70, "years": 3, "certifications": [] },
+        { "name": "Django", "level": 82, "years": 5, "certifications": ["Django Web Framework"] },
+        { "name": "FastAPI", "level": 85, "years": 3, "certifications": [] },
+        { "name": "Groovy/Grails", "level": 72, "years": 2, "certifications": [] },
+        { "name": "Axum", "level": 78, "years": 2, "certifications": [] },
         { "name": "GraphQL", "level": 85, "years": 4, "certifications": ["Learning GraphQL"] },
         { "name": "REST APIs", "level": 95, "years": 10, "certifications": [] }
+      ]
+    },
+    {
+      "name": "AI/ML",
+      "skills": [
+        { "name": "TensorFlow", "level": 75, "years": 3, "certifications": ["TensorFlow for AI/ML"] },
+        { "name": "PyTorch", "level": 70, "years": 2, "certifications": ["GANs (DeepLearning.AI)"] },
+        { "name": "LLMs", "level": 78, "years": 2, "certifications": [] },
+        { "name": "OpenAI", "level": 80, "years": 2, "certifications": [] },
+        { "name": "Anthropic Claude", "level": 80, "years": 2, "certifications": [] },
+        { "name": "Google Gemini", "level": 75, "years": 1, "certifications": [] },
+        { "name": "RAG Systems", "level": 78, "years": 2, "certifications": [] },
+        { "name": "CNNs", "level": 72, "years": 2, "certifications": [] },
+        { "name": "GNNs", "level": 68, "years": 1, "certifications": [] },
+        { "name": "Transformers", "level": 72, "years": 2, "certifications": [] },
+        { "name": "Apache Airflow", "level": 75, "years": 2, "certifications": [] },
+        { "name": "MLflow", "level": 72, "years": 2, "certifications": [] },
+        { "name": "Vertex AI", "level": 70, "years": 1, "certifications": [] },
+        { "name": "pgvector", "level": 68, "years": 1, "certifications": [] }
       ]
     },
     {
@@ -21,7 +68,9 @@
         { "name": "DynamoDB", "level": 82, "years": 4, "certifications": ["AWS for Developers"] },
         { "name": "MySQL", "level": 85, "years": 8, "certifications": [] },
         { "name": "Kafka", "level": 80, "years": 4, "certifications": [] },
-        { "name": "RabbitMQ", "level": 75, "years": 3, "certifications": [] }
+        { "name": "RabbitMQ", "level": 75, "years": 3, "certifications": [] },
+        { "name": "Redshift", "level": 70, "years": 2, "certifications": [] },
+        { "name": "ETL/ELT Pipelines", "level": 78, "years": 3, "certifications": [] }
       ]
     },
     {
@@ -37,24 +86,41 @@
       ]
     },
     {
-      "name": "Frontend",
+      "name": "Frontend & Mobile",
       "skills": [
         { "name": "React", "level": 92, "years": 7, "certifications": ["Meta React Specialization"] },
         { "name": "Next.js", "level": 88, "years": 5, "certifications": [] },
         { "name": "TypeScript", "level": 90, "years": 6, "certifications": ["HackerRank JavaScript"] },
         { "name": "Angular", "level": 75, "years": 4, "certifications": [] },
         { "name": "Vue.js", "level": 70, "years": 2, "certifications": [] },
-        { "name": "Tailwind CSS", "level": 85, "years": 4, "certifications": [] }
+        { "name": "Tailwind CSS", "level": 85, "years": 4, "certifications": [] },
+        { "name": "PWA", "level": 82, "years": 3, "certifications": [] },
+        { "name": "Kotlin + Jetpack Compose", "level": 72, "years": 2, "certifications": [] },
+        { "name": "Swift/SwiftUI", "level": 68, "years": 2, "certifications": [] },
+        { "name": "Electron", "level": 75, "years": 2, "certifications": [] }
       ]
     },
     {
-      "name": "Architecture & Systems",
+      "name": "Secure APIs & Compliance",
       "skills": [
-        { "name": "Microservices", "level": 92, "years": 7, "certifications": ["Kubernetes: Microservices"] },
-        { "name": "Event-Driven", "level": 88, "years": 5, "certifications": [] },
-        { "name": "System Design", "level": 90, "years": 8, "certifications": [] },
-        { "name": "Multi-tenant", "level": 85, "years": 5, "certifications": [] },
-        { "name": "API Design", "level": 92, "years": 8, "certifications": [] }
+        { "name": "OWASP Top 10", "level": 88, "years": 5, "certifications": [] },
+        { "name": "NIST SSDF", "level": 80, "years": 3, "certifications": [] },
+        { "name": "HIPAA", "level": 78, "years": 2, "certifications": [] },
+        { "name": "FHIR/HL7", "level": 72, "years": 2, "certifications": [] },
+        { "name": "AES-256-GCM", "level": 80, "years": 3, "certifications": [] },
+        { "name": "OAuth2/JWT", "level": 88, "years": 6, "certifications": [] }
+      ]
+    },
+    {
+      "name": "Observability",
+      "skills": [
+        { "name": "OpenTelemetry", "level": 82, "years": 2, "certifications": [] },
+        { "name": "Prometheus", "level": 80, "years": 3, "certifications": [] },
+        { "name": "Grafana", "level": 80, "years": 3, "certifications": [] },
+        { "name": "Jaeger", "level": 75, "years": 2, "certifications": [] },
+        { "name": "ELK Stack", "level": 78, "years": 3, "certifications": [] },
+        { "name": "AWS X-Ray", "level": 72, "years": 2, "certifications": [] },
+        { "name": "CloudWatch", "level": 80, "years": 4, "certifications": [] }
       ]
     },
     {
@@ -66,11 +132,15 @@
       ]
     },
     {
-      "name": "AI/ML",
+      "name": "Domains",
       "skills": [
-        { "name": "TensorFlow", "level": 70, "years": 3, "certifications": ["TensorFlow for AI/ML"] },
-        { "name": "PyTorch", "level": 65, "years": 2, "certifications": ["GANs (DeepLearning.AI)"] },
-        { "name": "LLMs", "level": 75, "years": 2, "certifications": [] }
+        { "name": "Healthcare ML", "level": 82, "years": 2, "certifications": [] },
+        { "name": "Digital Health (SiMD/SaMD)", "level": 78, "years": 2, "certifications": [] },
+        { "name": "Fintech", "level": 88, "years": 5, "certifications": [] },
+        { "name": "Energy Access (PAYG Solar)", "level": 85, "years": 2, "certifications": [] },
+        { "name": "AgriTech", "level": 75, "years": 1, "certifications": [] },
+        { "name": "Multi-tenant SaaS", "level": 88, "years": 5, "certifications": [] },
+        { "name": "Government-scale Infrastructure", "level": 80, "years": 3, "certifications": [] }
       ]
     }
   ],

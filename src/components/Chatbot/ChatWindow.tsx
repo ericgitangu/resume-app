@@ -14,10 +14,10 @@ interface Message {
 }
 
 const SUGGESTED_QUESTIONS = [
-  "What's Eric's experience with billing systems?",
-  "Does Eric have Web3/blockchain experience?",
-  "Tell me about Eric's work in Kenya",
-  "What databases has Eric worked with?",
+  "What's Eric's experience with distributed systems and event-driven architecture?",
+  "Tell me about Eric's leadership across 7 African markets",
+  "What AI/ML and healthcare projects has Eric built?",
+  "What are Eric's key honors and achievements?",
 ];
 
 interface ChatWindowProps {

@@ -14,11 +14,11 @@ const socialLinks = [
 ];
 
 const roles = [
-  "Full-Stack Engineer",
-  "Cloud Architect",
-  "Tech Lead",
+  "Software Engineering Lead",
+  "Distributed Systems Architect",
   "AI/ML Engineer",
-  "Web3 Developer",
+  "Healthcare Tech Builder",
+  "Cloud-Native Architect",
 ];
 
 export default function Hero() {
