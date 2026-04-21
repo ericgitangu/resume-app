@@ -37,6 +37,18 @@
       "featured": true
     },
     {
+      "id": "vunachain",
+      "name": "Vunachain — AgriTech Contract Farming & Traceability",
+      "description": "Blockchain-backed contract farming and agricultural supply chain traceability platform on AWS serverless with Rust Lambda functions",
+      "longDescription": "Event-driven agricultural supply chain platform enabling contract farming agreements, crop traceability from farm to market, and transparent payment settlement. Rust Lambda functions on ARM64/Graviton for cost-efficient compute, EventBridge for workflow orchestration, SQS with DLQs for reliable message processing, S3 for document storage, and RDS PostgreSQL for transactional data. Solidity smart contracts on Celo for immutable contract records. React/TypeScript dashboard for farmers, aggregators, and buyers.",
+      "technologies": ["Rust", "AWS Lambda", "ARM64/Graviton", "EventBridge", "SQS", "DLQs", "S3", "RDS PostgreSQL", "CloudWatch", "X-Ray", "Solidity", "Celo", "React", "TypeScript"],
+      "category": "AgriTech",
+      "year": 2025,
+      "github": null,
+      "demo": "https://vunachain.com",
+      "featured": true
+    },
+    {
       "id": "bsd-engine",
       "name": "BSD Engine — Business Services Diagnostic",
       "description": "Full-stack business diagnostics platform with Rust scoring engine, Next.js 16 dashboard, Recharts visualizations, and AI narrative generation via AWS Bedrock",
@@ -241,5 +253,5 @@
       "featured": false
     }
   ],
-  "categories": ["All", "AI/ML", "Enterprise", "Content", "Portfolio", "Fintech", "Blockchain", "E-commerce", "Security/AppSec"]
+  "categories": ["All", "AI/ML", "Enterprise", "Content", "Portfolio", "Fintech", "AgriTech", "Blockchain", "E-commerce", "Security/AppSec"]
 }

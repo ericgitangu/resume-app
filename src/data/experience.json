@@ -3,56 +3,42 @@
     {
       "id": "ignite-2025",
       "company": "Ignite Energy Access",
-      "role": "Team Lead",
-      "type": "Lead",
-      "location": "Nairobi, Kenya",
-      "startDate": "2025-10",
-      "endDate": null,
-      "current": true,
-      "description": "Leading automation initiatives and performance optimization for energy access infrastructure serving communities across Africa.",
-      "achievements": [
-        "Lead automation initiatives and performance optimization for energy access infrastructure",
-        "Drive technical roadmap for scalable platform architecture supporting C2B & B2B operations",
-        "Implement real-time monitoring and data pipelines for network intelligence"
-      ],
-      "technologies": ["Python", "Node.js", "PostgreSQL", "Redis", "Kafka", "AWS"],
-      "level": 5
-    },
-    {
-      "id": "engie-2025",
-      "company": "ENGIE Energy Access",
-      "role": "Team Lead",
+      "subtitle": "(formerly ENGIE Energy Access)",
+      "role": "Team Lead — QA & Engineering (SDET & Platform)",
       "type": "Lead",
       "location": "Nairobi, Kenya",
       "startDate": "2025-05",
-      "endDate": "2025-10",
-      "current": false,
-      "description": "Led automation and process optimization efforts for C2B & B2B platform operations across multiple African markets.",
+      "endDate": "2026-03",
+      "current": true,
+      "description": "Leading QA and engineering automation for PAYG solar energy infrastructure serving communities across 7 African markets. Driving platform reliability, observability, and test automation strategy.",
       "achievements": [
-        "Led automation and process optimization for C2B & B2B platform operations across African markets",
-        "Architected event-driven systems for billing, customer management, and operational workflows",
-        "Integrated SQL and NoSQL databases for low-latency analytics and multi-tenant scalability"
+        "Architected and led migration of legacy manual QA workflows to a fully automated SDET pipeline using Playwright, Cypress, and custom Ruby harnesses — reducing regression cycle time by 60%",
+        "Designed and deployed observability stack (OpenTelemetry, Prometheus, Grafana, Jaeger, ELK) across 7 African market deployments, cutting mean-time-to-detection from hours to minutes",
+        "Built and maintained CI/CD pipelines integrating automated security scanning, performance benchmarks, and contract testing across microservices",
+        "Drove cross-functional alignment between product, engineering, and data teams to establish quality gates and SLA-driven release criteria",
+        "Introduced chaos engineering practices and load testing frameworks (K6, Locust) to validate system resilience under peak PAYG billing cycles"
       ],
-      "technologies": ["Python", "Ruby", "PostgreSQL", "Redis", "RabbitMQ", "Kubernetes"],
+      "technologies": ["Python", "Ruby", "Node.js", "PostgreSQL", "Redis", "Kafka", "AWS", "OpenTelemetry", "Playwright", "Cypress", "ELK", "Prometheus", "Grafana", "Jaeger", "Redshift", "Kubernetes"],
       "level": 5
     },
     {
       "id": "vishnu-2024",
       "company": "Vishnu Systems, Inc.",
-      "role": "Director of Engineering / Lead Engineer",
+      "role": "Director of Engineering / Sole Technical Founder",
       "type": "Director",
       "location": "Atlanta, GA",
       "startDate": "2024-01",
       "endDate": "2025-08",
       "current": false,
-      "description": "Oversaw AI/ML security product lines for healthcare providers, leveraging AWS serverless architectures and Kubernetes orchestration.",
+      "description": "Founded and built an ML-driven security platform for Software-in-a-Medical-Device (SiMD) and Software-as-a-Medical-Device (SaMD) applications, targeting HIPAA-compliant vulnerability detection and compliance automation for healthcare providers.",
       "achievements": [
-        "Oversaw AI/ML security product lines for healthcare providers",
-        "Architected event-driven microservices with SQS/SNS and Kinesis for real-time data pipelines",
-        "Built subscription and billing systems with multi-tenant architecture",
-        "Reduced deployment cycles through streamlined CI/CD and DevSecOps scanning"
+        "Designed and built a FastAPI orchestration layer with CQRS and event-sourced domain model, routing scanning jobs through async task queues with saga-based compensation for partial failures",
+        "Implemented high-performance Rust+PyO3 modules for binary analysis and SBOM generation, achieving 50-100x throughput improvement over pure Python equivalents",
+        "Built ML pipelines combining CNNs for medical image metadata analysis, RAG for compliance document retrieval, and GNNs for dependency-graph vulnerability propagation",
+        "Developed compliance automation tooling mapping scan results to HIPAA, FDA 21 CFR Part 11, and IEC 62304 requirements with automated evidence generation",
+        "Delivered full MLOps stack: Airflow orchestration, MLflow experiment tracking, SageMaker/Vertex AI training, and A/B model deployment with canary rollouts"
       ],
-      "technologies": ["React", "Node.js", "Python", "AWS Lambda", "DynamoDB", "Kubernetes", "Docker"],
+      "technologies": ["Python", "FastAPI", "Rust", "PyO3", "Go", "React", "Node.js", "TensorFlow", "PyTorch", "Airflow", "MLflow", "AWS Lambda", "DynamoDB", "Kafka", "Kubernetes", "Docker"],
       "level": 5
     },
     {
@@ -61,17 +47,17 @@
       "role": "Lead Software Engineer",
       "type": "Lead",
       "location": "Seattle, WA / Nairobi, Kenya",
-      "startDate": "2023-04",
+      "startDate": "2023-01",
       "endDate": "2025-08",
       "current": false,
-      "description": "Developed digital address logistics platform for last-mile delivery, piloted in Nairobi, Kenya.",
+      "description": "Led engineering for a government-scale digital addressing and logistics platform, enabling formal address assignment for previously unaddressed urban areas in Nairobi, Kenya.",
       "achievements": [
-        "Developed digital address logistics platform for last-mile delivery in Nairobi pilot",
-        "Integrated real-time event streams (Kafka, Azure) and geo-based microservices",
-        "Established containerized deployments with Docker and Kubernetes",
-        "Applied advanced algorithms (Dijkstra's, A*) for route optimization"
+        "Led a 5-engineer team delivering a digital address platform that assigned formal addresses to 2.3 million Nairobi residents, integrating with Kenya's national addressing initiative",
+        "Architected computer-vision and GIS pipeline using Google Cloud Vision for address-plate recognition, PostGIS for spatial queries, and Google Cloud Pub/Sub for event-driven geocoding workflows",
+        "Built full-stack delivery: React/Next.js dashboard for administrators, Express API gateway, MongoDB document store, and GCP Cloud Run deployment with auto-scaling",
+        "Applied advanced geospatial algorithms (Dijkstra's, A*) for last-mile route optimization, reducing delivery time by 35% in pilot zones"
       ],
-      "technologies": ["React", "Node.js", "Python", "Kafka", "Azure", "MongoDB", "Docker", "Kubernetes"],
+      "technologies": ["React", "Next.js", "Node.js", "Express", "Python", "Kafka", "MongoDB", "Google Cloud Vision", "Google Cloud Pub/Sub", "GCP Cloud Run", "PostGIS", "Docker", "Kubernetes"],
       "level": 5
     },
     {
@@ -81,34 +67,36 @@
       "type": "Senior",
       "location": "Remote",
       "startDate": "2022-01",
-      "endDate": "2022-07",
+      "endDate": "2023-12",
       "current": false,
-      "description": "Modernized legacy monolith into microservices architecture using Node.js, Angular/React, and AWS ECS.",
+      "description": "Modernized legacy actuarial and billing systems into microservices architecture, supporting reinsurance treaty management, premium calculation, and claims processing workflows.",
       "achievements": [
-        "Modernized legacy monolith into microservices (Node, Angular/React, AWS ECS)",
-        "Optimized data-intensive workflows using advanced algorithms",
-        "Deployed robust CI/CD pipeline using AWS CodePipeline + Jenkins"
+        "Decomposed monolithic Java/Spring Boot application into 12 bounded-context microservices, defining clear service boundaries using DDD aggregate patterns",
+        "Led polyglot modernization: Java 17 for core actuarial engines, Groovy/Grails for rapid internal tooling, Node.js for API gateway and BFF layers",
+        "Built React frontend for treaty management dashboard with real-time premium calculation, replacing legacy JSP/Struts interface",
+        "Identified and resolved critical performance bottlenecks in batch premium calculation pipelines, achieving 4x throughput improvement through query optimization and caching strategies",
+        "Established service boundary contracts using OpenAPI specs and Pact contract testing, enabling independent deployment across 6 engineering teams"
       ],
-      "technologies": ["React", "Angular", "Node.js", "AWS ECS", "PostgreSQL", "MongoDB"],
+      "technologies": ["Java", "Spring Boot", "Groovy", "Grails", "React", "Node.js", "AWS ECS", "PostgreSQL", "MongoDB", "Redis"],
       "level": 4
     },
     {
       "id": "deveric-2019",
       "company": "Deveric Technologies (Freelance)",
-      "role": "Lead Software Engineer",
+      "role": "Founder & Principal Consultant",
       "type": "Lead",
       "location": "Nairobi, Kenya / Remote",
       "startDate": "2019-01",
       "endDate": "2022-02",
       "current": false,
-      "description": "Delivered fintech and e-commerce solutions for local businesses across Kenya using MEAN/MERN stack.",
+      "description": "Founded consultancy and mentorship initiative, delivering production systems for local businesses while mentoring 15+ engineers (6+ to advanced levels) in software architecture, DevOps, and system design.",
       "achievements": [
-        "Delivered fintech and e-commerce solutions for local businesses across Kenya",
-        "Built scalable C2B & B2B SaaS products with REST/GraphQL APIs and Redis caching",
-        "Architected payment platform integrations with multiple PSPs and multi-currency support",
-        "Mentored junior developers in data structures and DevOps best practices"
+        "Founded Deveric mentorship initiative (2019–present): 15+ engineers mentored across career stages, 6+ advanced to senior/lead roles through structured curriculum covering system design, algorithms, and production engineering",
+        "Delivered 10+ production projects across fintech, e-commerce, and logistics for Kenyan SMBs using MEAN/MERN stack with REST/GraphQL APIs and Redis caching",
+        "Mentees collectively earned 80+ validated technical certifications across AWS, Azure, GCP, AI/ML, and blockchain",
+        "Architected payment platform integrations with M-Pesa, multiple PSPs, and multi-currency support for cross-border transactions"
       ],
-      "technologies": ["React", "Node.js", "MongoDB", "PostgreSQL", "Redis", "AWS", "GCP"],
+      "technologies": ["React", "Node.js", "Go", "Rust", "FastAPI", "MongoDB", "PostgreSQL", "Redis", "AWS", "GCP"],
       "level": 4
     },
     {
@@ -120,13 +108,13 @@
       "startDate": "2018-01",
       "endDate": "2019-01",
       "current": false,
-      "description": "Contributed to telecommunications network management tools and product development lifecycle.",
+      "description": "Contributed to petabyte-scale video streaming and telecommunications network management infrastructure, working on low-level systems for content delivery and OSS/BSS workflows.",
       "achievements": [
-        "Contributed to telecommunications network management tools",
-        "Developed features supporting OSS/BSS workflows including provisioning",
-        "Introduced CI/CD pipelines using Jenkins and Docker"
+        "Developed low-level C and assembly modules for video packet processing in petabyte-scale streaming infrastructure, optimizing for throughput and minimal latency",
+        "Built reactive stream processing pipelines for real-time network telemetry, enabling sub-second anomaly detection across distributed CDN nodes",
+        "Designed fault-tolerant architecture patterns for content delivery, implementing circuit breakers and retry mechanisms that maintained 99.95% uptime during peak traffic"
       ],
-      "technologies": ["Python", "Java", "PostgreSQL", "Jenkins", "Docker"],
+      "technologies": ["C", "Assembly", "Java", "Python", "PostgreSQL", "RabbitMQ", "Kubernetes"],
       "level": 3
     },
     {
@@ -138,13 +126,13 @@
       "startDate": "2015-12",
       "endDate": "2018-01",
       "current": false,
-      "description": "Built and enhanced security integrations for real-time vulnerability scanning.",
+      "description": "Built security scanning platform features, contributing to the decomposition of a J2EE monolith into microservices while developing CI/CD integrations for enterprise DevSecOps workflows.",
       "achievements": [
-        "Built and enhanced security integrations for real-time vulnerability scanning",
-        "Re-architected core modules using Spring Boot, Docker, and Kubernetes",
-        "Collaborated with security teams to fix CVEs using TDD"
+        "Designed and implemented HATEOAS-compliant REST APIs using Spring Boot, JPA/Hibernate, and C#/.NET, supporting multi-tenant scan orchestration with role-based access control",
+        "Built CI/CD DevSecOps integrations (Jenkins, GitLab CI, Azure DevOps) enabling customers to embed security scanning directly into their build pipelines",
+        "Contributed to OWASP Top 10 and NIST SSDF compliance features, implementing automated policy engines that mapped scan findings to regulatory requirements"
       ],
-      "technologies": ["Java", "Spring Boot", "Python", "Docker", "Kubernetes", "C#"],
+      "technologies": ["Java", "Spring Boot", "JPA", "Hibernate", "C#", ".NET", "Python", "Docker", "Kubernetes", "Jenkins", "GitLab"],
       "level": 3
     },
     {
@@ -156,11 +144,10 @@
       "startDate": "2013-09",
       "endDate": "2014-05",
       "current": false,
-      "description": "Contributed to WebSphere Portlet Factory test automation and build pipeline optimization.",
+      "description": "Contributed to IBM Web Experience Factory (formerly WebSphere Portlet Factory) test automation and build pipeline optimization, establishing test-automation-first discipline.",
       "achievements": [
-        "Contributed to WebSphere Portlet Factory test automation",
-        "Improved regression coverage and reduced manual QA",
-        "Optimized build pipelines to accelerate release schedules"
+        "Built automated regression test suites for IBM Web Experience Factory, establishing test-automation-first discipline that reduced manual QA cycles by 40% and accelerated release schedules",
+        "Optimized Ant/Maven build pipelines with parallelized test execution and incremental compilation, cutting build times by 30%"
       ],
       "technologies": ["Java", "Ant", "Maven", "Jenkins"],
       "level": 1
@@ -175,12 +162,29 @@
       "startDate": "2011-09",
       "endDate": "2015-05",
       "honors": [
-        "Microsoft Scholarship Recipient (2012-2013)",
-        "Google Scholarship Recipient (2011-2012)",
-        "Dean's List (2011-2015)",
+        "Microsoft Scholarship Recipient (2012-2013) — Awarded for academic excellence and demonstrated potential in software engineering",
+        "Google Scholarship Recipient (2011-2012) — Awarded for outstanding achievement in computer science coursework and research",
+        "Dean's List: Fall 2010, Spring 2011, Fall 2011, Spring 2012, Spring 2013, Fall 2013, Spring 2014, Fall 2014, Spring 2015",
         "Omicron Delta Kappa (ODK) Honor Society"
       ],
       "level": 0
+    }
+  ],
+  "achievements": [
+    {
+      "id": "open-source",
+      "title": "Open Source Contributions",
+      "description": "20+ production-ready public repositories on GitHub across Rust, Go, TypeScript, Python, and Java — spanning distributed systems, ML pipelines, fintech, and developer tooling"
+    },
+    {
+      "id": "mentorship",
+      "title": "Mentorship & Teaching",
+      "description": "Founded Deveric mentorship initiative (2019–present): 15+ engineers mentored, 6+ advanced to senior/lead roles. CodePath.org Volunteer Student Teacher (May–Aug 2024): led Advanced TIP103 cohort in algorithms and data structures. Technical writing at developer.ericgitangu.com."
+    },
+    {
+      "id": "certifications",
+      "title": "Certifications",
+      "description": "80+ validated technical certifications across AWS, Azure, GCP, AI/ML, blockchain (Solidity/Polygon/Stellar), and application security — demonstrating continuous learning across the full stack."
     }
   ]
 }

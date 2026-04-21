@@ -19,7 +19,7 @@ export default function Summary() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A decade of building scalable systems across fintech, telecom, and enterprise platforms
+            A decade shipping event-driven distributed systems across healthcare ML, fintech, energy access, and government-scale infrastructure
           </p>
         </motion.div>
 
@@ -106,6 +106,9 @@ export default function Summary() {
               "Python",
               "Node.js",
               "Java",
+              "Rust",
+              "Go",
+              "Clojure",
               "PostgreSQL",
               "MongoDB",
               "Redis",

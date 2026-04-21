@@ -33,7 +33,7 @@ export default function Timeline() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A journey through fintech, telecom, and enterprise platforms
+            A journey through healthcare ML, fintech, energy access, and government-scale infrastructure
           </p>
         </motion.div>
 
@@ -155,6 +155,34 @@ export default function Timeline() {
               </Card>
             </div>
           </motion.div>
+
+          {/* Honors & Achievements */}
+          {experienceData.achievements && experienceData.achievements.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="relative md:pl-[50%] mt-6"
+            >
+              <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-accent border-4 border-background md:-translate-x-1/2 top-6 z-10" />
+              <div className="ml-10 md:ml-0 md:ml-8">
+                <Card className="glass">
+                  <CardContent className="p-6">
+                    <div className="flex flex-col gap-3 items-start">
+                      <Badge className="bg-accent/20 text-accent border-accent/30">Honors & Achievements</Badge>
+                      {experienceData.achievements.map((achievement: { id: string; title: string; description: string }) => (
+                        <div key={achievement.id} className="space-y-1">
+                          <h4 className="font-medium text-sm">{achievement.title}</h4>
+                          <p className="text-muted-foreground text-sm">{achievement.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>
