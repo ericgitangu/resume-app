@@ -136,16 +136,16 @@ export default function Timeline() {
           >
             <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-accent border-4 border-background md:-translate-x-1/2 top-6 z-10" />
             <div className="ml-10 md:ml-0 md:mr-8">
-              <Card className="glass">
-                <CardContent className="p-6">
-                  <div className="flex flex-col gap-2 md:items-end items-start">
+              <Card className="glass overflow-hidden">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex flex-col gap-2 md:items-end items-start min-w-0 w-full">
                     <Badge className="bg-accent/20 text-accent border-accent/30">Education</Badge>
-                    <h3 className="text-lg font-semibold">{experienceData.education[0].institution}</h3>
+                    <h3 className="text-lg font-semibold break-words">{experienceData.education[0].institution}</h3>
                     <p className="text-primary font-medium">{experienceData.education[0].degree}</p>
                     <p className="text-muted-foreground text-sm">Minor: {experienceData.education[0].minor}</p>
-                    <div className="flex flex-wrap gap-2 md:justify-end mt-2">
+                    <div className="flex flex-col gap-2 w-full mt-2">
                       {experienceData.education[0].honors.map((honor) => (
-                        <Badge key={honor} variant="outline" className="text-xs">
+                        <Badge key={honor} variant="outline" className="text-xs whitespace-normal text-left break-words max-w-full h-auto py-1">
                           {honor}
                         </Badge>
                       ))}
@@ -167,14 +167,14 @@ export default function Timeline() {
             >
               <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-accent border-4 border-background md:-translate-x-1/2 top-6 z-10" />
               <div className="ml-10 md:ml-0 md:ml-8">
-                <Card className="glass">
-                  <CardContent className="p-6">
-                    <div className="flex flex-col gap-3 items-start">
+                <Card className="glass overflow-hidden">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex flex-col gap-3 items-start min-w-0 w-full">
                       <Badge className="bg-accent/20 text-accent border-accent/30">Honors & Achievements</Badge>
                       {experienceData.achievements.map((achievement: { id: string; title: string; description: string }) => (
-                        <div key={achievement.id} className="space-y-1">
+                        <div key={achievement.id} className="space-y-1 min-w-0 w-full">
                           <h4 className="font-medium text-sm">{achievement.title}</h4>
-                          <p className="text-muted-foreground text-sm">{achievement.description}</p>
+                          <p className="text-muted-foreground text-sm break-words">{achievement.description}</p>
                         </div>
                       ))}
                     </div>
