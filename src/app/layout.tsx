@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
+import { combinedSchema } from "@/lib/structured-data";
 import "./globals.css";
 
 const geist = Geist({
@@ -84,17 +85,29 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Eric Gitangu | Software Engineer Architect",
     description:
       "Full-stack Software Engineer Architect with 10+ years of backend-focused expertise. Based in Nairobi, Kenya.",
-    images: ["/favicon.png"],
+    images: ["/og.png"],
     creator: "@ericgitangu",
+    site: "@ericgitangu",
   },
   alternates: {
     canonical: "https://resume.ericgitangu.com",
   },
   category: "technology",
+  applicationName: "Eric Gitangu — Resume",
+  referrer: "origin-when-cross-origin",
+  formatDetection: { email: false, address: false, telephone: false },
+  verification: {
+    // Drop google-site-verification tokens here when claimed in Search Console
+    // google: "...",
+    // yandex: "...",
+  },
+  other: {
+    "format-detection": "telephone=no",
+  },
 };
 
 export default function RootLayout({
@@ -106,6 +119,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#6366f1" />
+        {/* JSON-LD structured data — Google rich-results discovery for Person,
+            ProfilePage, and WebSite. Pulled from src/data/*.json so it tracks
+            the visible page content (Google flags divergence). */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(combinedSchema()),
+          }}
+        />
       </head>
       <body
         className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}

@@ -1,44 +1,39 @@
 import { NextResponse } from "next/server";
-import * as fs from "fs";
-import * as path from "path";
+import { buildResumeDocxBuffer } from "@/lib/resume-docx";
+import resume from "@/data/resume.json";
+
+// Dynamically render the resume DOCX from src/data/*.json so edits to the
+// resume / experience / projects / skills data propagate on the next request.
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 export async function GET() {
   try {
-    const docPath = path.join(process.cwd(), "public", "Eric_Gitangu_Resume.docx");
+    const buffer = await buildResumeDocxBuffer();
+    const filename = `${resume.name.replace(/\s+/g, "_")}_Resume.docx`;
 
-    if (!fs.existsSync(docPath)) {
-      return new NextResponse(
-        JSON.stringify({ error: "Resume Word document not available", message: "Please contact Eric directly." }),
-        {
-          status: 404,
-          headers: { "Content-Type": "application/json" }
-        }
-      );
-    }
-
-    const fileBuffer = fs.readFileSync(docPath);
-    const stats = fs.statSync(docPath);
-
-    return new NextResponse(fileBuffer, {
+    return new NextResponse(new Uint8Array(buffer), {
       status: 200,
       headers: {
-        "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        "Content-Length": stats.size.toString(),
-        "Content-Disposition": 'attachment; filename="Eric_Gitangu_Resume.docx"',
-        "Cache-Control": "public, max-age=3600",
-        "X-File-Size": stats.size.toString(),
-        "X-File-Name": "Eric_Gitangu_Resume.docx",
-        "X-File-Type": "word",
+        "Content-Type":
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "Content-Length": buffer.length.toString(),
+        "Content-Disposition": `attachment; filename="${filename}"`,
+        "Cache-Control": "public, max-age=300, must-revalidate",
+        "X-File-Size": buffer.length.toString(),
+        "X-File-Name": filename,
+        "X-File-Type": "docx",
+        "X-Generated-At": new Date().toISOString(),
       },
     });
   } catch (error) {
-    console.error("Word download error:", error);
+    console.error("DOCX render error:", error);
     return new NextResponse(
-      JSON.stringify({ error: "Download failed", message: "An error occurred while downloading the resume." }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" }
-      }
+      JSON.stringify({
+        error: "Render failed",
+        message: error instanceof Error ? error.message : "Unknown error rendering resume DOCX.",
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } },
     );
   }
 }

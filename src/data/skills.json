@@ -132,6 +132,34 @@
       ]
     },
     {
+      "name": ".NET / Microsoft Platform",
+      "skills": [
+        { "name": ".NET 10 / .NET 8+", "level": 82, "years": 2, "certifications": [] },
+        { "name": ".NET 4.5 / Windows Server (legacy)", "level": 80, "years": 3, "certifications": [] },
+        { "name": "ASP.NET Core", "level": 82, "years": 2, "certifications": [] },
+        { "name": "C#", "level": 85, "years": 5, "certifications": [] },
+        { "name": "Entity Framework Core", "level": 80, "years": 2, "certifications": [] },
+        { "name": "MediatR / CQRS", "level": 85, "years": 2, "certifications": [] },
+        { "name": "Polly (retry / circuit breaker)", "level": 82, "years": 2, "certifications": [] },
+        { "name": "FluentValidation", "level": 82, "years": 2, "certifications": [] },
+        { "name": "xUnit / FluentAssertions / Moq", "level": 82, "years": 2, "certifications": [] },
+        { "name": "Playwright .NET", "level": 75, "years": 1, "certifications": [] },
+        { "name": "Serilog", "level": 80, "years": 2, "certifications": [] },
+        { "name": "Scalar / Swagger OpenAPI", "level": 82, "years": 2, "certifications": [] },
+        { "name": "Visual Studio plugin development", "level": 80, "years": 3, "certifications": [] },
+        { "name": "MSIX packaging / signed delivery", "level": 75, "years": 3, "certifications": [] },
+        { "name": "IIS / Windows Server hosting", "level": 78, "years": 3, "certifications": [] },
+        { "name": "Azure App Service", "level": 78, "years": 3, "certifications": [] },
+        { "name": "Azure SQL Database", "level": 75, "years": 3, "certifications": [] },
+        { "name": "Azure Blob Storage", "level": 75, "years": 3, "certifications": [] },
+        { "name": "Azure Key Vault", "level": 72, "years": 2, "certifications": [] },
+        { "name": "Azure Functions", "level": 70, "years": 2, "certifications": [] },
+        { "name": "Azure DevOps Pipelines", "level": 78, "years": 3, "certifications": [] },
+        { "name": "Azure Virtual Machines", "level": 72, "years": 3, "certifications": [] },
+        { "name": "Bicep IaC", "level": 70, "years": 1, "certifications": [] }
+      ]
+    },
+    {
       "name": "Domains",
       "skills": [
         { "name": "Healthcare ML", "level": 82, "years": 2, "certifications": [] },
