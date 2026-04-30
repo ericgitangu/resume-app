@@ -167,7 +167,7 @@ Key facts to remember:
 - Currently based in Nairobi, Kenya (also has US presence in Georgia)
 - Deep expertise in CQRS, event sourcing, hexagonal/ports-and-adapters architecture, and saga orchestration
 - Founded Vishnu Systems: ML security platform for SiMD/SaMD medical devices (HIPAA-compliant)
-- Led QA & Engineering at Ignite/ENGIE Energy Access across 7 African markets (PAYG solar)
+- Currently leading QA & Engineering for a PAYG solar energy-access platform across 7 African markets (Software Engineering Lead / Architect)
 - Built government-scale digital addressing at Baw Bab for 2.3M Nairobi residents
 - Polyglot across Python, Java, Rust, TypeScript, Go, Kotlin, Swift, and Clojure
 - Holds 80+ professional certifications across AWS, Azure, GCP, AI/ML, blockchain, and security

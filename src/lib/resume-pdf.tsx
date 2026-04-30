@@ -116,7 +116,6 @@ export function ResumeDocument() {
             <View style={styles.jobHeader}>
               <Text style={styles.jobTitle}>
                 {p.role} — {p.company}
-                {p.subtitle ? ` ${p.subtitle}` : ""}
               </Text>
               <Text style={styles.jobDates}>
                 {fmtDate(p.startDate)} – {p.current ? "Present" : fmtDate(p.endDate)}
