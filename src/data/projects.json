@@ -251,6 +251,18 @@
       "github": "https://github.com/ericgitangu/paul-ledama-memorial",
       "demo": "https://paul-ledama-memorial.fly.dev",
       "featured": false
+    },
+    {
+      "id": "pesacore-api",
+      "name": "PesaCore API — .NET 10 Fintech Platform",
+      "description": "ASP.NET Core 10 / Clean Architecture fintech API exploring modern .NET idioms — CQRS via MediatR, Polly retry + circuit breaker, FluentValidation, EF Core, OpenTelemetry, Serilog, and an IIS / Windows Server hosting profile",
+      "longDescription": "Lightweight ASP.NET Core 10 / C# fintech API built as a hands-on .NET fluency signal pinned on the GitHub profile. Demonstrates production-shape modern-.NET idioms: nullable reference types, file-scoped namespaces, records and `required` modifiers, pattern-matching switch expressions. CQRS via MediatR (request/response handlers + idempotency pipeline behavior keyed on `Idempotency-Key` header), Polly retry + circuit breaker policies, FluentValidation at the request boundary, EF Core with SQLite locally and an Azure SQL connection profile for managed-identity auth, OpenTelemetry instrumentation (ASP.NET Core, HttpClient, EF Core, runtime, process) exporting via OTLP, Serilog with correlation-id middleware, and Scalar OpenAPI for interactive docs. Ships an IIS hosting profile (`web.config`, `IISProfile.pubxml`, `appsettings.IIS.json`) so the same binary can be hosted on predominantly-on-prem Windows Server environments — bridging the .NET 4.5 / Windows Server era at Veracode to the current .NET LTS ecosystem. Tests use xUnit + FluentAssertions + Moq with `Microsoft.AspNetCore.Mvc.Testing` (WebApplicationFactory) and EF Core InMemory.",
+      "technologies": ["C#", ".NET 10", "ASP.NET Core", "Clean Architecture", "MediatR", "CQRS", "Polly", "FluentValidation", "Entity Framework Core", "AutoMapper", "Dapper", "Serilog", "OpenTelemetry", "Scalar OpenAPI", "xUnit", "FluentAssertions", "WebApplicationFactory", "IIS / Windows Server", "Azure SQL", "Managed Identity"],
+      "category": "Fintech",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/pesacore-api",
+      "demo": null,
+      "featured": true
     }
   ],
   "categories": ["All", "AI/ML", "Enterprise", "Content", "Portfolio", "Fintech", "AgriTech", "Blockchain", "E-commerce", "Security/AppSec"]

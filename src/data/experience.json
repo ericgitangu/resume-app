@@ -16,9 +16,12 @@
         "Designed and deployed observability stack (OpenTelemetry, Prometheus, Grafana, Jaeger, ELK) across 7 African market deployments, cutting mean-time-to-detection from hours to minutes",
         "Built and maintained CI/CD pipelines integrating automated security scanning, performance benchmarks, and contract testing across microservices",
         "Drove cross-functional alignment between product, engineering, and data teams to establish quality gates and SLA-driven release criteria",
-        "Introduced chaos engineering practices and load testing frameworks (K6, Locust) to validate system resilience under peak PAYG billing cycles"
+        "Introduced chaos engineering practices and load testing frameworks (K6, Locust) to validate system resilience under peak PAYG billing cycles",
+        "Designed shared RabbitMQ-backed bounded contexts (Payment, Token, Subscription) as a reusable platform layer serving all product teams; decoupled synchronous PAYG processing, eliminated peak-load timeouts, unblocked release cadence from 2 to 12+ deploys per week — a paved-roads / golden-paths platform pattern adopted across the engineering org",
+        "Delivered 900+ end-to-end automated scenarios across payments, IoT provisioning, token lifecycle, and subscription flows; reduced regression from 3 days to 45 minutes; enabled continuous deployment across 7 markets",
+        "Line-managed 4 engineers across Kenya, Uganda, and Tanzania — 2 promoted to senior within tenure; enforced architectural standards and OWASP Top 10 secure coding through structured code reviews"
       ],
-      "technologies": ["Python", "Ruby", "Node.js", "PostgreSQL", "Redis", "Kafka", "AWS", "OpenTelemetry", "Playwright", "Cypress", "ELK", "Prometheus", "Grafana", "Jaeger", "Redshift", "Kubernetes"],
+      "technologies": ["Python", "Ruby", "Node.js", "PostgreSQL", "Redis", "Kafka", "RabbitMQ", "AWS", "OpenTelemetry", "Playwright", "Cypress", "ELK", "Prometheus", "Grafana", "Jaeger", "Redshift", "Kubernetes", "K6", "Locust"],
       "level": 5
     },
     {
@@ -36,9 +39,12 @@
         "Implemented high-performance Rust+PyO3 modules for binary analysis and SBOM generation, achieving 50-100x throughput improvement over pure Python equivalents",
         "Built ML pipelines combining CNNs for medical image metadata analysis, RAG for compliance document retrieval, and GNNs for dependency-graph vulnerability propagation",
         "Developed compliance automation tooling mapping scan results to HIPAA, FDA 21 CFR Part 11, and IEC 62304 requirements with automated evidence generation",
-        "Delivered full MLOps stack: Airflow orchestration, MLflow experiment tracking, SageMaker/Vertex AI training, and A/B model deployment with canary rollouts"
+        "Delivered full MLOps stack: Airflow orchestration, MLflow experiment tracking, SageMaker/Vertex AI training, and A/B model deployment with canary rollouts",
+        "Implemented Circuit Breaker + exponential backoff in Go to absorb burst load on GPU evaluation workers — custom half-open state machine equivalent of Resilience4j (5s initial interval, 2× multiplier, 60s ceiling) with async Kafka drain on open-circuit; zero customer-facing timeouts during a live degradation event, circuit self-healed without manual intervention",
+        "Productionised AI-assisted development tooling — integrated LLM APIs (OpenAI, Anthropic Claude) for automated compliance documentation generation, reducing manual report assembly to zero; foundation for AI-assisted DevOps tooling experimentation",
+        "Shipped idempotent SQS / SNS / Kinesis + Kafka pipelines with DLQs and exactly-once semantics; full CloudWatch + X-Ray observability and customer-facing SLAs"
       ],
-      "technologies": ["Python", "FastAPI", "Rust", "PyO3", "Go", "React", "Node.js", "TensorFlow", "PyTorch", "Airflow", "MLflow", "AWS Lambda", "DynamoDB", "Kafka", "Kubernetes", "Docker"],
+      "technologies": ["Python", "FastAPI", "Rust", "PyO3", "Go", "React", "Node.js", "TensorFlow", "PyTorch", "Airflow", "MLflow", "AWS Lambda", "DynamoDB", "Kafka", "Kubernetes", "Docker", "OpenAI", "Anthropic Claude", "SQS", "SNS", "Kinesis", "CloudWatch", "X-Ray"],
       "level": 5
     },
     {
@@ -55,9 +61,11 @@
         "Led a 5-engineer team delivering a digital address platform that assigned formal addresses to 2.3 million Nairobi residents, integrating with Kenya's national addressing initiative",
         "Architected computer-vision and GIS pipeline using Google Cloud Vision for address-plate recognition, PostGIS for spatial queries, and Google Cloud Pub/Sub for event-driven geocoding workflows",
         "Built full-stack delivery: React/Next.js dashboard for administrators, Express API gateway, MongoDB document store, and GCP Cloud Run deployment with auto-scaling",
-        "Applied advanced geospatial algorithms (Dijkstra's, A*) for last-mile route optimization, reducing delivery time by 35% in pilot zones"
+        "Applied advanced geospatial algorithms (Dijkstra's, A*) for last-mile route optimization, reducing delivery time by 35% in pilot zones",
+        "Initial production deployment was on Azure (App Service, Azure SQL Database, Azure Blob Storage, Azure DevOps CI/CD pipelines, with Azure Virtual Machines for runtime management during the on-premises-equivalent phase) before evolving to a hybrid Azure + GCP Cloud Run model — a direct precedent for predominantly on-prem Windows Server environments evolving toward hybrid cloud",
+        "Designed a Backend-for-Frontend (BFF) platform layer in Go that separated field-agent mobile from county-government web surfaces; defined OpenAPI specs, RESTful APIs, and Kafka event pipelines as shared platform standards adopted by Nairobi County Government as official infrastructure"
       ],
-      "technologies": ["React", "Next.js", "Node.js", "Express", "Python", "Kafka", "MongoDB", "Google Cloud Vision", "Google Cloud Pub/Sub", "GCP Cloud Run", "PostGIS", "Docker", "Kubernetes"],
+      "technologies": ["React", "Next.js", "Node.js", "Express", "Go", "Python", "Kafka", "MongoDB", "Google Cloud Vision", "Google Cloud Pub/Sub", "GCP Cloud Run", "PostGIS", "Docker", "Kubernetes", "Azure App Service", "Azure SQL Database", "Azure Blob Storage", "Azure DevOps", "Azure Virtual Machines", "OpenAPI"],
       "level": 5
     },
     {
@@ -130,9 +138,12 @@
       "achievements": [
         "Designed and implemented HATEOAS-compliant REST APIs using Spring Boot, JPA/Hibernate, and C#/.NET, supporting multi-tenant scan orchestration with role-based access control",
         "Built CI/CD DevSecOps integrations (Jenkins, GitLab CI, Azure DevOps) enabling customers to embed security scanning directly into their build pipelines",
-        "Contributed to OWASP Top 10 and NIST SSDF compliance features, implementing automated policy engines that mapped scan findings to regulatory requirements"
+        "Contributed to OWASP Top 10 and NIST SSDF compliance features, implementing automated policy engines that mapped scan findings to regulatory requirements",
+        "Owned the Veracode Visual Studio plugin (.NET 4.5 / Windows platform component) end-to-end — enabling developers to run SAST analysis at file, project, solution, or pipeline granularity directly inside Visual Studio, or to inject the .NET backend into enterprise CI/CD systems for shift-left secure coding. The entire platform stack ran on-premises on Windows Server (2012/2016 era), the most direct precedent in this resume to predominantly-on-prem Windows Server platforms",
+        "Led the platform upgrade to enforce TLS 1.2 across the .NET 4.5 plugin and on-premises Windows Server backend services — a compliance-critical delivery for enterprise customers in regulated environments (financial services, healthcare, government), requiring coordinated changes across the plugin, client-facing APIs, and on-prem server configuration",
+        "Owned the full SDLC and continuous-delivery pipeline for plugin releases — produced MSIX packaging and signed delivery artefacts, managed versioning and backward compatibility for clients on mixed .NET Framework versions, and rollout sequencing across a large installed base of Fortune 500 customers running on-prem Windows Server"
       ],
-      "technologies": ["Java", "Spring Boot", "JPA", "Hibernate", "C#", ".NET", "Python", "Docker", "Kubernetes", "Jenkins", "GitLab"],
+      "technologies": ["Java", "Spring Boot", "JPA", "Hibernate", "C#", ".NET", ".NET 4.5", "ASP.NET", "Visual Studio SDK", "MSIX", "Windows Server 2012/2016", "Python", "Docker", "Kubernetes", "Jenkins", "GitLab", "Azure DevOps", "OWASP Top 10", "NIST SSDF"],
       "level": 3
     },
     {

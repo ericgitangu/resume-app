@@ -1,44 +1,41 @@
+import { createElement } from "react";
 import { NextResponse } from "next/server";
-import * as fs from "fs";
-import * as path from "path";
+import { renderToBuffer } from "@react-pdf/renderer";
+import { ResumeDocument } from "@/lib/resume-pdf";
+import resume from "@/data/resume.json";
+
+// Dynamically render the resume PDF from src/data/*.json so edits to the
+// resume / experience / projects / skills data propagate on the next request.
+// No more stale static file in public/.
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 export async function GET() {
   try {
-    const pdfPath = path.join(process.cwd(), "public", "Eric_Gitangu_Resume.pdf");
+    const buffer = await renderToBuffer(createElement(ResumeDocument));
+    const filename = `${resume.name.replace(/\s+/g, "_")}_Resume.pdf`;
 
-    if (!fs.existsSync(pdfPath)) {
-      return new NextResponse(
-        JSON.stringify({ error: "Resume PDF not available", message: "Please contact Eric directly." }),
-        {
-          status: 404,
-          headers: { "Content-Type": "application/json" }
-        }
-      );
-    }
-
-    const fileBuffer = fs.readFileSync(pdfPath);
-    const stats = fs.statSync(pdfPath);
-
-    return new NextResponse(fileBuffer, {
+    return new NextResponse(new Uint8Array(buffer), {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Length": stats.size.toString(),
-        "Content-Disposition": 'attachment; filename="Eric_Gitangu_Resume.pdf"',
-        "Cache-Control": "public, max-age=3600",
-        "X-File-Size": stats.size.toString(),
-        "X-File-Name": "Eric_Gitangu_Resume.pdf",
+        "Content-Length": buffer.length.toString(),
+        "Content-Disposition": `attachment; filename="${filename}"`,
+        "Cache-Control": "public, max-age=300, must-revalidate",
+        "X-File-Size": buffer.length.toString(),
+        "X-File-Name": filename,
         "X-File-Type": "pdf",
+        "X-Generated-At": new Date().toISOString(),
       },
     });
   } catch (error) {
-    console.error("PDF download error:", error);
+    console.error("PDF render error:", error);
     return new NextResponse(
-      JSON.stringify({ error: "Download failed", message: "An error occurred while downloading the resume." }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" }
-      }
+      JSON.stringify({
+        error: "Render failed",
+        message: error instanceof Error ? error.message : "Unknown error rendering resume PDF.",
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } },
     );
   }
 }
