@@ -99,7 +99,6 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
       new Paragraph({
         children: [
           new TextRun({ text: `${p.role} — ${p.company}`, bold: true, size: 21 }),
-          ...(p.subtitle ? [new TextRun({ text: ` ${p.subtitle}`, size: 21 })] : []),
           new TextRun({
             text: `   ${fmtDate(p.startDate)} – ${p.current ? "Present" : fmtDate(p.endDate)} · ${p.location}`,
             size: 18,
