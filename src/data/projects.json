@@ -487,6 +487,38 @@
       "github": "https://github.com/ericgitangu/pesacore-api",
       "demo": null,
       "featured": true
+    },
+    {
+      "id": "agent-plane",
+      "name": "AgentPlane — AI-Powered JIRA Board",
+      "description": "Full-stack AI project management tool — describe an epic in natural language and a LangGraph multi-agent pipeline (Decomposer → Estimator → Assigner) breaks it into estimated, assigned sub-issues streamed back via SSE onto a Plane-style Kanban board.",
+      "longDescription": "Three-service monorepo combining a Plane-style issue tracker (FastAPI + CockroachDB) with a LangGraph supervisor pipeline and a Next.js 14 frontend. Three agents run in sequence: DecomposerAgent proposes 3–7 sub-issues using Anthropic forced tool-use, EstimatorAgent assigns Fibonacci story points with Fibonacci clamping, AssignerAgent recommends owners from the skills-tagged member roster and guards against hallucinated IDs. Results stream to the UI per-worker via SSE using LangGraph’s astream_events; every run is logged to MongoDB Atlas for replay and history diffing. Redis (Upstash, serverless free tier) enforces a 10 req/min/workspace sliding-window rate limit to cap Anthropic API spend. CockroachDB holds the workspace → project → issue hierarchy with self-referential parent_id for epics; LangGraph AsyncPostgresSaver checkpoints each worker so partial failures resume rather than restart. Deployed: Next.js 14 frontend on Vercel, FastAPI services on Fly.io free tier, CockroachDB Serverless (5 GB free), MongoDB Atlas M0 (512 MB free), Upstash Redis (10k req/day free).",
+      "technologies": [
+        "Python 3.12",
+        "FastAPI",
+        "LangGraph",
+        "LangChain",
+        "Anthropic",
+        "Next.js 14",
+        "TypeScript",
+        "TanStack Query",
+        "CockroachDB",
+        "MongoDB Atlas",
+        "Redis Upstash",
+        "SQLAlchemy 2.0",
+        "Alembic",
+        "Pydantic v2",
+        "SSE",
+        "structlog",
+        "OpenTelemetry",
+        "Docker Compose",
+        "Vercel"
+      ],
+      "category": "AI/ML",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/agentplane",
+      "demo": "https://agent-plane.ericgitangu.com",
+      "featured": true
     }
   ],
   "categories": [
