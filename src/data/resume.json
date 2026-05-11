@@ -18,13 +18,14 @@
     "github": "https://github.com/ericgitangu",
     "portfolio": "https://developer.ericgitangu.com"
   },
-  "summary": "Software Engineering Lead and Architect with 10+ years shipping event-driven distributed systems across healthcare ML, fintech, energy access, and government-scale infrastructure. Deep expertise in CQRS, event sourcing, hexagonal/ports-and-adapters, and saga orchestration — applied at Vishnu Systems (ML security for SiMD/SaMD medical devices), a current Software Engineering Lead / Architect role driving PAYG solar platform reliability across 7 African markets, Baw Bab Technologies (digital addressing for 2.3M Nairobi residents), and Unicorns (multi-tenant SaaS super-app). Polyglot across Python, Java, Rust, TypeScript, Go, Kotlin, Swift, and Clojure. Founded Deveric mentorship initiative (15+ engineers mentored) and hold 80+ validated technical certifications.",
+  "summary": "Software Engineering Lead and Architect with 10+ years shipping event-driven distributed systems across healthcare ML, fintech, energy access, and government-scale infrastructure. Deep expertise in CQRS, event sourcing, hexagonal/ports-and-adapters, and saga orchestration — applied at Vishnu Systems (ML security for SiMD/SaMD medical devices), a current Software Engineering Lead / Architect role driving PAYG solar platform reliability across 7 African markets, Baw Bab Technologies (digital addressing for 2.3M Nairobi residents), and Unicorns (multi-tenant SaaS super-app). Polyglot across Python, Java, C#, Rust, TypeScript, Go, Kotlin, Swift, and Clojure — with hands-on .NET 10 / ASP.NET Core fintech work (PesaCore) bridging the .NET 4.5 / Windows Server era at Veracode to the modern LTS ecosystem. Founded Deveric mentorship initiative (15+ engineers mentored) and hold 80+ validated technical certifications.",
   "highlights": [
     "10+ years shipping distributed systems at scale",
     "Healthcare ML & medical device security (Vishnu Systems)",
     "Fintech & PAYG solar across 7 African markets",
     "Government-scale digital addressing (2.3M residents)",
-    "Polyglot: Python, Java, Rust, TypeScript, Go, Kotlin, Swift, Clojure",
+    "Polyglot: Python, Java, C#, Rust, TypeScript, Go, Kotlin, Swift, Clojure",
+    ".NET 10 / ASP.NET Core fintech (PesaCore) + .NET 4.5 / Windows Server legacy (Veracode)",
     "80+ certifications | 15+ engineers mentored"
   ],
   "yearsOfExperience": 10,
