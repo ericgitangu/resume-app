@@ -112,7 +112,7 @@
       "category": "AI/ML",
       "year": 2026,
       "github": "https://github.com/ericgitangu/pawa-cloud",
-      "demo": "https://pawacloud-web.fly.dev",
+      "demo": "https://pawacloud-web.vercel.app",
       "featured": true
     },
     {
@@ -216,7 +216,7 @@
       "category": "Enterprise",
       "year": 2026,
       "github": "https://github.com/ericgitangu/bsd-engine",
-      "demo": "https://bsd-engine-web.fly.dev",
+      "demo": "https://bsd-engine-web.vercel.app",
       "featured": false
     },
     {
@@ -260,7 +260,7 @@
       "category": "Security/AppSec",
       "year": 2026,
       "github": "https://github.com/ericgitangu/secure-messenger-desktop",
-      "demo": "https://secure-messenger-desktop.fly.dev",
+      "demo": "https://github.com/ericgitangu/secure-messenger-desktop",
       "featured": true
     },
     {
@@ -318,7 +318,7 @@
       "category": "Enterprise",
       "year": 2026,
       "github": null,
-      "demo": "https://powerhub-qa-mobile.fly.dev",
+      "demo": "https://powerhub-qa.vercel.app",
       "featured": true
     },
     {
@@ -336,7 +336,7 @@
       "category": "Content",
       "year": 2025,
       "github": null,
-      "demo": "https://deveric-blog.fly.dev",
+      "demo": null,
       "featured": true
     },
     {
@@ -517,7 +517,7 @@
       "category": "Portfolio",
       "year": 2026,
       "github": "https://github.com/ericgitangu/paul-ledama-memorial",
-      "demo": "https://paul-ledama-memorial.fly.dev",
+      "demo": "https://paulledamasunset.vercel.app",
       "featured": false
     }
   ],
