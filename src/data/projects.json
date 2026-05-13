@@ -2,9 +2,9 @@
   "projects": [
     {
       "id": "agent-plane",
-      "name": "AgentPlane — AI-Powered JIRA Board",
-      "description": "Full-stack AI project management tool — describe an epic in natural language and a LangGraph multi-agent pipeline (Decomposer → Estimator → Assigner) breaks it into estimated, assigned sub-issues streamed back via SSE onto a Plane-style Kanban board.",
-      "longDescription": "Three-service monorepo combining a Plane-style issue tracker (FastAPI + CockroachDB) with a LangGraph supervisor pipeline and a Next.js 14 frontend. Three agents run in sequence: DecomposerAgent proposes 3–7 sub-issues using Anthropic forced tool-use, EstimatorAgent assigns Fibonacci story points with Fibonacci clamping, AssignerAgent recommends owners from the skills-tagged member roster and guards against hallucinated IDs. Results stream to the UI per-worker via SSE using LangGraph’s astream_events; every run is logged to MongoDB Atlas for replay and history diffing. Redis (Upstash, serverless free tier) enforces a 10 req/min/workspace sliding-window rate limit to cap Anthropic API spend. CockroachDB holds the workspace → project → issue hierarchy with self-referential parent_id for epics; LangGraph AsyncPostgresSaver checkpoints each worker so partial failures resume rather than restart. Deployed: Next.js 14 frontend on Vercel, FastAPI services on Fly.io free tier, CockroachDB Serverless (5 GB free), MongoDB Atlas M0 (512 MB free), Upstash Redis (10k req/day free).",
+      "name": "AgentPlane \u2014 AI-Powered JIRA Board",
+      "description": "Full-stack AI project management tool \u2014 describe an epic in natural language and a LangGraph multi-agent pipeline (Decomposer \u2192 Estimator \u2192 Assigner) breaks it into estimated, assigned sub-issues streamed back via SSE onto a Plane-style Kanban board.",
+      "longDescription": "Three-service monorepo combining a Plane-style issue tracker (FastAPI + CockroachDB) with a LangGraph supervisor pipeline and a Next.js 14 frontend. Three agents run in sequence: DecomposerAgent proposes 3\u20137 sub-issues using Anthropic forced tool-use, EstimatorAgent assigns Fibonacci story points with Fibonacci clamping, AssignerAgent recommends owners from the skills-tagged member roster and guards against hallucinated IDs. Results stream to the UI per-worker via SSE using LangGraph\u2019s astream_events; every run is logged to MongoDB Atlas for replay and history diffing. Redis (Upstash, serverless free tier) enforces a 10 req/min/workspace sliding-window rate limit to cap Anthropic API spend. CockroachDB holds the workspace \u2192 project \u2192 issue hierarchy with self-referential parent_id for epics; LangGraph AsyncPostgresSaver checkpoints each worker so partial failures resume rather than restart. Deployed: Next.js 14 frontend on Vercel, FastAPI services on Fly.io free tier, CockroachDB Serverless (5 GB free), MongoDB Atlas M0 (512 MB free), Upstash Redis (10k req/day free).",
       "technologies": [
         "Python 3.12",
         "FastAPI",
@@ -34,9 +34,9 @@
     },
     {
       "id": "pesacore-api",
-      "name": "PesaCore API — .NET 10 Fintech Platform",
-      "description": "ASP.NET Core 10 / Clean Architecture fintech API exploring modern .NET idioms — CQRS via MediatR, Polly retry + circuit breaker, FluentValidation, EF Core, OpenTelemetry, Serilog, and an IIS / Windows Server hosting profile",
-      "longDescription": "Lightweight ASP.NET Core 10 / C# fintech API built as a hands-on .NET fluency signal pinned on the GitHub profile. Demonstrates production-shape modern-.NET idioms: nullable reference types, file-scoped namespaces, records and `required` modifiers, pattern-matching switch expressions. CQRS via MediatR (request/response handlers + idempotency pipeline behavior keyed on `Idempotency-Key` header), Polly retry + circuit breaker policies, FluentValidation at the request boundary, EF Core with SQLite locally and an Azure SQL connection profile for managed-identity auth, OpenTelemetry instrumentation (ASP.NET Core, HttpClient, EF Core, runtime, process) exporting via OTLP, Serilog with correlation-id middleware, and Scalar OpenAPI for interactive docs. Ships an IIS hosting profile (`web.config`, `IISProfile.pubxml`, `appsettings.IIS.json`) so the same binary can be hosted on predominantly-on-prem Windows Server environments — bridging the .NET 4.5 / Windows Server era at Veracode to the current .NET LTS ecosystem. Tests use xUnit + FluentAssertions + Moq with `Microsoft.AspNetCore.Mvc.Testing` (WebApplicationFactory) and EF Core InMemory.",
+      "name": "PesaCore API \u2014 .NET 10 Fintech Platform",
+      "description": "ASP.NET Core 10 / Clean Architecture fintech API exploring modern .NET idioms \u2014 CQRS via MediatR, Polly retry + circuit breaker, FluentValidation, EF Core, OpenTelemetry, Serilog, and an IIS / Windows Server hosting profile",
+      "longDescription": "Lightweight ASP.NET Core 10 / C# fintech API built as a hands-on .NET fluency signal pinned on the GitHub profile. Demonstrates production-shape modern-.NET idioms: nullable reference types, file-scoped namespaces, records and `required` modifiers, pattern-matching switch expressions. CQRS via MediatR (request/response handlers + idempotency pipeline behavior keyed on `Idempotency-Key` header), Polly retry + circuit breaker policies, FluentValidation at the request boundary, EF Core with SQLite locally and an Azure SQL connection profile for managed-identity auth, OpenTelemetry instrumentation (ASP.NET Core, HttpClient, EF Core, runtime, process) exporting via OTLP, Serilog with correlation-id middleware, and Scalar OpenAPI for interactive docs. Ships an IIS hosting profile (`web.config`, `IISProfile.pubxml`, `appsettings.IIS.json`) so the same binary can be hosted on predominantly-on-prem Windows Server environments \u2014 bridging the .NET 4.5 / Windows Server era at Veracode to the current .NET LTS ecosystem. Tests use xUnit + FluentAssertions + Moq with `Microsoft.AspNetCore.Mvc.Testing` (WebApplicationFactory) and EF Core InMemory.",
       "technologies": [
         "C#",
         ".NET 10",
@@ -90,7 +90,7 @@
     },
     {
       "id": "pawa-cloud",
-      "name": "PawaCloud Assistant — AI Cloud Advisor",
+      "name": "PawaCloud Assistant \u2014 AI Cloud Advisor",
       "description": "AI chatbot with Gemini 2.5 Flash, Rust+PyO3 text processing, SSE streaming, Google OAuth, and PostgreSQL persistence on GCP Cloud Run",
       "longDescription": "Full-stack AI advisory chatbot streaming responses in real time via SSE. Python FastAPI backend with Rust+PyO3 text processing (50-100x faster than pure Python), Google Gemini 2.5 Flash for generation, PostgreSQL (Neon) for persistent cross-device chat history, and HMAC-signed Bearer tokens for cross-origin auth. Next.js 16 PWA frontend with TailwindCSS v4, live status dashboard with latency charts and PyO3 benchmarks. Deployed on Cloud Run africa-south1 + Fly.io JNB with Terraform IaC.",
       "technologies": [
@@ -106,7 +106,7 @@
         "Cloud Run",
         "Terraform",
         "Docker",
-        "Fly.io",
+        "Vercel",
         "OAuth"
       ],
       "category": "AI/ML",
@@ -117,9 +117,9 @@
     },
     {
       "id": "unirides",
-      "name": "UniRides — Ride-Sharing Reimagined",
+      "name": "UniRides \u2014 Ride-Sharing Reimagined",
       "description": "Production-grade ride-sharing platform with 5 Google Maps APIs, real-time tracking, Kenyan market-rate pricing, and FastAPI backend on GCP Cloud Run",
-      "longDescription": "Full-stack Uber/Bolt-class ride-sharing app for the Kenyan market. Next.js 16 PWA frontend with satellite map view, Google Places Autocomplete for pickup/dropoff, Directions API route polylines, Distance Matrix live ETA with dynamic polling (3s active, 10s accepted), and client-side fare calculation using post-2025 Kenyan market rates (KES 35/km aligned with Bolt/Uber after the 50% fare increase). FastAPI backend with async SQLAlchemy 2.0, Neon PostgreSQL, Upstash Redis, JWT auth, WebSocket ride tracking, and structured logging. Deployed on Fly.io (frontend) + GCP Cloud Run (backend) with scale-to-zero for $0 idle cost.",
+      "longDescription": "Full-stack Uber/Bolt-class ride-sharing app for the Kenyan market. Next.js 16 PWA frontend with satellite map view, Google Places Autocomplete for pickup/dropoff, Directions API route polylines, Distance Matrix live ETA with dynamic polling (3s active, 10s accepted), and client-side fare calculation using post-2025 Kenyan market rates (KES 35/km aligned with Bolt/Uber after the 50% fare increase). FastAPI backend with async SQLAlchemy 2.0, Neon PostgreSQL, Upstash Redis, JWT auth, WebSocket ride tracking, and structured logging. Deployed on Vercel (frontend) + GCP Cloud Run (backend) with scale-to-zero for $0 idle cost.",
       "technologies": [
         "Next.js",
         "TypeScript",
@@ -132,7 +132,6 @@
         "Redis",
         "WebSocket",
         "GCP Cloud Run",
-        "Fly.io",
         "Docker",
         "NextAuth",
         "Zustand"
@@ -146,7 +145,7 @@
     {
       "id": "lendstream",
       "name": "LendStream",
-      "description": "Polyglot micro-lending platform — Java, Clojure, React, Kafka, CQRS",
+      "description": "Polyglot micro-lending platform \u2014 Java, Clojure, React, Kafka, CQRS",
       "longDescription": "Event-driven micro-lending platform with CQRS, transactional outbox, and dual-mode event broker (Kafka locally, QStash in cloud). Java 21 handles loan lifecycle and SOAP/CBS integration. Clojure handles credit scoring through pure functional pipelines. React/TypeScript dashboard with portfolio analytics. Runs on Docker Compose (15 containers with full APM) or GCP Cloud Run at $0-3/month.",
       "technologies": [
         "Java 21",
@@ -172,7 +171,7 @@
     },
     {
       "id": "vunachain",
-      "name": "Vunachain — AgriTech Contract Farming & Traceability",
+      "name": "Vunachain \u2014 AgriTech Contract Farming & Traceability",
       "description": "Blockchain-backed contract farming and agricultural supply chain traceability platform on AWS serverless with Rust Lambda functions",
       "longDescription": "Event-driven agricultural supply chain platform enabling contract farming agreements, crop traceability from farm to market, and transparent payment settlement. Rust Lambda functions on ARM64/Graviton for cost-efficient compute, EventBridge for workflow orchestration, SQS with DLQs for reliable message processing, S3 for document storage, and RDS PostgreSQL for transactional data. Solidity smart contracts on Celo for immutable contract records. React/TypeScript dashboard for farmers, aggregators, and buyers.",
       "technologies": [
@@ -199,7 +198,7 @@
     },
     {
       "id": "bsd-engine",
-      "name": "BSD Engine — Business Services Diagnostic",
+      "name": "BSD Engine \u2014 Business Services Diagnostic",
       "description": "Full-stack business diagnostics platform with Rust scoring engine, Next.js 16 dashboard, Recharts visualizations, and AI narrative generation via AWS Bedrock",
       "longDescription": "Assesses operational execution maturity across 7 weighted indicators using a 23-question Likert-scale survey. Rust backend scores responses, classifies severity, and generates rich visual reports (radar, bar, area, gap, pie charts) plus AI-powered executive narratives via Bedrock Claude Haiku. Shareable report URLs with OG images, dark-themed print/PDF export with BSD branding.",
       "technologies": [
@@ -210,7 +209,7 @@
         "Recharts",
         "AWS Bedrock",
         "AWS CDK",
-        "Fly.io",
+        "Vercel",
         "Tailwind CSS"
       ],
       "category": "Enterprise",
@@ -221,7 +220,7 @@
     },
     {
       "id": "wave-application",
-      "name": "Wave Application — ML Engineer",
+      "name": "Wave Application \u2014 ML Engineer",
       "description": "Full-stack polyglot submission for Wave's Senior ML Engineer role with Next.js 16 PWA, Rust+PyO3 Lambda backend, and AWS CDK infrastructure",
       "longDescription": "Ships a working product as the application itself. Next.js 16 dashboard with real-time health probes, persistent Upstash Redis submissions, and manual Wave API trigger. Rust+PyO3 backend on AWS Lambda with Bedrock (Claude 3 Haiku sentiment, Titan Embeddings), SageMaker (XLM-RoBERTa 20-language detection), and EventBridge fan-out. 4 CDK stacks, CI/CD with auto-resume submission.",
       "technologies": [
@@ -254,8 +253,7 @@
         "Redux Toolkit",
         "WebSocket",
         "AES-256-GCM",
-        "Prometheus",
-        "Fly.io"
+        "Prometheus"
       ],
       "category": "Security/AppSec",
       "year": 2026,
@@ -313,7 +311,7 @@
         "Tailwind CSS",
         "Chart.js",
         "PostgreSQL",
-        "Fly.io"
+        "Vercel"
       ],
       "category": "Enterprise",
       "year": 2026,
@@ -504,7 +502,7 @@
     {
       "id": "paul-ledama-memorial",
       "name": "Paul Ledama Sekento Memorial",
-      "description": "A loving tribute website celebrating the life of Paul Ledama Sekento (1983–2026) with biography, tributes, gallery, and funeral programme",
+      "description": "A loving tribute website celebrating the life of Paul Ledama Sekento (1983\u20132026) with biography, tributes, gallery, and funeral programme",
       "longDescription": "Memorial website honoring Paul Ledama Sekento, built with Next.js 15, Tailwind CSS v4, and next-themes. Features biography, tributes from family and friends, photo gallery, hymns, and funeral service programme. PWA-enabled with offline support, deployed on Fly.io.",
       "technologies": [
         "Next.js",
@@ -512,7 +510,7 @@
         "Tailwind CSS",
         "next-themes",
         "PWA",
-        "Fly.io"
+        "Vercel"
       ],
       "category": "Portfolio",
       "year": 2026,
