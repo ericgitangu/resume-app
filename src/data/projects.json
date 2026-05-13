@@ -208,7 +208,8 @@
         "TypeScript",
         "Recharts",
         "AWS Bedrock",
-        "AWS CDK",
+        "GCP Cloud Run",
+        "Artifact Registry",
         "Vercel",
         "Tailwind CSS"
       ],
