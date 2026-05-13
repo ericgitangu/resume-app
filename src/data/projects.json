@@ -366,13 +366,13 @@
         "ASP.NET Core",
         "C#",
         "PostgreSQL",
-        "Redis",
-        "Azure"
+        "GCP Cloud Run",
+        "Docker"
       ],
       "category": "Fintech",
       "year": 2024,
-      "github": null,
-      "demo": null,
+      "github": "https://github.com/ericgitangu/PayGoHub",
+      "demo": "https://paygohub-904401126919.africa-south1.run.app",
       "featured": false
     },
     {
