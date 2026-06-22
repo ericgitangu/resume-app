@@ -56,6 +56,7 @@
         "Upstash Redis",
         "OpenTelemetry",
         "Prometheus / Grafana",
+        "Scalar OpenAPI",
         "ReDoc / OpenAPI",
         "GCP Cloud Run",
         "Cloud Build",
@@ -63,9 +64,11 @@
         "Docker",
         "Husky.Net",
         "xUnit",
+        "FluentAssertions",
         "WebApplicationFactory",
         "IIS / Windows Server",
-        "Azure SQL"
+        "Azure SQL",
+        "Managed Identity"
       ],
       "category": "Fintech",
       "year": 2026,
