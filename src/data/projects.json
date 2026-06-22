@@ -1,42 +1,10 @@
 {
   "projects": [
     {
-      "id": "agent-plane",
-      "name": "AgentPlane \u2014 AI-Powered JIRA Board",
-      "description": "Full-stack AI project management tool \u2014 describe an epic in natural language and a LangGraph multi-agent pipeline (Decomposer \u2192 Estimator \u2192 Assigner) breaks it into estimated, assigned sub-issues streamed back via SSE onto a Plane-style Kanban board.",
-      "longDescription": "Three-service monorepo combining a Plane-style issue tracker (FastAPI + CockroachDB) with a LangGraph supervisor pipeline and a Next.js 14 frontend. Three agents run in sequence: DecomposerAgent proposes 3\u20137 sub-issues using Anthropic forced tool-use, EstimatorAgent assigns Fibonacci story points with Fibonacci clamping, AssignerAgent recommends owners from the skills-tagged member roster and guards against hallucinated IDs. Results stream to the UI per-worker via SSE using LangGraph\u2019s astream_events; every run is logged to MongoDB Atlas for replay and history diffing. Redis (Upstash, serverless free tier) enforces a 10 req/min/workspace sliding-window rate limit to cap Anthropic API spend. CockroachDB holds the workspace \u2192 project \u2192 issue hierarchy with self-referential parent_id for epics; LangGraph AsyncPostgresSaver checkpoints each worker so partial failures resume rather than restart. Deployed: Next.js 14 frontend on Vercel, FastAPI services on Fly.io free tier, CockroachDB Serverless (5 GB free), MongoDB Atlas M0 (512 MB free), Upstash Redis (10k req/day free).",
-      "technologies": [
-        "Python 3.12",
-        "FastAPI",
-        "LangGraph",
-        "LangChain",
-        "Anthropic",
-        "Next.js 14",
-        "TypeScript",
-        "TanStack Query",
-        "CockroachDB",
-        "MongoDB Atlas",
-        "Redis Upstash",
-        "SQLAlchemy 2.0",
-        "Alembic",
-        "Pydantic v2",
-        "SSE",
-        "structlog",
-        "OpenTelemetry",
-        "Docker Compose",
-        "Vercel"
-      ],
-      "category": "AI/ML",
-      "year": 2026,
-      "github": "https://github.com/ericgitangu/agentplane",
-      "demo": "https://agent-plane.ericgitangu.com",
-      "featured": true
-    },
-    {
       "id": "pesacore-api",
-      "name": "PesaCore \u2014 .NET 10 Cloud-Native Banking Platform",
-      "description": "Live core-banking platform: ASP.NET Core 10 API + Blazor WebAssembly console (BFF) \u2014 CQRS with idempotent transfers, real Neon Postgres persistence, distributed Upstash Redis cache, OpenTelemetry, ReDoc \u2014 deployed serverless on GCP Cloud Run (scale-to-zero) and portable to on-prem Windows/IIS.",
-      "longDescription": "A deployed, full-stack core-banking platform that began as a modern-.NET fluency signal and grew into a live cloud-native app. A Blazor WebAssembly SPA is fronted by an ASP.NET Core BFF (YARP reverse-proxy) that keeps the API URL and secrets server-side; because GCP Cloud Run scales to zero, durable state lives in Neon Postgres and shared/ephemeral state (distributed idempotency + cache-aside) in Upstash Redis \u2014 both serverless and swappable behind EF Core / IDistributedCache, so the vendor is a deployment choice, not a code dependency. CQRS via MediatR with a pipeline behavior enforcing an X-Idempotency-Key on every mutation (no double-debits across instances), FluentValidation at the request boundary, RFC 7807 problem responses, Polly resilience, OpenTelemetry (\u2192 Collector \u2192 Prometheus \u2192 Grafana) and Serilog with correlation IDs, and a ReDoc/OpenAPI reference at /docs. One container, three front doors: Kestrel in a Linux container (Cloud Run), IIS + ANCM on-prem Windows (web.config, IISProfile.pubxml), or Azure \u2014 the same binary \u2014 bridging the .NET 4.5 / Windows Server era at Veracode to the current .NET LTS ecosystem. Secrets live only in GCP Secret Manager and are read at runtime; 67 tests (xUnit + WebApplicationFactory) gate CI; Husky.Net enforces pre-commit/pre-push.",
+      "name": "PesaCore — .NET 10 Cloud-Native Banking Platform",
+      "description": "Live core-banking platform: ASP.NET Core 10 API + Blazor WebAssembly console (BFF) — CQRS with idempotent transfers, real Neon Postgres persistence, distributed Upstash Redis cache, OpenTelemetry, ReDoc — deployed serverless on GCP Cloud Run (scale-to-zero) and portable to on-prem Windows/IIS.",
+      "longDescription": "A deployed, full-stack core-banking platform that began as a modern-.NET fluency signal and grew into a live cloud-native app. A Blazor WebAssembly SPA is fronted by an ASP.NET Core BFF (YARP reverse-proxy) that keeps the API URL and secrets server-side; because GCP Cloud Run scales to zero, durable state lives in Neon Postgres and shared/ephemeral state (distributed idempotency + cache-aside) in Upstash Redis — both serverless and swappable behind EF Core / IDistributedCache, so the vendor is a deployment choice, not a code dependency. CQRS via MediatR with a pipeline behavior enforcing an X-Idempotency-Key on every mutation (no double-debits across instances), FluentValidation at the request boundary, RFC 7807 problem responses, Polly resilience, OpenTelemetry (→ Collector → Prometheus → Grafana) and Serilog with correlation IDs, and a ReDoc/OpenAPI reference at /docs. One container, three front doors: Kestrel in a Linux container (Cloud Run), IIS + ANCM on-prem Windows (web.config, IISProfile.pubxml), or Azure — the same binary — bridging the .NET 4.5 / Windows Server era at Veracode to the current .NET LTS ecosystem. Secrets live only in GCP Secret Manager and are read at runtime; 67 tests (xUnit + WebApplicationFactory) gate CI; Husky.Net enforces pre-commit/pre-push.",
       "technologies": [
         "C#",
         ".NET 10",
@@ -77,6 +45,38 @@
       "featured": true
     },
     {
+      "id": "agent-plane",
+      "name": "AgentPlane — AI-Powered JIRA Board",
+      "description": "Full-stack AI project management tool — describe an epic in natural language and a LangGraph multi-agent pipeline (Decomposer → Estimator → Assigner) breaks it into estimated, assigned sub-issues streamed back via SSE onto a Plane-style Kanban board.",
+      "longDescription": "Three-service monorepo combining a Plane-style issue tracker (FastAPI + CockroachDB) with a LangGraph supervisor pipeline and a Next.js 14 frontend. Three agents run in sequence: DecomposerAgent proposes 3–7 sub-issues using Anthropic forced tool-use, EstimatorAgent assigns Fibonacci story points with Fibonacci clamping, AssignerAgent recommends owners from the skills-tagged member roster and guards against hallucinated IDs. Results stream to the UI per-worker via SSE using LangGraph’s astream_events; every run is logged to MongoDB Atlas for replay and history diffing. Redis (Upstash, serverless free tier) enforces a 10 req/min/workspace sliding-window rate limit to cap Anthropic API spend. CockroachDB holds the workspace → project → issue hierarchy with self-referential parent_id for epics; LangGraph AsyncPostgresSaver checkpoints each worker so partial failures resume rather than restart. Deployed: Next.js 14 frontend on Vercel, FastAPI services on Fly.io free tier, CockroachDB Serverless (5 GB free), MongoDB Atlas M0 (512 MB free), Upstash Redis (10k req/day free).",
+      "technologies": [
+        "Python 3.12",
+        "FastAPI",
+        "LangGraph",
+        "LangChain",
+        "Anthropic",
+        "Next.js 14",
+        "TypeScript",
+        "TanStack Query",
+        "CockroachDB",
+        "MongoDB Atlas",
+        "Redis Upstash",
+        "SQLAlchemy 2.0",
+        "Alembic",
+        "Pydantic v2",
+        "SSE",
+        "structlog",
+        "OpenTelemetry",
+        "Docker Compose",
+        "Vercel"
+      ],
+      "category": "AI/ML",
+      "year": 2026,
+      "github": "https://github.com/ericgitangu/agentplane",
+      "demo": "https://agent-plane.ericgitangu.com",
+      "featured": true
+    },
+    {
       "id": "swarmbench-research",
       "name": "SwarmBench Multi-Agent LLM Empirical Study",
       "description": "Seven-trial benchmark engineering study on Kimi K2.5 falsifying three multi-agent advantage hypotheses; produced a 15-page scholarly preprint.",
@@ -101,7 +101,7 @@
     },
     {
       "id": "pawa-cloud",
-      "name": "PawaCloud Assistant \u2014 AI Cloud Advisor",
+      "name": "PawaCloud Assistant — AI Cloud Advisor",
       "description": "AI chatbot with Gemini 2.5 Flash, Rust+PyO3 text processing, SSE streaming, Google OAuth, and PostgreSQL persistence on GCP Cloud Run",
       "longDescription": "Full-stack AI advisory chatbot streaming responses in real time via SSE. Python FastAPI backend with Rust+PyO3 text processing (50-100x faster than pure Python), Google Gemini 2.5 Flash for generation, PostgreSQL (Neon) for persistent cross-device chat history, and HMAC-signed Bearer tokens for cross-origin auth. Next.js 16 PWA frontend with TailwindCSS v4, live status dashboard with latency charts and PyO3 benchmarks. Deployed on Cloud Run africa-south1 + Fly.io JNB with Terraform IaC.",
       "technologies": [
@@ -128,7 +128,7 @@
     },
     {
       "id": "unirides",
-      "name": "UniRides \u2014 Ride-Sharing Reimagined",
+      "name": "UniRides — Ride-Sharing Reimagined",
       "description": "Production-grade ride-sharing platform with 5 Google Maps APIs, real-time tracking, Kenyan market-rate pricing, and FastAPI backend on GCP Cloud Run",
       "longDescription": "Full-stack Uber/Bolt-class ride-sharing app for the Kenyan market. Next.js 16 PWA frontend with satellite map view, Google Places Autocomplete for pickup/dropoff, Directions API route polylines, Distance Matrix live ETA with dynamic polling (3s active, 10s accepted), and client-side fare calculation using post-2025 Kenyan market rates (KES 35/km aligned with Bolt/Uber after the 50% fare increase). FastAPI backend with async SQLAlchemy 2.0, Neon PostgreSQL, Upstash Redis, JWT auth, WebSocket ride tracking, and structured logging. Deployed on Vercel (frontend) + GCP Cloud Run (backend) with scale-to-zero for $0 idle cost.",
       "technologies": [
@@ -156,7 +156,7 @@
     {
       "id": "lendstream",
       "name": "LendStream",
-      "description": "Polyglot micro-lending platform \u2014 Java, Clojure, React, Kafka, CQRS",
+      "description": "Polyglot micro-lending platform — Java, Clojure, React, Kafka, CQRS",
       "longDescription": "Event-driven micro-lending platform with CQRS, transactional outbox, and dual-mode event broker (Kafka locally, QStash in cloud). Java 21 handles loan lifecycle and SOAP/CBS integration. Clojure handles credit scoring through pure functional pipelines. React/TypeScript dashboard with portfolio analytics. Runs on Docker Compose (15 containers with full APM) or GCP Cloud Run at $0-3/month.",
       "technologies": [
         "Java 21",
@@ -182,7 +182,7 @@
     },
     {
       "id": "vunachain",
-      "name": "Vunachain \u2014 AgriTech Contract Farming & Traceability",
+      "name": "Vunachain — AgriTech Contract Farming & Traceability",
       "description": "Blockchain-backed contract farming and agricultural supply chain traceability platform on AWS serverless with Rust Lambda functions",
       "longDescription": "Event-driven agricultural supply chain platform enabling contract farming agreements, crop traceability from farm to market, and transparent payment settlement. Rust Lambda functions on ARM64/Graviton for cost-efficient compute, EventBridge for workflow orchestration, SQS with DLQs for reliable message processing, S3 for document storage, and RDS PostgreSQL for transactional data. Solidity smart contracts on Celo for immutable contract records. React/TypeScript dashboard for farmers, aggregators, and buyers.",
       "technologies": [
@@ -209,7 +209,7 @@
     },
     {
       "id": "bsd-engine",
-      "name": "BSD Engine \u2014 Business Services Diagnostic",
+      "name": "BSD Engine — Business Services Diagnostic",
       "description": "Full-stack business diagnostics platform with Rust scoring engine, Next.js 16 dashboard, Recharts visualizations, and AI narrative generation via AWS Bedrock",
       "longDescription": "Assesses operational execution maturity across 7 weighted indicators using a 23-question Likert-scale survey. Rust backend scores responses, classifies severity, and generates rich visual reports (radar, bar, area, gap, pie charts) plus AI-powered executive narratives via Bedrock Claude Haiku. Shareable report URLs with OG images, dark-themed print/PDF export with BSD branding.",
       "technologies": [
@@ -232,7 +232,7 @@
     },
     {
       "id": "wave-application",
-      "name": "Wave Application \u2014 ML Engineer",
+      "name": "Wave Application — ML Engineer",
       "description": "Full-stack polyglot submission for Wave's Senior ML Engineer role with Next.js 16 PWA, Rust+PyO3 Lambda backend, and AWS CDK infrastructure",
       "longDescription": "Ships a working product as the application itself. Next.js 16 dashboard with real-time health probes, persistent Upstash Redis submissions, and manual Wave API trigger. Rust+PyO3 backend on AWS Lambda with Bedrock (Claude 3 Haiku sentiment, Titan Embeddings), SageMaker (XLM-RoBERTa 20-language detection), and EventBridge fan-out. 4 CDK stacks, CI/CD with auto-resume submission.",
       "technologies": [
@@ -514,7 +514,7 @@
     {
       "id": "paul-ledama-memorial",
       "name": "Paul Ledama Sekento Memorial",
-      "description": "A loving tribute website celebrating the life of Paul Ledama Sekento (1983\u20132026) with biography, tributes, gallery, and funeral programme",
+      "description": "A loving tribute website celebrating the life of Paul Ledama Sekento (1983–2026) with biography, tributes, gallery, and funeral programme",
       "longDescription": "Memorial website honoring Paul Ledama Sekento, built with Next.js 15, Tailwind CSS v4, and next-themes. Features biography, tributes from family and friends, photo gallery, hymns, and funeral service programme. PWA-enabled with offline support, deployed on Fly.io.",
       "technologies": [
         "Next.js",
