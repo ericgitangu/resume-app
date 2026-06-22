@@ -2,24 +2,27 @@
   "positions": [
     {
       "id": "moovn-2026",
-      "company": "Moovn (moovn.com)",
-      "role": "Full Stack Engineer — Architecture & Security",
+      "company": "Moovn Technologies (moovn.com)",
+      "role": "Senior Full Stack Engineer — Platform Architecture & Security",
       "type": "Lead",
-      "location": "Remote",
+      "location": "Nairobi, Kenya",
       "startDate": "2026-01",
       "endDate": "",
       "current": true,
-      "description": "Full-stack engineering with ownership of system architecture and application security across Moovn's mobility/logistics platform (moovn.com).",
+      "description": "Architecting and scaling Moovn's global platform across mobility, logistics, fintech, and digital commerce (Seattle-HQ'd, emerging-market focus). Full-stack delivery with ownership of platform architecture, payments infrastructure, and data security.",
       "achievements": [
-        "Own end-to-end full-stack delivery alongside platform architecture and the application-security posture.",
-        "Drive secure-by-default engineering — OWASP Top 10, secrets management, hardened and observable deployments — across services."
+        "Design and build scalable backend services, RESTful APIs, and distributed systems powering mobility, payments, and last-mile logistics; modernize existing PHP/CodeIgniter systems toward a cloud-native, next-generation architecture",
+        "Lead fintech & payment integrations — payment orchestration, settlement, reconciliation, and transaction processing across banking APIs, mobile money operators, Mastercard MPGS, and Stripe — with PCI DSS-aligned secure payment workflows",
+        "Own application & data security: OAuth2 / OpenID Connect / JWT auth frameworks, encryption, IAM, and OWASP-aligned secure-by-default practices, including security reviews and penetration-test remediation",
+        "Run cloud, DevOps & network engineering — Docker/Kubernetes, Terraform IaC across AWS/Azure/GCP, CI/CD pipelines, observability, and hardened Linux + Nginx/Apache high-availability production environments",
+        "Provide architectural guidance across engineering initiatives and mentor engineers through code reviews; contribute to long-term platform strategy with executive leadership"
       ],
-      "technologies": ["TypeScript", "Node.js", "React", "Python", "PostgreSQL", "AWS", "Docker"],
+      "technologies": ["PHP", "CodeIgniter", "Node.js", "TypeScript", "Python", "Go", "React", "Next.js", "Vue.js", "Tailwind CSS", "MySQL", "PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Linux", "Nginx", "Apache", "Docker", "Kubernetes", "Terraform", "AWS", "Azure", "GCP", "OAuth2", "JWT", "PCI DSS", "OWASP", "Mastercard MPGS", "Stripe", "Mobile Money", "Banking APIs"],
       "level": 5
     },
     {
       "id": "lead-architect-2025",
-      "company": "Ignite Access",
+      "company": "Ignite Energy Access",
       "role": "Software Engineering Lead / Architect — QA & Platform",
       "type": "Lead",
       "location": "Nairobi, Kenya",
