@@ -1,14 +1,31 @@
 {
   "positions": [
     {
+      "id": "moovn-2026",
+      "company": "Moovn (moovn.com)",
+      "role": "Full Stack Engineer — Architecture & Security",
+      "type": "Lead",
+      "location": "Remote",
+      "startDate": "2026-01",
+      "endDate": "",
+      "current": true,
+      "description": "Full-stack engineering with ownership of system architecture and application security across Moovn's mobility/logistics platform (moovn.com).",
+      "achievements": [
+        "Own end-to-end full-stack delivery alongside platform architecture and the application-security posture.",
+        "Drive secure-by-default engineering — OWASP Top 10, secrets management, hardened and observable deployments — across services."
+      ],
+      "technologies": ["TypeScript", "Node.js", "React", "Python", "PostgreSQL", "AWS", "Docker"],
+      "level": 5
+    },
+    {
       "id": "lead-architect-2025",
-      "company": "Software Engineering Lead / Architect",
-      "role": "Team Lead — QA & Engineering (SDET & Platform)",
+      "company": "Ignite Access",
+      "role": "Software Engineering Lead / Architect — QA & Platform",
       "type": "Lead",
       "location": "Nairobi, Kenya",
       "startDate": "2025-05",
-      "endDate": "2026-03",
-      "current": true,
+      "endDate": "2026-01",
+      "current": false,
       "description": "Leading QA and engineering automation for PAYG solar energy infrastructure serving communities across 7 African markets. Driving platform reliability, observability, and test automation strategy.",
       "achievements": [
         "Architected and led migration of legacy manual QA workflows to a fully automated SDET pipeline using Playwright, Cypress, and custom Ruby harnesses — reducing regression cycle time by 60%",
