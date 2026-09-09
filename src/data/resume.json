@@ -1,9 +1,9 @@
 {
   "name": "Eric Gitangu",
   "nickname": "Deveric",
-  "title": "Software Engineering Lead / Architect — Distributed Systems and AI/ML",
-  "subtitle": "Distributed Systems Architect | Backend & Cloud-Native Engineering Lead",
-  "tagline": "Architecting event-driven distributed systems across healthcare ML, fintech, energy access, and government-scale infrastructure",
+  "title": "Software Engineer — Payments Platforms, Distributed Systems & Security Architecture",
+  "subtitle": "Architecture ownership across card and mobile-money rails, PCI-scoped systems, and multi-surface platforms",
+  "tagline": "Designing and running mission-critical, money-moving systems across African fintech, mobility, energy access and health — hands-on, from release rail to ledger",
   "location": {
     "primary": "Nairobi, Kenya",
     "secondary": "Atlanta, GA"
@@ -18,17 +18,17 @@
     "github": "https://github.com/ericgitangu",
     "portfolio": "https://developer.ericgitangu.com"
   },
-  "summary": "Software Engineering Lead and Architect with 10+ years shipping event-driven distributed systems across healthcare ML, fintech, energy access, and government-scale infrastructure. Deep expertise in CQRS, event sourcing, hexagonal/ports-and-adapters, and saga orchestration — applied at Moovn Technologies (current — Senior Full Stack Engineer, Platform Architecture & Security across mobility, fintech & logistics), Vishnu Systems (ML security for SiMD/SaMD medical devices), Ignite Energy Access (PAYG solar platform reliability across 7 African markets), Baw Bab Technologies (digital addressing for 2.3M Nairobi residents), and Unicorns (multi-tenant SaaS super-app). Polyglot across Python, Java, C#, Rust, TypeScript, Go, Kotlin, Swift, and Clojure — with hands-on .NET 10 / ASP.NET Core fintech work (PesaCore) bridging the .NET 4.5 / Windows Server era at Veracode to the modern LTS ecosystem. Founded Deveric mentorship initiative (15+ engineers mentored) and hold 80+ validated technical certifications.",
+  "summary": "Software engineer with 11+ years designing, shipping and operating distributed, mission-critical systems — the last five in African fintech, mobility and energy access, where the systems move real money. Currently own platform architecture and data security for a mobility/fintech platform: five product surfaces and a mobile API behind one backend-for-frontend, 6,800+ unit tests, 280+ architecture decision records, an atomic release rail with automatic rollback, and card and mobile-money rails (Mastercard MPGS, M-Pesa, MTN, Tigo) built to PCI DSS SAQ-A scope with idempotent, fail-closed money paths. Earlier: CI/CD and quality gates for a PAYG solar platform across seven markets, an ML-security platform for medical-device software, and a digital-addressing pilot with a county government. Polyglot across TypeScript/Node.js, Java/Spring Boot, PHP, Python, Rust, Go and C#/.NET; deep in event-driven architecture, resiliency and fault-tolerance patterns, public cloud and containers, observability and secure SDLC. Set architecture direction across teams, mentor engineers (15+), and stay in production code every day.",
   "highlights": [
-    "10+ years shipping distributed systems at scale",
-    "Healthcare ML & medical device security (Vishnu Systems)",
-    "Fintech & PAYG solar across 7 African markets",
-    "Government-scale digital addressing (2.3M residents)",
-    "Polyglot: Python, Java, C#, Rust, TypeScript, Go, Kotlin, Swift, Clojure",
-    ".NET 10 / ASP.NET Core fintech (PesaCore) + .NET 4.5 / Windows Server legacy (Veracode)",
-    "80+ certifications | 15+ engineers mentored"
+    "11+ years on distributed, mission-critical systems; 5 in African fintech and mobility",
+    "Card + mobile-money rails at PCI DSS SAQ-A scope: Mastercard MPGS, M-Pesa, MTN, Tigo",
+    "Atomic release rail with smoke-gated automatic rollback for a money-moving platform",
+    "Tamper-evident, hash-chained trust-score ledger with HMAC-signed partner event ingestion",
+    "6,800+ unit tests · 280+ ADRs · 5 Next.js surfaces behind one BFF",
+    "Polyglot: TypeScript, Java/Spring, PHP, Python, Rust, Go, C#/.NET",
+    "80+ certifications · 15+ engineers mentored, 6+ advanced to senior roles"
   ],
-  "yearsOfExperience": 10,
+  "yearsOfExperience": 11,
   "certificationsCount": 80,
   "resumeUrl": "https://resume.ericgitangu.com"
 }
