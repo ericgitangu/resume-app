@@ -1,9 +1,9 @@
 {
   "name": "Eric Gitangu",
   "nickname": "Deveric",
-  "title": "Software Engineer, Payments Platforms and Distributed Systems",
-  "subtitle": "Backend, platform and security engineering for payment systems in Africa",
-  "tagline": "Backend and platform engineer for payment systems that run in production",
+  "title": "Senior Software Engineer | Distributed Systems, Platform Architecture & Security",
+  "subtitle": "Backend and platform engineering across fintech, healthcare, energy and logistics",
+  "tagline": "Senior engineer who owns the system: architecture, security, infrastructure and the code that ships",
   "location": {
     "primary": "Nairobi, Kenya",
     "secondary": "Atlanta, GA"
@@ -21,7 +21,7 @@
   },
   "summary": "Software engineer with 11 years in production systems across fintech, healthcare, energy access, logistics and application security. I currently own architecture and security for a multi-surface payments and mobility platform, a Mastercard partner, where I removed an authentication bypass, closed money-correctness defects, mapped the platform to payments compliance requirements, and built card and mobile money rails within PCI DSS scope. Before that I led platform and quality engineering for a pay-as-you-go solar company in seven African countries, founded an ML security company for medical device software, and led the team behind a digital addressing pilot with the Nairobi County Government. I design event-driven systems, run the cloud and edge they live on (AWS, GCP, Azure, Cloudflare; Terraform and Ansible; nginx, load balancing, rate limiting, high availability), plan for failure, instrument what I ship, and lead teams through review, mentoring and clear technical direction. TypeScript, Java, PHP, Python, Rust, Go and C#.",
   "highlights": [
-    "11 years in production systems: fintech, healthcare, energy access, logistics, application security",
+    "Senior engineer, 11 years in production systems: fintech, healthcare, energy access, logistics, application security",
     "Architecture and security owner for a Mastercard-partner payments and mobility platform",
     "Card and mobile money rails within PCI DSS scope: Mastercard MPGS, M-Pesa, MTN, Tigo",
     "Event-driven payment architecture across seven African markets; release cadence from 2 to 12 deploys a week",

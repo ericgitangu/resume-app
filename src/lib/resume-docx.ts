@@ -63,7 +63,7 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
       children: [new TextRun({ text: resume.name, bold: true, size: 40 })],
     }),
     new Paragraph({
-      children: [new TextRun({ text: resume.title, size: 22, color: "444444" })],
+      children: [new TextRun({ text: resume.title, size: 24, bold: true, color: "1A1A1A" })],
       spacing: { after: 40 },
     }),
     new Paragraph({
