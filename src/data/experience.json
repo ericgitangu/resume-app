@@ -287,7 +287,9 @@
       "minor": "Mathematics",
       "startDate": "2011-09",
       "endDate": "2015-05",
-      "honors": [],
+      "honors": [
+        "Microsoft Scholar and Google Scholar. Dean's List for nine semesters. Omicron Delta Kappa."
+      ],
       "level": 0
     }
   ],
@@ -295,7 +297,12 @@
     {
       "id": "open-source",
       "title": "Open source and certifications",
-      "description": "Public GitHub repositories in Rust, Go, TypeScript, Python, Java and C#, plus contributions to TruStacks. 80 certifications in AWS, Azure, GCP, AI, blockchain and application security. 15 engineers mentored since 2019, six promoted to senior or lead roles."
+      "description": "Public GitHub repositories in Rust, Go, TypeScript, Python, Java and C#, plus contributions to TruStacks. 80 certifications in AWS, Azure, GCP, AI, blockchain and application security."
+    },
+    {
+      "id": "mentorship",
+      "title": "Mentorship and teaching",
+      "description": "15 engineers mentored since 2019, six promoted to senior or lead roles. Volunteer instructor for a CodePath.org advanced algorithms cohort in 2024."
     }
   ]
 }

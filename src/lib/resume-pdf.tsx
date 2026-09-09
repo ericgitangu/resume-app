@@ -70,7 +70,7 @@ function Bullet({ children }: { children: React.ReactNode }) {
 }
 
 // Print-only trims: the site keeps every category; the two-to-three-page PDF drops breadth-only ones.
-const RESUME_SKIP_SKILL_CATEGORIES = new Set(["Web3 & Blockchain", ".NET / Microsoft Platform", "Observability", "Domains", "Frontend & Mobile"]);
+const RESUME_SKIP_SKILL_CATEGORIES = new Set(["Web3 & Blockchain", ".NET / Microsoft Platform", "Observability", "Domains"]);
 
 export function ResumeDocument() {
   const positions = [...experience.positions].sort((a, b) =>
@@ -113,6 +113,10 @@ export function ResumeDocument() {
           <Text style={styles.contactItem}>·</Text>
           <Link src={resume.contact.github} style={[styles.contactItem, styles.link]}>
             github.com/ericgitangu
+          </Link>
+          <Text style={styles.contactItem}>·</Text>
+          <Link src={resume.resumeUrl} style={[styles.contactItem, styles.link]}>
+            resume.ericgitangu.com
           </Link>
         </View>
 
