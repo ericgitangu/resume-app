@@ -1,9 +1,9 @@
 {
   "name": "Eric Gitangu",
   "nickname": "Deveric",
-  "title": "Software Engineer — Payments Platforms, Distributed Systems & Security Architecture",
-  "subtitle": "Architecture ownership across card and mobile-money rails, PCI-scoped systems, and multi-surface platforms",
-  "tagline": "Designing and running mission-critical, money-moving systems across African fintech, mobility, energy access and health — hands-on, from release rail to ledger",
+  "title": "Software Engineer, Payments Platforms and Distributed Systems",
+  "subtitle": "Backend, platform and security engineering for payment systems in Africa",
+  "tagline": "Backend and platform engineer for payment systems that run in production",
   "location": {
     "primary": "Nairobi, Kenya",
     "secondary": "Atlanta, GA"
@@ -18,15 +18,15 @@
     "github": "https://github.com/ericgitangu",
     "portfolio": "https://developer.ericgitangu.com"
   },
-  "summary": "Software engineer with 11+ years designing, shipping and operating distributed, mission-critical systems — the last five in African fintech, mobility and energy access, where the systems move real money. Currently own platform architecture and data security for a mobility/fintech platform: five product surfaces and a mobile API behind one backend-for-frontend, 6,800+ unit tests, 280+ architecture decision records, an atomic release rail with automatic rollback, and card and mobile-money rails (Mastercard MPGS, M-Pesa, MTN, Tigo) built to PCI DSS SAQ-A scope with idempotent, fail-closed money paths. Earlier: CI/CD and quality gates for a PAYG solar platform across seven markets, an ML-security platform for medical-device software, and a digital-addressing pilot with a county government. Polyglot across TypeScript/Node.js, Java/Spring Boot, PHP, Python, Rust, Go and C#/.NET; deep in event-driven architecture, resiliency and fault-tolerance patterns, public cloud and containers, observability and secure SDLC. Set architecture direction across teams, mentor engineers (15+), and stay in production code every day.",
+  "summary": "Software engineer with 11 years in production systems, the last five in African fintech, mobility and energy access. I currently own platform architecture and data security for a mobility and payments company: five web applications and a mobile API on one backend, 6,800 unit tests, 280 architecture decision records, an atomic release process with automatic rollback, and card and mobile money integrations (Mastercard Payment Gateway Services, M-Pesa, MTN, Tigo) built within PCI DSS SAQ-A scope. Before that I ran CI/CD and test automation for a pay-as-you-go solar platform in seven countries, founded an ML security company for medical device software, and led a digital addressing pilot with a county government. I work in TypeScript, Java, PHP, Python, Rust, Go and C#. I design event-driven systems, plan for failure, and instrument what I ship. I set technical direction for the team, review code daily, and have mentored 15 engineers.",
   "highlights": [
-    "11+ years on distributed, mission-critical systems; 5 in African fintech and mobility",
-    "Card + mobile-money rails at PCI DSS SAQ-A scope: Mastercard MPGS, M-Pesa, MTN, Tigo",
-    "Atomic release rail with smoke-gated automatic rollback for a money-moving platform",
-    "Tamper-evident, hash-chained trust-score ledger with HMAC-signed partner event ingestion",
-    "6,800+ unit tests · 280+ ADRs · 5 Next.js surfaces behind one BFF",
-    "Polyglot: TypeScript, Java/Spring, PHP, Python, Rust, Go, C#/.NET",
-    "80+ certifications · 15+ engineers mentored, 6+ advanced to senior roles"
+    "11 years in production systems, 5 in African fintech and mobility",
+    "Card and mobile money integrations within PCI DSS SAQ-A scope: Mastercard MPGS, M-Pesa, MTN, Tigo",
+    "Atomic release process with automatic rollback for a live payments platform",
+    "Trust score engine with a hash-chained ledger and signed partner event ingestion",
+    "6,800 unit tests, 280 architecture decision records, 5 web applications on one backend",
+    "TypeScript, Java, PHP, Python, Rust, Go, C#",
+    "80 certifications, 15 engineers mentored"
   ],
   "yearsOfExperience": 11,
   "certificationsCount": 80,

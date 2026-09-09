@@ -80,7 +80,7 @@ export function ResumeDocument() {
 
   return (
     <Document
-      title={`${resume.name} — Resume`}
+      title={`${resume.name}, Resume`}
       author={resume.name}
       subject={resume.title}
       keywords={resume.highlights.join(", ")}
@@ -118,7 +118,7 @@ export function ResumeDocument() {
           <View key={p.id} wrap={false}>
             <View style={styles.jobHeader}>
               <Text style={styles.jobTitle}>
-                {p.role} — {p.company}
+                {p.role}, {p.company}
               </Text>
               <Text style={styles.jobDates}>
                 {fmtDate(p.startDate)} – {p.current ? "Present" : fmtDate(p.endDate)}
@@ -175,7 +175,7 @@ export function ResumeDocument() {
               <View key={e.id} wrap={false} style={{ marginBottom: 3 }}>
                 <Text style={{ fontFamily: "Helvetica-Bold", fontSize: 10 }}>
                   {e.degree}
-                  {e.minor ? ` · Minor: ${e.minor}` : ""} — {e.institution}
+                  {e.minor ? `, minor in ${e.minor}` : ""}, {e.institution}
                 </Text>
                 <Text style={{ fontSize: 8.5, color: "#555" }}>
                   {fmtDate(e.startDate)} – {fmtDate(e.endDate)}
