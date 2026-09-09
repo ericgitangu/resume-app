@@ -312,6 +312,12 @@
           "certifications": []
         },
         {
+          "name": "Nginx (edge reverse proxy)",
+          "level": 92,
+          "years": 8,
+          "certifications": []
+        },
+        {
           "name": "Vercel",
           "level": 88,
           "years": 6,
@@ -430,7 +436,7 @@
       ]
     },
     {
-      "name": "Edge, Networking & Reliability",
+      "name": "Edge (Cloudflare, Nginx), Networking & Reliability",
       "skills": [
         {
           "name": "Nginx reverse proxy and API gateway",
