@@ -1,5 +1,46 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Document, Page, Text, View, StyleSheet, Link } from "@react-pdf/renderer";
+import { Document, Page, Text, View, StyleSheet, Link, Font } from "@react-pdf/renderer";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+
+// Geist (the face the site itself ships via next/font) for the PDF body; Geist Mono for technology tags.
+// Static weights only: react-pdf cannot use variable fonts. Files live in public/fonts (see scripts/gen-resume.mts).
+const FONT_DIR = join(process.cwd(), "public", "fonts");
+const fontFile = (base: string) => {
+  for (const ext of ["otf", "ttf"]) {
+    const p = join(FONT_DIR, `${base}.${ext}`);
+    if (existsSync(p)) return p;
+  }
+  return null;
+};
+const geist = [
+  { base: "Geist-Regular", fontWeight: 400 },
+  { base: "Geist-Medium", fontWeight: 500 },
+  { base: "Geist-SemiBold", fontWeight: 600 },
+  { base: "Geist-Bold", fontWeight: 700 },
+]
+  .map((w) => ({ src: fontFile(w.base), fontWeight: w.fontWeight }))
+  .filter((w): w is { src: string; fontWeight: number } => Boolean(w.src));
+const geistMono = [
+  { base: "GeistMono-Regular", fontWeight: 400 },
+  { base: "GeistMono-Medium", fontWeight: 500 },
+]
+  .map((w) => ({ src: fontFile(w.base), fontWeight: w.fontWeight }))
+  .filter((w): w is { src: string; fontWeight: number } => Boolean(w.src));
+const HAS_GEIST = geist.length === 4;
+// Under tsx the generator script and this module can resolve two copies of @react-pdf/renderer, each with its own
+// font registry. Register on whichever instance will render: this module's, and the caller's via registerResumeFonts.
+export function registerResumeFonts(api: typeof Font): void {
+  if (HAS_GEIST) api.register({ family: "Geist", fonts: geist });
+  if (geistMono.length) api.register({ family: "Geist Mono", fonts: geistMono });
+  api.registerHyphenationCallback((word) => [word]);
+}
+registerResumeFonts(Font);
+const SANS = HAS_GEIST ? "Geist" : "Helvetica";
+const SANS_BOLD = HAS_GEIST ? "Geist" : "Helvetica-Bold";
+const MONO = geistMono.length ? "Geist Mono" : SANS;
+const BOLD = HAS_GEIST ? { fontFamily: SANS, fontWeight: 700 as const } : { fontFamily: SANS_BOLD };
+const SEMI = HAS_GEIST ? { fontFamily: SANS, fontWeight: 600 as const } : { fontFamily: SANS_BOLD };
 import resume from "@/data/resume.json";
 import experience from "@/data/experience.json";
 import projects from "@/data/projects.json";
@@ -9,15 +50,15 @@ import skills from "@/data/skills.json";
 // so any edit to resume/experience/projects/skills propagates on next request.
 
 const styles = StyleSheet.create({
-  page: { padding: 30, fontSize: 9, fontFamily: "Helvetica", color: "#111", lineHeight: 1.22 },
-  name: { fontSize: 20, fontFamily: "Helvetica-Bold", lineHeight: 1.2, marginBottom: 4 },
+  page: { padding: 30, fontSize: 9, fontFamily: SANS, color: "#111", lineHeight: 1.22 },
+  name: { fontSize: 20, ...BOLD, lineHeight: 1.2, marginBottom: 4 },
   title: { fontSize: 11, color: "#444", marginBottom: 4 },
   contactRow: { flexDirection: "row", flexWrap: "wrap", fontSize: 8.5, color: "#444", marginBottom: 10 },
   contactItem: { marginRight: 10 },
   link: { color: "#1a4ea3", textDecoration: "none" },
   sectionHeader: {
     fontSize: 10.5,
-    fontFamily: "Helvetica-Bold",
+    ...SEMI,
     textTransform: "uppercase",
     letterSpacing: 1.1,
     borderBottomWidth: 0.6,
@@ -28,15 +69,16 @@ const styles = StyleSheet.create({
   },
   summary: { marginBottom: 6, textAlign: "justify" },
   jobHeader: { flexDirection: "row", justifyContent: "space-between", marginTop: 5 },
-  jobTitle: { fontFamily: "Helvetica-Bold", fontSize: 10, flex: 1, paddingRight: 10 },
+  jobTitle: { ...BOLD, fontSize: 10, flex: 1, paddingRight: 10 },
   jobDates: { fontSize: 8.5, color: "#555", flexShrink: 0 },
   jobMeta: { fontSize: 9, color: "#444", marginBottom: 2 },
-  jobDescription: { fontSize: 9, color: "#222", marginBottom: 3, fontStyle: "italic" },
+  jobDescription: { fontSize: 9, color: "#222", marginBottom: 3, fontWeight: 500 },
   bullet: { flexDirection: "row", marginBottom: 1.5 },
   bulletDot: { width: 8 },
   bulletText: { flex: 1, fontSize: 9 },
   techRow: { flexDirection: "row", flexWrap: "wrap", marginTop: 2, marginBottom: 4 },
   techPill: {
+    fontFamily: MONO,
     fontSize: 7.5,
     paddingHorizontal: 4,
     paddingVertical: 1,
@@ -46,10 +88,10 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     borderRadius: 2,
   },
-  projectName: { fontFamily: "Helvetica-Bold", fontSize: 10 },
+  projectName: { ...BOLD, fontSize: 10 },
   projectDesc: { fontSize: 9, marginBottom: 2 },
   skillCategory: { marginBottom: 4 },
-  skillCategoryName: { fontSize: 9.5, fontFamily: "Helvetica-Bold", marginBottom: 1 },
+  skillCategoryName: { fontSize: 9.5, ...BOLD, marginBottom: 1 },
   skillList: { fontSize: 9, color: "#222" },
 });
 
@@ -171,7 +213,7 @@ export function ResumeDocument() {
         ))}
 
         {/* Skills */}
-        <Text style={styles.sectionHeader}>Core Technical Skills</Text>
+        <Text style={styles.sectionHeader} break>Core Technical Skills</Text>
         {skills.categories.filter((cat) => !RESUME_SKIP_SKILL_CATEGORIES.has(cat.name)).map((cat) => (
           <View key={cat.name} style={styles.skillCategory} wrap={false}>
             <Text style={styles.skillCategoryName}>{cat.name}</Text>
@@ -185,7 +227,7 @@ export function ResumeDocument() {
             <Text style={styles.sectionHeader}>Education, Certifications and Open Source</Text>
             {experience.education.map((e) => (
               <View key={e.id} wrap={false} style={{ marginBottom: 3 }}>
-                <Text style={{ fontFamily: "Helvetica-Bold", fontSize: 10 }}>
+                <Text style={{ ...BOLD, fontSize: 10 }}>
                   {e.degree}
                   {e.minor ? `, minor in ${e.minor}` : ""}, {e.institution}
                 </Text>
@@ -199,7 +241,7 @@ export function ResumeDocument() {
             ))}
             {experience.achievements.map((a) => (
               <Bullet key={a.id}>
-                <Text style={{ fontFamily: "Helvetica-Bold" }}>{a.title}: </Text>
+                <Text style={{ ...BOLD }}>{a.title}: </Text>
                 {a.description}
               </Bullet>
             ))}
