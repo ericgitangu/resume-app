@@ -121,19 +121,23 @@
     },
     {
       "id": "rga",
-      "role": "Senior Software Engineer",
+      "role": "Senior Full Stack Developer (contract)",
       "company": "Reinsurance Group of America (RGA)",
       "location": "Remote",
       "startDate": "2022-01",
       "endDate": "2022-07",
       "current": false,
-      "description": "",
+      "description": "Full stack development on the Java and React platform for actuarial, billing and reinsurance treaty processing. Contract placement through Signature Commercial Solutions.",
       "achievements": [
-        "Worked on the Java microservices platform for actuarial, billing and reinsurance treaty processing. Defined service boundaries and data contracts with the architecture team, wrote integration tests and PostgreSQL migrations, and introduced OpenAPI and contract tests so services could deploy independently."
+        "Built the React front end for the treaty management dashboard, replacing a legacy JSP and Struts interface, with a Node.js API layer in front of the Spring Boot services.",
+        "Defined service boundaries and data contracts with the architecture team, wrote integration tests and PostgreSQL migrations, and introduced OpenAPI and contract tests so services could deploy independently."
       ],
       "technologies": [
         "Java",
         "Spring Boot",
+        "React",
+        "TypeScript",
+        "Node.js",
         "PostgreSQL",
         "OpenAPI",
         "Pact"
