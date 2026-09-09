@@ -73,6 +73,15 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
           link: `mailto:${resume.contact.email}`,
           children: [new TextRun({ text: resume.contact.email, size: 18, color: "1A4EA3", underline: {} })],
         }),
+        ...(resume.contact.emailSecondary
+          ? [
+              new TextRun({ text: " · ", size: 18, color: "555555" }),
+              new ExternalHyperlink({
+                link: `mailto:${resume.contact.emailSecondary}`,
+                children: [new TextRun({ text: resume.contact.emailSecondary, size: 18, color: "1A4EA3", underline: {} })],
+              }),
+            ]
+          : []),
         new TextRun({ text: ` · ${resume.contact.phone.primary} · `, size: 18, color: "555555" }),
         new ExternalHyperlink({
           link: resume.contact.linkedin,
@@ -110,7 +119,7 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
     );
     if (p.description) children.push(body(p.description, { italic: true }));
     for (const a of p.achievements) children.push(bullet(a));
-    children.push(
+    if (p.technologies.length) children.push(
       new Paragraph({
         children: [
           new TextRun({ text: "Stack: ", bold: true, size: 17, color: "555555" }),
@@ -156,7 +165,7 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
 
   // Skills
   children.push(sectionHeader("Core Technical Skills"));
-  for (const cat of skills.categories.filter((c) => c.name !== "Web3 & Blockchain" && c.name !== ".NET / Microsoft Platform" && c.name !== "Observability" && c.name !== "Domains")) {
+  for (const cat of skills.categories.filter((c) => c.name !== "Web3 & Blockchain" && c.name !== ".NET / Microsoft Platform" && c.name !== "Observability" && c.name !== "Domains" && c.name !== "Frontend & Mobile")) {
     children.push(
       new Paragraph({
         children: [
@@ -170,7 +179,7 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
 
   // Education
   if (experience.education?.length) {
-    children.push(sectionHeader("Education"));
+    children.push(sectionHeader("Education, Certifications and Open Source"));
     for (const e of experience.education) {
       children.push(
         new Paragraph({
@@ -193,7 +202,6 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
 
   // Achievements
   if (experience.achievements?.length) {
-    children.push(sectionHeader("Certifications & Open Source"));
     for (const a of experience.achievements) {
       children.push(
         new Paragraph({

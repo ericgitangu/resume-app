@@ -9,7 +9,7 @@ import skills from "@/data/skills.json";
 // so any edit to resume/experience/projects/skills propagates on next request.
 
 const styles = StyleSheet.create({
-  page: { padding: 32, fontSize: 9, fontFamily: "Helvetica", color: "#111", lineHeight: 1.25 },
+  page: { padding: 30, fontSize: 9, fontFamily: "Helvetica", color: "#111", lineHeight: 1.22 },
   name: { fontSize: 20, fontFamily: "Helvetica-Bold", lineHeight: 1.2, marginBottom: 4 },
   title: { fontSize: 11, color: "#444", marginBottom: 4 },
   contactRow: { flexDirection: "row", flexWrap: "wrap", fontSize: 8.5, color: "#444", marginBottom: 10 },
@@ -70,7 +70,7 @@ function Bullet({ children }: { children: React.ReactNode }) {
 }
 
 // Print-only trims: the site keeps every category; the two-to-three-page PDF drops breadth-only ones.
-const RESUME_SKIP_SKILL_CATEGORIES = new Set(["Web3 & Blockchain", ".NET / Microsoft Platform", "Observability", "Domains"]);
+const RESUME_SKIP_SKILL_CATEGORIES = new Set(["Web3 & Blockchain", ".NET / Microsoft Platform", "Observability", "Domains", "Frontend & Mobile"]);
 
 export function ResumeDocument() {
   const positions = [...experience.positions].sort((a, b) =>
@@ -96,6 +96,14 @@ export function ResumeDocument() {
           <Link src={`mailto:${resume.contact.email}`} style={[styles.contactItem, styles.link]}>
             {resume.contact.email}
           </Link>
+          {resume.contact.emailSecondary ? (
+            <>
+              <Text style={styles.contactItem}>·</Text>
+              <Link src={`mailto:${resume.contact.emailSecondary}`} style={[styles.contactItem, styles.link]}>
+                {resume.contact.emailSecondary}
+              </Link>
+            </>
+          ) : null}
           <Text style={styles.contactItem}>·</Text>
           <Text style={styles.contactItem}>{resume.contact.phone.primary}</Text>
           <Text style={styles.contactItem}>·</Text>
@@ -129,13 +137,13 @@ export function ResumeDocument() {
             {p.achievements.map((a, i) => (
               <Bullet key={i}>{a}</Bullet>
             ))}
-            <View style={styles.techRow}>
+            {p.technologies.length ? <View style={styles.techRow}>
               {p.technologies.slice(0, 10).map((t, i) => (
                 <Text key={i} style={styles.techPill}>
                   {t}
                 </Text>
               ))}
-            </View>
+            </View> : null}
           </View>
         ))}
 
@@ -170,7 +178,7 @@ export function ResumeDocument() {
         {/* Education — wrapped so the heading never strands at a page foot */}
         {experience.education?.length ? (
           <View wrap={false}>
-            <Text style={styles.sectionHeader}>Education</Text>
+            <Text style={styles.sectionHeader}>Education, Certifications and Open Source</Text>
             {experience.education.map((e) => (
               <View key={e.id} wrap={false} style={{ marginBottom: 3 }}>
                 <Text style={{ fontFamily: "Helvetica-Bold", fontSize: 10 }}>
@@ -185,13 +193,6 @@ export function ResumeDocument() {
                 ))}
               </View>
             ))}
-          </View>
-        ) : null}
-
-        {/* Achievements — same orphan protection */}
-        {experience.achievements?.length ? (
-          <View wrap={false}>
-            <Text style={styles.sectionHeader}>Certifications & Open Source</Text>
             {experience.achievements.map((a) => (
               <Bullet key={a.id}>
                 <Text style={{ fontFamily: "Helvetica-Bold" }}>{a.title}: </Text>
