@@ -9,8 +9,8 @@ import skills from "@/data/skills.json";
 // so any edit to resume/experience/projects/skills propagates on next request.
 
 const styles = StyleSheet.create({
-  page: { padding: 36, fontSize: 9.5, fontFamily: "Helvetica", color: "#111", lineHeight: 1.35 },
-  name: { fontSize: 20, fontFamily: "Helvetica-Bold", marginBottom: 2 },
+  page: { padding: 32, fontSize: 9, fontFamily: "Helvetica", color: "#111", lineHeight: 1.25 },
+  name: { fontSize: 20, fontFamily: "Helvetica-Bold", lineHeight: 1.2, marginBottom: 4 },
   title: { fontSize: 11, color: "#444", marginBottom: 4 },
   contactRow: { flexDirection: "row", flexWrap: "wrap", fontSize: 8.5, color: "#444", marginBottom: 10 },
   contactItem: { marginRight: 10 },
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
   },
   summary: { marginBottom: 6, textAlign: "justify" },
   jobHeader: { flexDirection: "row", justifyContent: "space-between", marginTop: 5 },
-  jobTitle: { fontFamily: "Helvetica-Bold", fontSize: 10 },
-  jobDates: { fontSize: 8.5, color: "#555" },
+  jobTitle: { fontFamily: "Helvetica-Bold", fontSize: 10, flex: 1, paddingRight: 10 },
+  jobDates: { fontSize: 8.5, color: "#555", flexShrink: 0 },
   jobMeta: { fontSize: 9, color: "#444", marginBottom: 2 },
   jobDescription: { fontSize: 9, color: "#222", marginBottom: 3, fontStyle: "italic" },
   bullet: { flexDirection: "row", marginBottom: 1.5 },
@@ -68,6 +68,9 @@ function Bullet({ children }: { children: React.ReactNode }) {
     </View>
   );
 }
+
+// Print-only trims: the site keeps every category; the two-to-three-page PDF drops breadth-only ones.
+const RESUME_SKIP_SKILL_CATEGORIES = new Set(["Web3 & Blockchain", ".NET / Microsoft Platform", "Observability", "Domains"]);
 
 export function ResumeDocument() {
   const positions = [...experience.positions].sort((a, b) =>
@@ -122,12 +125,12 @@ export function ResumeDocument() {
               </Text>
             </View>
             <Text style={styles.jobMeta}>{p.location}</Text>
-            <Text style={styles.jobDescription}>{p.description}</Text>
+            {p.description ? <Text style={styles.jobDescription}>{p.description}</Text> : null}
             {p.achievements.map((a, i) => (
               <Bullet key={i}>{a}</Bullet>
             ))}
             <View style={styles.techRow}>
-              {p.technologies.map((t, i) => (
+              {p.technologies.slice(0, 10).map((t, i) => (
                 <Text key={i} style={styles.techPill}>
                   {t}
                 </Text>
@@ -137,7 +140,7 @@ export function ResumeDocument() {
         ))}
 
         {/* Projects */}
-        <Text style={styles.sectionHeader} break>Selected Projects</Text>
+        <Text style={styles.sectionHeader}>Selected Projects</Text>
         {featuredProjects.map((proj) => (
           <View key={proj.id} wrap={false} style={{ marginBottom: 4 }}>
             <Text style={styles.projectName}>
@@ -157,16 +160,16 @@ export function ResumeDocument() {
 
         {/* Skills */}
         <Text style={styles.sectionHeader}>Core Technical Skills</Text>
-        {skills.categories.map((cat) => (
+        {skills.categories.filter((cat) => !RESUME_SKIP_SKILL_CATEGORIES.has(cat.name)).map((cat) => (
           <View key={cat.name} style={styles.skillCategory} wrap={false}>
             <Text style={styles.skillCategoryName}>{cat.name}</Text>
-            <Text style={styles.skillList}>{cat.skills.map((s) => s.name).join(" · ")}</Text>
+            <Text style={styles.skillList}>{cat.skills.slice(0, 10).map((s) => s.name).join(" · ")}</Text>
           </View>
         ))}
 
-        {/* Education */}
+        {/* Education — wrapped so the heading never strands at a page foot */}
         {experience.education?.length ? (
-          <>
+          <View wrap={false}>
             <Text style={styles.sectionHeader}>Education</Text>
             {experience.education.map((e) => (
               <View key={e.id} wrap={false} style={{ marginBottom: 3 }}>
@@ -182,12 +185,12 @@ export function ResumeDocument() {
                 ))}
               </View>
             ))}
-          </>
+          </View>
         ) : null}
 
-        {/* Achievements */}
+        {/* Achievements — same orphan protection */}
         {experience.achievements?.length ? (
-          <>
+          <View wrap={false}>
             <Text style={styles.sectionHeader}>Certifications & Open Source</Text>
             {experience.achievements.map((a) => (
               <Bullet key={a.id}>
@@ -195,7 +198,7 @@ export function ResumeDocument() {
                 {a.description}
               </Bullet>
             ))}
-          </>
+          </View>
         ) : null}
       </Page>
     </Document>

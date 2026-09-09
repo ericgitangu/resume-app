@@ -108,13 +108,13 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
         spacing: { before: 120, after: 30 },
       }),
     );
-    children.push(body(p.description, { italic: true }));
+    if (p.description) children.push(body(p.description, { italic: true }));
     for (const a of p.achievements) children.push(bullet(a));
     children.push(
       new Paragraph({
         children: [
           new TextRun({ text: "Stack: ", bold: true, size: 17, color: "555555" }),
-          new TextRun({ text: p.technologies.join(" · "), size: 17, color: "1A4EA3" }),
+          new TextRun({ text: p.technologies.slice(0, 10).join(" · "), size: 17, color: "1A4EA3" }),
         ],
         spacing: { after: 80 },
       }),
@@ -156,12 +156,12 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
 
   // Skills
   children.push(sectionHeader("Core Technical Skills"));
-  for (const cat of skills.categories) {
+  for (const cat of skills.categories.filter((c) => c.name !== "Web3 & Blockchain" && c.name !== ".NET / Microsoft Platform" && c.name !== "Observability" && c.name !== "Domains")) {
     children.push(
       new Paragraph({
         children: [
           new TextRun({ text: `${cat.name}: `, bold: true, size: 19 }),
-          new TextRun({ text: cat.skills.map((s) => s.name).join(" · "), size: 19 }),
+          new TextRun({ text: cat.skills.slice(0, 10).map((s) => s.name).join(" · "), size: 19 }),
         ],
         spacing: { after: 60 },
       }),

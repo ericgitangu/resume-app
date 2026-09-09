@@ -1,186 +1,217 @@
 {
   "positions": [
     {
-      "id": "moovn-2026",
-      "company": "Moovn Technologies (moovn.com)",
-      "role": "Senior Full Stack Engineer — Platform Architecture & Security",
-      "type": "Lead",
-      "location": "Nairobi, Kenya",
-      "startDate": "2026-01",
+      "id": "moovn",
+      "role": "Senior Full Stack Engineer — Platform Architecture & Data Security",
+      "company": "Moovn Technologies",
+      "location": "Nairobi, Kenya (Seattle HQ)",
+      "startDate": "2026-02",
       "endDate": "",
       "current": true,
-      "description": "Architecting and scaling Moovn's global platform across mobility, logistics, fintech, and digital commerce (Seattle-HQ'd, emerging-market focus). Full-stack delivery with ownership of platform architecture, payments infrastructure, and data security.",
+      "description": "Own architecture and data security for a mobility/fintech platform serving riders, drivers, corporates and partners across East and Southern Africa.",
       "achievements": [
-        "Design and build scalable backend services, RESTful APIs, and distributed systems powering mobility, payments, and last-mile logistics; modernize existing PHP/CodeIgniter systems toward a cloud-native, next-generation architecture",
-        "Lead fintech & payment integrations — payment orchestration, settlement, reconciliation, and transaction processing across banking APIs, mobile money operators, Mastercard MPGS, and Stripe — with PCI DSS-aligned secure payment workflows",
-        "Own application & data security: OAuth2 / OpenID Connect / JWT auth frameworks, encryption, IAM, and OWASP-aligned secure-by-default practices, including security reviews and penetration-test remediation",
-        "Run cloud, DevOps & network engineering — Docker/Kubernetes, Terraform IaC across AWS/Azure/GCP, CI/CD pipelines, observability, and hardened Linux + Nginx/Apache high-availability production environments",
-        "Provide architectural guidance across engineering initiatives and mentor engineers through code reviews; contribute to long-term platform strategy with executive leadership"
+        "Own the architecture of a money-moving platform: five Next.js surfaces and a mobile API behind one backend-for-frontend on a PHP monolith — 6,800+ unit tests and 280+ architecture decision records governing every change.",
+        "Designed and operate the atomic release rail: immutable releases activated by a symlink flip, a post-flip smoke that decides healthy / roll back, a release guard on money-path files, and detached self-logging deploys — one command, under a minute, one-command rollback.",
+        "Built card and mobile-money rails to PCI DSS SAQ-A scope: Mastercard Payment Gateway Services hosted sessions (card data never touches our servers), M-Pesa Daraja STK and B2C, MTN and Tigo — locality-locked rail resolution, fail-closed idempotency, signed and IP-allow-listed settlement callbacks.",
+        "Designed a cross-product trust-score engine: HMAC-signed idempotent event ingestion from partner products, a tamper-evident hash-chained ledger, a budget-guarded nightly recompute over ~40,000 users, and a flag-gated phased rollout across admin, rider portal and mobile.",
+        "Raised security posture end to end: key-only SSH with fail2ban, WebAuthn/TOTP MFA and reserved admin rights, audit hash-chains, gitleaks and blocking test gates in git hooks, purple-team pentest remediation, encrypted nightly off-box backups with restore drills.",
+        "Instrumented a legacy application with Prometheus, Grafana and Loki without coupling app code; root-caused a failover storm to a mis-sequenced reboot. Author the team's release and deploy standards; mentor through structured review."
       ],
-      "technologies": ["PHP", "CodeIgniter", "Node.js", "TypeScript", "Python", "Go", "React", "Next.js", "Vue.js", "Tailwind CSS", "MySQL", "PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Linux", "Nginx", "Apache", "Docker", "Kubernetes", "Terraform", "AWS", "Azure", "GCP", "OAuth2", "JWT", "PCI DSS", "OWASP", "Mastercard MPGS", "Stripe", "Mobile Money", "Banking APIs"],
-      "level": 5
+      "technologies": [
+        "PHP",
+        "TypeScript",
+        "Next.js",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Redis",
+        "Nginx",
+        "Prometheus",
+        "Grafana",
+        "M-Pesa Daraja",
+        "Mastercard MPGS"
+      ],
+      "level": 0,
+      "type": "full-time"
     },
     {
-      "id": "lead-architect-2025",
-      "company": "Ignite Energy Access",
-      "role": "Software Engineering Lead / Architect — QA & Platform",
-      "type": "Lead",
+      "id": "ignite",
+      "role": "Team Lead — QA & Engineering",
+      "company": "Ignite Energy Access (formerly ENGIE Energy Access)",
       "location": "Nairobi, Kenya",
       "startDate": "2025-05",
       "endDate": "2026-01",
       "current": false,
-      "description": "Leading QA and engineering automation for PAYG solar energy infrastructure serving communities across 7 African markets. Driving platform reliability, observability, and test automation strategy.",
+      "description": "Owned CI/CD and quality infrastructure for a PAYG solar platform across seven African markets.",
       "achievements": [
-        "Architected and led migration of legacy manual QA workflows to a fully automated SDET pipeline using Playwright, Cypress, and custom Ruby harnesses — reducing regression cycle time by 60%",
-        "Designed and deployed observability stack (OpenTelemetry, Prometheus, Grafana, Jaeger, ELK) across 7 African market deployments, cutting mean-time-to-detection from hours to minutes",
-        "Built and maintained CI/CD pipelines integrating automated security scanning, performance benchmarks, and contract testing across microservices",
-        "Drove cross-functional alignment between product, engineering, and data teams to establish quality gates and SLA-driven release criteria",
-        "Introduced chaos engineering practices and load testing frameworks (K6, Locust) to validate system resilience under peak PAYG billing cycles",
-        "Designed shared RabbitMQ-backed bounded contexts (Payment, Token, Subscription) as a reusable platform layer serving all product teams; decoupled synchronous PAYG processing, eliminated peak-load timeouts, unblocked release cadence from 2 to 12+ deploys per week — a paved-roads / golden-paths platform pattern adopted across the engineering org",
-        "Delivered 900+ end-to-end automated scenarios across payments, IoT provisioning, token lifecycle, and subscription flows; reduced regression from 3 days to 45 minutes; enabled continuous deployment across 7 markets",
-        "Line-managed 4 engineers across Kenya, Uganda, and Tanzania — 2 promoted to senior within tenure; enforced architectural standards and OWASP Top 10 secure coding through structured code reviews"
+        "Owned end-to-end CI/CD and QA infrastructure across seven markets (Kenya, Uganda, Tanzania, Rwanda, Mozambique, Côte d'Ivoire, Zambia) — testing standards, release gates and deployment workflows adopted across engineering.",
+        "Built automated end-to-end suites (Playwright, Cypress) over payment processing, token generation, subscriptions and IoT provisioning; moved regression from multi-day manual cycles to automated runs on every pull request.",
+        "Led the Rails 5 to 7.2 upgrade across the payment, PAYG token, IoT diagnostics, subscription and OTA firmware systems, spanning multi-tenant configurations for multiple markets.",
+        "Designed asynchronous token generation (RabbitMQ) and a Redshift payment-event pipeline, removing synchronous bottlenecks under peak billing load; led and grew a team of QA engineers."
       ],
-      "technologies": ["Python", "Ruby", "Node.js", "PostgreSQL", "Redis", "Kafka", "RabbitMQ", "AWS", "OpenTelemetry", "Playwright", "Cypress", "ELK", "Prometheus", "Grafana", "Jaeger", "Redshift", "Kubernetes", "K6", "Locust"],
-      "level": 5
+      "technologies": [
+        "Ruby on Rails",
+        "Playwright",
+        "Cypress",
+        "RabbitMQ",
+        "Redshift",
+        "PostgreSQL",
+        "GitLab CI",
+        "Docker",
+        "Kubernetes",
+        "K6"
+      ],
+      "level": 0,
+      "type": "full-time"
     },
     {
-      "id": "vishnu-2024",
+      "id": "vishnu",
+      "role": "Director of Engineering / Lead Engineer",
       "company": "Vishnu Systems, Inc.",
-      "role": "Director of Engineering / Sole Technical Founder",
-      "type": "Director",
-      "location": "Atlanta, GA",
+      "location": "Atlanta, GA · Remote",
       "startDate": "2024-01",
       "endDate": "2025-08",
       "current": false,
-      "description": "Founded and built an ML-driven security platform for Software-in-a-Medical-Device (SiMD) and Software-as-a-Medical-Device (SaMD) applications, targeting HIPAA-compliant vulnerability detection and compliance automation for healthcare providers.",
+      "description": "Founded and led engineering (concurrently with Baw Bab) for an ML security and robustness platform for software in and as medical devices (SiMD/SaMD).",
       "achievements": [
-        "Designed and built a FastAPI orchestration layer with CQRS and event-sourced domain model, routing scanning jobs through async task queues with saga-based compensation for partial failures",
-        "Implemented high-performance Rust+PyO3 modules for binary analysis and SBOM generation, achieving 50-100x throughput improvement over pure Python equivalents",
-        "Built ML pipelines combining CNNs for medical image metadata analysis, RAG for compliance document retrieval, and GNNs for dependency-graph vulnerability propagation",
-        "Developed compliance automation tooling mapping scan results to HIPAA, FDA 21 CFR Part 11, and IEC 62304 requirements with automated evidence generation",
-        "Delivered full MLOps stack: Airflow orchestration, MLflow experiment tracking, SageMaker/Vertex AI training, and A/B model deployment with canary rollouts",
-        "Implemented Circuit Breaker + exponential backoff in Go to absorb burst load on GPU evaluation workers — custom half-open state machine equivalent of Resilience4j (5s initial interval, 2× multiplier, 60s ceiling) with async Kafka drain on open-circuit; zero customer-facing timeouts during a live degradation event, circuit self-healed without manual intervention",
-        "Productionised AI-assisted development tooling — integrated LLM APIs (OpenAI, Anthropic Claude) for automated compliance documentation generation, reducing manual report assembly to zero; foundation for AI-assisted DevOps tooling experimentation",
-        "Shipped idempotent SQS / SNS / Kinesis + Kafka pipelines with DLQs and exactly-once semantics; full CloudWatch + X-Ray observability and customer-facing SLAs"
+        "Built the platform from scratch: CNNs, RAG and GNNs to detect adversarial attacks on ML models, evaluate robustness and surface gaps against healthcare ML regulation (HIPAA, FDA 21 CFR Part 11, IEC 62304).",
+        "Architected an AWS event-driven backend in Python and Rust (PyO3) with a Go middleware layer for routing, rate limiting and fan-out; circuit-breaker and back-off patterns kept a live degradation invisible to customers.",
+        "Orchestrated ML pipelines with Airflow and tracked them end to end with MLflow — experiment versioning, model registry, reproducibility."
       ],
-      "technologies": ["Python", "FastAPI", "Rust", "PyO3", "Go", "React", "Node.js", "TensorFlow", "PyTorch", "Airflow", "MLflow", "AWS Lambda", "DynamoDB", "Kafka", "Kubernetes", "Docker", "OpenAI", "Anthropic Claude", "SQS", "SNS", "Kinesis", "CloudWatch", "X-Ray"],
-      "level": 5
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Rust",
+        "PyO3",
+        "Go",
+        "AWS",
+        "Kafka",
+        "Airflow",
+        "MLflow",
+        "PyTorch"
+      ],
+      "level": 1,
+      "type": "founder"
     },
     {
-      "id": "bawbab-2023",
-      "company": "Baw Bab Technologies, Inc.",
+      "id": "bawbab",
       "role": "Lead Software Engineer",
-      "type": "Lead",
+      "company": "Baw Bab Technologies, Inc.",
       "location": "Seattle, WA / Nairobi, Kenya",
-      "startDate": "2023-01",
+      "startDate": "2023-04",
       "endDate": "2025-08",
       "current": false,
-      "description": "Led engineering for a government-scale digital addressing and logistics platform, enabling formal address assignment for previously unaddressed urban areas in Nairobi, Kenya.",
+      "description": "Led engineering (concurrently with Vishnu Systems) for a digital-addressing platform for last-mile delivery in informal urban areas across Africa.",
       "achievements": [
-        "Led a 5-engineer team delivering a digital address platform that assigned formal addresses to 2.3 million Nairobi residents, integrating with Kenya's national addressing initiative",
-        "Architected computer-vision and GIS pipeline using Google Cloud Vision for address-plate recognition, PostGIS for spatial queries, and Google Cloud Pub/Sub for event-driven geocoding workflows",
-        "Built full-stack delivery: React/Next.js dashboard for administrators, Express API gateway, MongoDB document store, and GCP Cloud Run deployment with auto-scaling",
-        "Applied advanced geospatial algorithms (Dijkstra's, A*) for last-mile route optimization, reducing delivery time by 35% in pilot zones",
-        "Initial production deployment was on Azure (App Service, Azure SQL Database, Azure Blob Storage, Azure DevOps CI/CD pipelines, with Azure Virtual Machines for runtime management during the on-premises-equivalent phase) before evolving to a hybrid Azure + GCP Cloud Run model — a direct precedent for predominantly on-prem Windows Server environments evolving toward hybrid cloud",
-        "Designed a Backend-for-Frontend (BFF) platform layer in Go that separated field-agent mobile from county-government web surfaces; defined OpenAPI specs, RESTful APIs, and Kafka event pipelines as shared platform standards adopted by Nairobi County Government as official infrastructure"
+        "Built computer-vision pipelines over Azure, Google and OpenStreetMap satellite imagery to identify residential structures and convert them to Google Plus Codes at scale.",
+        "Piloted the platform with the Nairobi County Government — the second digital-addressing programme of its kind in Africa — integrating with county land-registry records.",
+        "Owned the full stack (React, Node.js, Kafka, MongoDB), the OpenAPI contracts and a Go backend-for-frontend separating field-agent mobile from county web; ran it on Azure, then hybrid Azure and GCP Cloud Run."
       ],
-      "technologies": ["React", "Next.js", "Node.js", "Express", "Go", "Python", "Kafka", "MongoDB", "Google Cloud Vision", "Google Cloud Pub/Sub", "GCP Cloud Run", "PostGIS", "Docker", "Kubernetes", "Azure App Service", "Azure SQL Database", "Azure Blob Storage", "Azure DevOps", "Azure Virtual Machines", "OpenAPI"],
-      "level": 5
+      "technologies": [
+        "React",
+        "Node.js",
+        "Go",
+        "Kafka",
+        "MongoDB",
+        "PostGIS",
+        "Azure",
+        "GCP Cloud Run",
+        "OpenAPI"
+      ],
+      "level": 1,
+      "type": "full-time"
     },
     {
-      "id": "rga-2022",
-      "company": "Reinsurance Group of America (RGA)",
+      "id": "rga",
       "role": "Senior Software Engineer",
-      "type": "Senior",
+      "company": "Reinsurance Group of America (RGA)",
       "location": "Remote",
       "startDate": "2022-01",
-      "endDate": "2023-12",
+      "endDate": "2022-07",
       "current": false,
-      "description": "Modernized legacy actuarial and billing systems into microservices architecture, supporting reinsurance treaty management, premium calculation, and claims processing workflows.",
+      "description": "",
       "achievements": [
-        "Decomposed monolithic Java/Spring Boot application into 12 bounded-context microservices, defining clear service boundaries using DDD aggregate patterns",
-        "Led polyglot modernization: Java 17 for core actuarial engines, Groovy/Grails for rapid internal tooling, Node.js for API gateway and BFF layers",
-        "Built React frontend for treaty management dashboard with real-time premium calculation, replacing legacy JSP/Struts interface",
-        "Identified and resolved critical performance bottlenecks in batch premium calculation pipelines, achieving 4x throughput improvement through query optimization and caching strategies",
-        "Established service boundary contracts using OpenAPI specs and Pact contract testing, enabling independent deployment across 6 engineering teams"
+        "Refined service boundaries and data contracts with platform architects in a correctness-critical domain; defensive coding, integration testing, careful PostgreSQL migrations, OpenAPI and contract-test conventions for independent deploys."
       ],
-      "technologies": ["Java", "Spring Boot", "Groovy", "Grails", "React", "Node.js", "AWS ECS", "PostgreSQL", "MongoDB", "Redis"],
-      "level": 4
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "OpenAPI",
+        "Pact"
+      ],
+      "level": 2,
+      "type": "full-time"
     },
     {
-      "id": "deveric-2019",
-      "company": "Deveric Technologies (Freelance)",
-      "role": "Founder & Principal Consultant",
-      "type": "Lead",
+      "id": "deveric",
+      "role": "Independent Engineer & Mentor",
+      "company": "Deveric Technologies",
       "location": "Nairobi, Kenya / Remote",
       "startDate": "2019-01",
       "endDate": "2022-02",
       "current": false,
-      "description": "Founded consultancy and mentorship initiative, delivering production systems for local businesses while mentoring 15+ engineers (6+ to advanced levels) in software architecture, DevOps, and system design.",
+      "description": "",
       "achievements": [
-        "Founded Deveric mentorship initiative (2019–present): 15+ engineers mentored across career stages, 6+ advanced to senior/lead roles through structured curriculum covering system design, algorithms, and production engineering",
-        "Delivered 10+ production projects across fintech, e-commerce, and logistics for Kenyan SMBs using MEAN/MERN stack with REST/GraphQL APIs and Redis caching",
-        "Mentees collectively earned 80+ validated technical certifications across AWS, Azure, GCP, AI/ML, and blockchain",
-        "Architected payment platform integrations with M-Pesa, multiple PSPs, and multi-currency support for cross-border transactions"
+        "Founded the Deveric mentoring initiative — structured mentorship for 15+ developers, 6+ advancing to mid or senior roles; earned 80+ technical certifications across cloud, backend, blockchain, AI/ML and security; shipped Go, Rust and Python projects in hackathons and open source."
       ],
-      "technologies": ["React", "Node.js", "Go", "Rust", "FastAPI", "MongoDB", "PostgreSQL", "Redis", "AWS", "GCP"],
-      "level": 4
+      "technologies": [
+        "Go",
+        "Rust",
+        "Python",
+        "TypeScript",
+        "AWS",
+        "GCP",
+        "Azure"
+      ],
+      "level": 2,
+      "type": "independent"
     },
     {
-      "id": "vecima-2018",
-      "company": "Vecima Networks Inc.",
+      "id": "vecima",
       "role": "Software Engineer",
-      "type": "Engineer",
+      "company": "Vecima Networks Inc. (now Concurrent)",
       "location": "Peachtree City, GA",
       "startDate": "2018-01",
       "endDate": "2019-01",
       "current": false,
-      "description": "Contributed to petabyte-scale video streaming and telecommunications network management infrastructure, working on low-level systems for content delivery and OSS/BSS workflows.",
+      "description": "",
       "achievements": [
-        "Developed low-level C and assembly modules for video packet processing in petabyte-scale streaming infrastructure, optimizing for throughput and minimal latency",
-        "Built reactive stream processing pipelines for real-time network telemetry, enabling sub-second anomaly detection across distributed CDN nodes",
-        "Designed fault-tolerant architecture patterns for content delivery, implementing circuit breakers and retry mechanisms that maintained 99.95% uptime during peak traffic"
+        "Wrote low-level C and embedded assembly for streaming pipelines with deterministic store-and-replay and zero frame loss; designed fault-tolerant delivery with redundant paths, graceful degradation and self-healing recovery."
       ],
-      "technologies": ["C", "Assembly", "Java", "Python", "PostgreSQL", "RabbitMQ", "Kubernetes"],
-      "level": 3
+      "technologies": [
+        "C",
+        "Assembly",
+        "Linux",
+        "CDN"
+      ],
+      "level": 3,
+      "type": "full-time"
     },
     {
-      "id": "veracode-2015",
-      "company": "Veracode",
+      "id": "veracode",
       "role": "Software Engineer",
-      "type": "Engineer",
+      "company": "Veracode",
       "location": "Burlington, MA",
       "startDate": "2015-12",
       "endDate": "2018-01",
       "current": false,
-      "description": "Built security scanning platform features, contributing to the decomposition of a J2EE monolith into microservices while developing CI/CD integrations for enterprise DevSecOps workflows.",
+      "description": "Application-security platform — integrating SAST/DAST/SCA into enterprise CI/CD and DevSecOps toolchains.",
       "achievements": [
-        "Designed and implemented HATEOAS-compliant REST APIs using Spring Boot, JPA/Hibernate, and C#/.NET, supporting multi-tenant scan orchestration with role-based access control",
-        "Built CI/CD DevSecOps integrations (Jenkins, GitLab CI, Azure DevOps) enabling customers to embed security scanning directly into their build pipelines",
-        "Contributed to OWASP Top 10 and NIST SSDF compliance features, implementing automated policy engines that mapped scan findings to regulatory requirements",
-        "Owned the Veracode Visual Studio plugin (.NET 4.5 / Windows platform component) end-to-end — enabling developers to run SAST analysis at file, project, solution, or pipeline granularity directly inside Visual Studio, or to inject the .NET backend into enterprise CI/CD systems for shift-left secure coding. The entire platform stack ran on-premises on Windows Server (2012/2016 era), the most direct precedent in this resume to predominantly-on-prem Windows Server platforms",
-        "Led the platform upgrade to enforce TLS 1.2 across the .NET 4.5 plugin and on-premises Windows Server backend services — a compliance-critical delivery for enterprise customers in regulated environments (financial services, healthcare, government), requiring coordinated changes across the plugin, client-facing APIs, and on-prem server configuration",
-        "Owned the full SDLC and continuous-delivery pipeline for plugin releases — produced MSIX packaging and signed delivery artefacts, managed versioning and backward compatibility for clients on mixed .NET Framework versions, and rollout sequencing across a large installed base of Fortune 500 customers running on-prem Windows Server"
+        "Built integrations embedding security scanning into customers' CI/CD (Jenkins, GitLab CI, Azure DevOps); contributed to the monolith-to-microservices decomposition on Spring Boot, JPA and Hibernate with HATEOAS REST APIs.",
+        "Owned the Visual Studio plugin (.NET / Windows) end to end, including the TLS 1.2 enforcement upgrade for regulated customers; every feature reviewed against the OWASP Top 10, aligned to NIST SSDF."
       ],
-      "technologies": ["Java", "Spring Boot", "JPA", "Hibernate", "C#", ".NET", ".NET 4.5", "ASP.NET", "Visual Studio SDK", "MSIX", "Windows Server 2012/2016", "Python", "Docker", "Kubernetes", "Jenkins", "GitLab", "Azure DevOps", "OWASP Top 10", "NIST SSDF"],
-      "level": 3
-    },
-    {
-      "id": "ibm-2013",
-      "company": "IBM",
-      "role": "Software Engineer (Co-op)",
-      "type": "Intern",
-      "location": "Littleton, MA",
-      "startDate": "2013-09",
-      "endDate": "2014-05",
-      "current": false,
-      "description": "Contributed to IBM Web Experience Factory (formerly WebSphere Portlet Factory) test automation and build pipeline optimization, establishing test-automation-first discipline.",
-      "achievements": [
-        "Built automated regression test suites for IBM Web Experience Factory, establishing test-automation-first discipline that reduced manual QA cycles by 40% and accelerated release schedules",
-        "Optimized Ant/Maven build pipelines with parallelized test execution and incremental compilation, cutting build times by 30%"
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "JPA/Hibernate",
+        "C#/.NET",
+        "REST",
+        "Jenkins",
+        "OWASP"
       ],
-      "technologies": ["Java", "Ant", "Maven", "Jenkins"],
-      "level": 1
+      "level": 3,
+      "type": "full-time"
     }
   ],
   "education": [
@@ -192,10 +223,7 @@
       "startDate": "2011-09",
       "endDate": "2015-05",
       "honors": [
-        "Microsoft Scholarship Recipient (2012-2013) — Awarded for academic excellence and demonstrated potential in software engineering",
-        "Google Scholarship Recipient (2011-2012) — Awarded for outstanding achievement in computer science coursework and research",
-        "Dean's List: Fall 2010, Spring 2011, Fall 2011, Spring 2012, Spring 2013, Fall 2013, Spring 2014, Fall 2014, Spring 2015",
-        "Omicron Delta Kappa (ODK) Honor Society"
+        "Microsoft Scholar and Google Scholar · Dean's List (nine semesters) · Omicron Delta Kappa"
       ],
       "level": 0
     }
@@ -203,18 +231,13 @@
   "achievements": [
     {
       "id": "open-source",
-      "title": "Open Source Contributions",
-      "description": "20+ production-ready public repositories on GitHub across Rust, Go, TypeScript, Python, and Java — spanning distributed systems, ML pipelines, fintech, and developer tooling"
+      "title": "Open Source & Certifications",
+      "description": "Public GitHub repositories across Rust, Go, TypeScript, Python, Java and C#/.NET (payments and lending platforms, distributed systems, ML pipelines); 80+ validated certifications across AWS, Azure, GCP, AI/ML, blockchain and application security."
     },
     {
       "id": "mentorship",
       "title": "Mentorship & Teaching",
-      "description": "Founded Deveric mentorship initiative (2019–present): 15+ engineers mentored, 6+ advanced to senior/lead roles. CodePath.org Volunteer Student Teacher (May–Aug 2024): led Advanced TIP103 cohort in algorithms and data structures. Technical writing at developer.ericgitangu.com."
-    },
-    {
-      "id": "certifications",
-      "title": "Certifications",
-      "description": "80+ validated technical certifications across AWS, Azure, GCP, AI/ML, blockchain (Solidity/Polygon/Stellar), and application security — demonstrating continuous learning across the full stack."
+      "description": "Founded the Deveric mentorship initiative (2019–present): 15+ engineers mentored, 6+ advanced to senior or lead roles. CodePath.org volunteer instructor (2024), advanced algorithms cohort."
     }
   ]
 }
