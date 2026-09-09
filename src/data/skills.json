@@ -4,9 +4,9 @@
       "name": "Architecture & Systems",
       "skills": [
         {
-          "name": "Distributed Systems",
-          "level": 85,
-          "years": 4,
+          "name": "Distributed systems",
+          "level": 88,
+          "years": 6,
           "certifications": []
         },
         {
@@ -18,15 +18,99 @@
           ]
         },
         {
-          "name": "Event-Driven",
+          "name": "Event-driven architecture",
           "level": 88,
-          "years": 5,
+          "years": 6,
           "certifications": []
         },
         {
           "name": "CQRS",
           "level": 85,
           "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "Event sourcing",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Saga orchestration",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Hexagonal / ports and adapters",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Domain-driven design",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Backend-for-frontend",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Multi-tenant SaaS",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "API design (REST, GraphQL, gRPC, OpenAPI)",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Resiliency patterns (circuit breaker, back-off, idempotency)",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Strangler-fig migration",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Zero-trust auth",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Scale-to-zero serverless design",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Capacity and failure-mode analysis",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Distributed Systems",
+          "level": 85,
+          "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "Event-Driven",
+          "level": 88,
+          "years": 5,
           "certifications": []
         },
         {
@@ -194,6 +278,254 @@
           "name": "AES-256-GCM",
           "level": 80,
           "years": 3,
+          "certifications": []
+        }
+      ]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "skills": [
+        {
+          "name": "AWS",
+          "level": 92,
+          "years": 7,
+          "certifications": [
+            "AWS for Developers"
+          ]
+        },
+        {
+          "name": "GCP",
+          "level": 78,
+          "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "Azure",
+          "level": 78,
+          "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "Cloudflare (Workers, DNS, CDN, WAF)",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Vercel",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Fly.io",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Kubernetes",
+          "level": 88,
+          "years": 5,
+          "certifications": [
+            "Kubernetes: Microservices"
+          ]
+        },
+        {
+          "name": "Docker",
+          "level": 92,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Terraform",
+          "level": 72,
+          "years": 3,
+          "certifications": []
+        },
+        {
+          "name": "Ansible",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "CloudFormation / CDK",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "GitHub Actions",
+          "level": 85,
+          "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "GitLab CI",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Jenkins",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Atomic releases and rollback",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Serverless (Lambda, Cloud Run, Workers)",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "CI/CD",
+          "level": 90,
+          "years": 8,
+          "certifications": []
+        },
+        {
+          "name": "Atomic releases / rollback",
+          "level": 85,
+          "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "Prometheus / Grafana / Loki",
+          "level": 85,
+          "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "OpenTelemetry",
+          "level": 85,
+          "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "Nginx",
+          "level": 85,
+          "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "Linux hardening",
+          "level": 85,
+          "years": 4,
+          "certifications": []
+        },
+        {
+          "name": "Observability (Prometheus/Grafana/Loki)",
+          "level": 85,
+          "years": 4,
+          "certifications": []
+        }
+      ]
+    },
+    {
+      "name": "Edge, Networking & Reliability",
+      "skills": [
+        {
+          "name": "Nginx reverse proxy and API gateway",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Load balancing",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "High availability and failover",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Rate limiting",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "TLS 1.2/1.3, HSTS, CSP",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "ModSecurity / OWASP CRS",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "fail2ban and SSH hardening",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Prometheus",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Grafana",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Loki",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "OpenTelemetry",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Jaeger",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "ELK",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "SLOs and error budgets",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Chaos and load testing (K6, Locust)",
+          "level": 88,
+          "years": 6,
+          "certifications": []
+        },
+        {
+          "name": "Linux (Ubuntu, Debian)",
+          "level": 88,
+          "years": 6,
           "certifications": []
         }
       ]
@@ -490,99 +822,6 @@
           "name": "ETL/ELT Pipelines",
           "level": 78,
           "years": 3,
-          "certifications": []
-        }
-      ]
-    },
-    {
-      "name": "Cloud & DevOps",
-      "skills": [
-        {
-          "name": "AWS",
-          "level": 92,
-          "years": 7,
-          "certifications": [
-            "AWS for Developers"
-          ]
-        },
-        {
-          "name": "GCP",
-          "level": 78,
-          "years": 4,
-          "certifications": []
-        },
-        {
-          "name": "Azure",
-          "level": 78,
-          "years": 4,
-          "certifications": []
-        },
-        {
-          "name": "Kubernetes",
-          "level": 88,
-          "years": 5,
-          "certifications": [
-            "Kubernetes: Microservices"
-          ]
-        },
-        {
-          "name": "Docker",
-          "level": 92,
-          "years": 6,
-          "certifications": []
-        },
-        {
-          "name": "Terraform",
-          "level": 72,
-          "years": 3,
-          "certifications": []
-        },
-        {
-          "name": "CI/CD",
-          "level": 90,
-          "years": 8,
-          "certifications": []
-        },
-        {
-          "name": "Atomic releases / rollback",
-          "level": 85,
-          "years": 4,
-          "certifications": []
-        },
-        {
-          "name": "Prometheus / Grafana / Loki",
-          "level": 85,
-          "years": 4,
-          "certifications": []
-        },
-        {
-          "name": "OpenTelemetry",
-          "level": 85,
-          "years": 4,
-          "certifications": []
-        },
-        {
-          "name": "Nginx",
-          "level": 85,
-          "years": 4,
-          "certifications": []
-        },
-        {
-          "name": "Linux hardening",
-          "level": 85,
-          "years": 4,
-          "certifications": []
-        },
-        {
-          "name": "GitHub Actions",
-          "level": 85,
-          "years": 4,
-          "certifications": []
-        },
-        {
-          "name": "Observability (Prometheus/Grafana/Loki)",
-          "level": 85,
-          "years": 4,
           "certifications": []
         }
       ]
