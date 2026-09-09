@@ -2,20 +2,20 @@
   "positions": [
     {
       "id": "moovn",
-      "role": "Senior Full Stack Engineer — Platform Architecture & Data Security",
+      "role": "Senior Full Stack Engineer, Platform Architecture and Data Security",
       "company": "Moovn Technologies",
       "location": "Nairobi, Kenya (Seattle HQ)",
       "startDate": "2026-02",
       "endDate": "",
       "current": true,
-      "description": "Own architecture and data security for a mobility/fintech platform serving riders, drivers, corporates and partners across East and Southern Africa.",
+      "description": "Platform architecture and data security for a mobility and payments company operating in East and Southern Africa.",
       "achievements": [
-        "Own the architecture of a money-moving platform: five Next.js surfaces and a mobile API behind one backend-for-frontend on a PHP monolith — 6,800+ unit tests and 280+ architecture decision records governing every change.",
-        "Designed and operate the atomic release rail: immutable releases activated by a symlink flip, a post-flip smoke that decides healthy / roll back, a release guard on money-path files, and detached self-logging deploys — one command, under a minute, one-command rollback.",
-        "Built card and mobile-money rails to PCI DSS SAQ-A scope: Mastercard Payment Gateway Services hosted sessions (card data never touches our servers), M-Pesa Daraja STK and B2C, MTN and Tigo — locality-locked rail resolution, fail-closed idempotency, signed and IP-allow-listed settlement callbacks.",
-        "Designed a cross-product trust-score engine: HMAC-signed idempotent event ingestion from partner products, a tamper-evident hash-chained ledger, a budget-guarded nightly recompute over ~40,000 users, and a flag-gated phased rollout across admin, rider portal and mobile.",
-        "Raised security posture end to end: key-only SSH with fail2ban, WebAuthn/TOTP MFA and reserved admin rights, audit hash-chains, gitleaks and blocking test gates in git hooks, purple-team pentest remediation, encrypted nightly off-box backups with restore drills.",
-        "Instrumented a legacy application with Prometheus, Grafana and Loki without coupling app code; root-caused a failover storm to a mis-sequenced reboot. Author the team's release and deploy standards; mentor through structured review."
+        "Own the architecture of five web applications and a mobile API served from one PHP backend. The codebase carries 6,800 unit tests and 280 architecture decision records.",
+        "Designed the release process. Each release is an immutable directory activated by a symlink flip. A post-flip smoke test rolls back automatically on a real error. Deploy is one command and finishes in under a minute; rollback is one command.",
+        "Built the card top-up rail on Mastercard Payment Gateway Services hosted sessions, so card data never reaches our servers, keeping the platform in PCI DSS SAQ-A scope. Built M-Pesa STK and B2C, MTN and Tigo mobile money rails with per-country routing and idempotency that fails closed.",
+        "Designed a trust score engine that ingests signed, idempotent events from partner products into a hash-chained ledger and recomputes scores nightly for 40,000 users. Rolled it out behind feature flags to the admin console, rider portal and mobile API.",
+        "Hardened access and change control: key-only SSH with fail2ban, WebAuthn and TOTP MFA for admins, secret scanning and test gates in git hooks, pentest remediation, and encrypted nightly off-site database backups with restore drills.",
+        "Added Prometheus, Grafana and Loki to a legacy application without changing application code. Traced a database failover storm to a mis-sequenced reboot and fixed the liveness checks. Wrote the team's release and deployment guides."
       ],
       "technologies": [
         "PHP",
@@ -27,27 +27,25 @@
         "Redis",
         "Nginx",
         "Prometheus",
-        "Grafana",
-        "M-Pesa Daraja",
-        "Mastercard MPGS"
+        "Grafana"
       ],
       "level": 0,
       "type": "full-time"
     },
     {
       "id": "ignite",
-      "role": "Team Lead — QA & Engineering",
+      "role": "Team Lead, QA and Engineering",
       "company": "Ignite Energy Access (formerly ENGIE Energy Access)",
       "location": "Nairobi, Kenya",
       "startDate": "2025-05",
       "endDate": "2026-01",
       "current": false,
-      "description": "Owned CI/CD and quality infrastructure for a PAYG solar platform across seven African markets.",
+      "description": "CI/CD and test automation for a pay-as-you-go solar platform in seven countries.",
       "achievements": [
-        "Owned end-to-end CI/CD and QA infrastructure across seven markets (Kenya, Uganda, Tanzania, Rwanda, Mozambique, Côte d'Ivoire, Zambia) — testing standards, release gates and deployment workflows adopted across engineering.",
-        "Built automated end-to-end suites (Playwright, Cypress) over payment processing, token generation, subscriptions and IoT provisioning; moved regression from multi-day manual cycles to automated runs on every pull request.",
-        "Led the Rails 5 to 7.2 upgrade across the payment, PAYG token, IoT diagnostics, subscription and OTA firmware systems, spanning multi-tenant configurations for multiple markets.",
-        "Designed asynchronous token generation (RabbitMQ) and a Redshift payment-event pipeline, removing synchronous bottlenecks under peak billing load; led and grew a team of QA engineers."
+        "Owned CI/CD pipelines and test infrastructure for Kenya, Uganda, Tanzania, Rwanda, Mozambique, Côte d'Ivoire and Zambia. Defined the testing standards and release gates engineering adopted.",
+        "Built end-to-end test suites in Playwright and Cypress for payment processing, token generation, subscriptions and IoT device provisioning. Regression moved from a multi-day manual cycle to an automated run on every pull request.",
+        "Led the Rails 5 to 7.2 upgrade across the payment, PAYG token, IoT diagnostics, subscription and firmware update systems, including multi-tenant configuration for each market.",
+        "Designed asynchronous token generation on RabbitMQ and a Redshift pipeline for payment events, which removed timeouts during peak billing. Managed a team of QA engineers."
       ],
       "technologies": [
         "Ruby on Rails",
@@ -72,11 +70,11 @@
       "startDate": "2024-01",
       "endDate": "2025-08",
       "current": false,
-      "description": "Founded and led engineering (concurrently with Baw Bab) for an ML security and robustness platform for software in and as medical devices (SiMD/SaMD).",
+      "description": "Founded the company and built its product: ML security testing for software in medical devices. Ran concurrently with Baw Bab.",
       "achievements": [
-        "Built the platform from scratch: CNNs, RAG and GNNs to detect adversarial attacks on ML models, evaluate robustness and surface gaps against healthcare ML regulation (HIPAA, FDA 21 CFR Part 11, IEC 62304).",
-        "Architected an AWS event-driven backend in Python and Rust (PyO3) with a Go middleware layer for routing, rate limiting and fan-out; circuit-breaker and back-off patterns kept a live degradation invisible to customers.",
-        "Orchestrated ML pipelines with Airflow and tracked them end to end with MLflow — experiment versioning, model registry, reproducibility."
+        "Built the platform from scratch. It uses CNNs, retrieval-augmented generation and graph neural networks to detect adversarial attacks on ML models and to report gaps against HIPAA, FDA 21 CFR Part 11 and IEC 62304.",
+        "Designed the AWS backend in Python and Rust (PyO3) with a Go middleware layer for routing, rate limiting and fan-out to evaluation workers. Circuit breakers and back-off kept a live degradation invisible to customers.",
+        "Ran ML pipelines on Airflow with MLflow for experiment tracking, model registry and reproducibility."
       ],
       "technologies": [
         "Python",
@@ -101,11 +99,11 @@
       "startDate": "2023-04",
       "endDate": "2025-08",
       "current": false,
-      "description": "Led engineering (concurrently with Vishnu Systems) for a digital-addressing platform for last-mile delivery in informal urban areas across Africa.",
+      "description": "Digital addressing for last-mile delivery in informal urban areas. Ran concurrently with Vishnu Systems.",
       "achievements": [
-        "Built computer-vision pipelines over Azure, Google and OpenStreetMap satellite imagery to identify residential structures and convert them to Google Plus Codes at scale.",
-        "Piloted the platform with the Nairobi County Government — the second digital-addressing programme of its kind in Africa — integrating with county land-registry records.",
-        "Owned the full stack (React, Node.js, Kafka, MongoDB), the OpenAPI contracts and a Go backend-for-frontend separating field-agent mobile from county web; ran it on Azure, then hybrid Azure and GCP Cloud Run."
+        "Built computer vision pipelines over Azure, Google and OpenStreetMap satellite imagery to detect residential structures and assign them Google Plus Codes.",
+        "Ran a pilot with the Nairobi County Government, the second digital addressing programme in Africa, integrated with county land registry records.",
+        "Owned the stack: React, Node.js, Kafka and MongoDB, with OpenAPI contracts and a Go backend-for-frontend separating the field agent mobile app from the county web console. Hosted on Azure, later Azure and GCP Cloud Run."
       ],
       "technologies": [
         "React",
@@ -131,7 +129,7 @@
       "current": false,
       "description": "",
       "achievements": [
-        "Refined service boundaries and data contracts with platform architects in a correctness-critical domain; defensive coding, integration testing, careful PostgreSQL migrations, OpenAPI and contract-test conventions for independent deploys."
+        "Worked on the Java microservices platform for actuarial, billing and reinsurance treaty processing. Defined service boundaries and data contracts with the architecture team, wrote integration tests and PostgreSQL migrations, and introduced OpenAPI and contract tests so services could deploy independently."
       ],
       "technologies": [
         "Java",
@@ -153,7 +151,7 @@
       "current": false,
       "description": "",
       "achievements": [
-        "Founded the Deveric mentoring initiative — structured mentorship for 15+ developers, 6+ advancing to mid or senior roles; earned 80+ technical certifications across cloud, backend, blockchain, AI/ML and security; shipped Go, Rust and Python projects in hackathons and open source."
+        "Founded a mentoring programme: 15 developers mentored through code review, system design sessions and career coaching, 6 of whom moved to mid or senior roles. Completed 80 technical certifications in cloud, backend, blockchain, AI and security. Built Go, Rust and Python projects for hackathons and open source."
       ],
       "technologies": [
         "Go",
@@ -177,7 +175,7 @@
       "current": false,
       "description": "",
       "achievements": [
-        "Wrote low-level C and embedded assembly for streaming pipelines with deterministic store-and-replay and zero frame loss; designed fault-tolerant delivery with redundant paths, graceful degradation and self-healing recovery."
+        "Wrote C and embedded assembly for petabyte-scale video streaming pipelines with deterministic store-and-replay and zero frame loss. Designed redundant data paths and self-healing recovery for content delivery."
       ],
       "technologies": [
         "C",
@@ -196,10 +194,10 @@
       "startDate": "2015-12",
       "endDate": "2018-01",
       "current": false,
-      "description": "Application-security platform — integrating SAST/DAST/SCA into enterprise CI/CD and DevSecOps toolchains.",
+      "description": "Application security platform. Integrated static, dynamic and composition scanning into customer CI/CD pipelines.",
       "achievements": [
-        "Built integrations embedding security scanning into customers' CI/CD (Jenkins, GitLab CI, Azure DevOps); contributed to the monolith-to-microservices decomposition on Spring Boot, JPA and Hibernate with HATEOAS REST APIs.",
-        "Owned the Visual Studio plugin (.NET / Windows) end to end, including the TLS 1.2 enforcement upgrade for regulated customers; every feature reviewed against the OWASP Top 10, aligned to NIST SSDF."
+        "Built the Jenkins, GitLab CI and Azure DevOps integrations that let customers run security scans inside their build pipelines. Worked on the monolith-to-microservices decomposition on Spring Boot, JPA and Hibernate with HATEOAS REST APIs.",
+        "Owned the Visual Studio plugin (.NET on Windows), including the TLS 1.2 enforcement upgrade for customers in regulated industries. Reviewed every feature against the OWASP Top 10 and NIST SSDF."
       ],
       "technologies": [
         "Java",
@@ -223,7 +221,7 @@
       "startDate": "2011-09",
       "endDate": "2015-05",
       "honors": [
-        "Microsoft Scholar and Google Scholar · Dean's List (nine semesters) · Omicron Delta Kappa"
+        "Microsoft Scholar and Google Scholar. Dean's List for nine semesters. Omicron Delta Kappa."
       ],
       "level": 0
     }
@@ -231,13 +229,13 @@
   "achievements": [
     {
       "id": "open-source",
-      "title": "Open Source & Certifications",
-      "description": "Public GitHub repositories across Rust, Go, TypeScript, Python, Java and C#/.NET (payments and lending platforms, distributed systems, ML pipelines); 80+ validated certifications across AWS, Azure, GCP, AI/ML, blockchain and application security."
+      "title": "Open source and certifications",
+      "description": "Public GitHub repositories in Rust, Go, TypeScript, Python, Java and C#: payment and lending platforms, distributed systems, ML pipelines, developer tools. 80 certifications in AWS, Azure, GCP, AI, blockchain and application security."
     },
     {
       "id": "mentorship",
-      "title": "Mentorship & Teaching",
-      "description": "Founded the Deveric mentorship initiative (2019–present): 15+ engineers mentored, 6+ advanced to senior or lead roles. CodePath.org volunteer instructor (2024), advanced algorithms cohort."
+      "title": "Mentorship and teaching",
+      "description": "Founded a mentoring programme in 2019: 15 engineers mentored, 6 promoted to senior or lead roles. Volunteer instructor for a CodePath.org advanced algorithms cohort in 2024."
     }
   ]
 }

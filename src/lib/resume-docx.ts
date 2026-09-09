@@ -98,7 +98,7 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
     children.push(
       new Paragraph({
         children: [
-          new TextRun({ text: `${p.role} — ${p.company}`, bold: true, size: 21 }),
+          new TextRun({ text: `${p.role}, ${p.company}`, bold: true, size: 21 }),
           new TextRun({
             text: `   ${fmtDate(p.startDate)} – ${p.current ? "Present" : fmtDate(p.endDate)} · ${p.location}`,
             size: 18,
@@ -177,7 +177,7 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
           children: [
             new TextRun({ text: e.degree, bold: true, size: 20 }),
             ...(e.minor ? [new TextRun({ text: ` · Minor: ${e.minor}`, size: 20 })] : []),
-            new TextRun({ text: ` — ${e.institution}`, size: 20 }),
+            new TextRun({ text: `, ${e.institution}`, size: 20 }),
             new TextRun({
               text: `   ${fmtDate(e.startDate)} – ${fmtDate(e.endDate)}`,
               size: 17,
@@ -210,7 +210,7 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
 
   const doc = new Document({
     creator: resume.name,
-    title: `${resume.name} — Resume`,
+    title: `${resume.name}, Resume`,
     description: resume.title,
     styles: {
       default: {
