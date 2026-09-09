@@ -51,8 +51,8 @@ import skills from "@/data/skills.json";
 
 const styles = StyleSheet.create({
   page: { padding: 30, fontSize: 9, fontFamily: SANS, color: "#111", lineHeight: 1.22 },
-  name: { fontSize: 20, ...BOLD, lineHeight: 1.2, marginBottom: 4 },
-  title: { fontSize: 11, color: "#444", marginBottom: 4 },
+  name: { fontSize: 22, ...BOLD, lineHeight: 1.15, marginBottom: 3 },
+  title: { fontSize: 12, ...SEMI, color: "#1a1a1a", marginBottom: 5, letterSpacing: 0.1 },
   contactRow: { flexDirection: "row", flexWrap: "wrap", fontSize: 8.5, color: "#444", marginBottom: 10 },
   contactItem: { marginRight: 10 },
   link: { color: "#1a4ea3", textDecoration: "none" },
