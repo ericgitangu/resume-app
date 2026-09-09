@@ -74,7 +74,7 @@
       "year": 2026,
       "github": "https://github.com/ericgitangu/lendstream",
       "demo": "https://nanolend-app.vercel.app",
-      "featured": false
+      "featured": true
     },
     {
       "id": "unicorns",
@@ -142,7 +142,7 @@
       "year": 2026,
       "github": "https://github.com/ericgitangu/swarmbench-submission",
       "demo": "https://developer.ericgitangu.com/pdf/research-paper.pdf",
-      "featured": false
+      "featured": true
     },
     {
       "id": "agent-plane",
@@ -173,7 +173,33 @@
       "category": "AI/ML",
       "year": 2026,
       "demo": "https://agent-plane.ericgitangu.com",
-      "featured": false
+      "featured": true
+    },
+    {
+      "id": "pawa-cloud",
+      "name": "PawaCloud, AI cloud advisor",
+      "description": "Conversational cloud-architecture advisor on Gemini 2.5 Flash with a Rust and PyO3 text-processing core, server-sent event streaming, Google OAuth and PostgreSQL, deployed on GCP Cloud Run.",
+      "longDescription": "Full-stack AI advisory chatbot streaming responses in real time via SSE. Python FastAPI backend with Rust+PyO3 text processing (50-100x faster than pure Python), Google Gemini 2.5 Flash for generation, PostgreSQL (Neon) for persistent cross-device chat history, and HMAC-signed Bearer tokens for cross-origin auth. Next.js 16 PWA frontend with TailwindCSS v4, live status dashboard with latency charts and PyO3 benchmarks. Deployed on Cloud Run africa-south1 + Fly.io JNB with Terraform IaC.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Rust",
+        "PyO3",
+        "Gemini AI",
+        "Next.js",
+        "TailwindCSS",
+        "PostgreSQL",
+        "Google Cloud",
+        "Cloud Run",
+        "Terraform",
+        "Docker",
+        "Vercel",
+        "OAuth"
+      ],
+      "category": "AI/ML",
+      "year": 2026,
+      "demo": "https://pawacloud-web.vercel.app",
+      "featured": true
     },
     {
       "id": "paygohub",
@@ -212,33 +238,6 @@
       "year": 2026,
       "github": "https://github.com/ericgitangu/secure-messenger-desktop",
       "demo": "https://github.com/ericgitangu/secure-messenger-desktop",
-      "featured": false
-    },
-    {
-      "id": "pawa-cloud",
-      "name": "PawaCloud Assistant — AI Cloud Advisor",
-      "description": "AI chatbot with Gemini 2.5 Flash, Rust+PyO3 text processing, SSE streaming, Google OAuth, and PostgreSQL persistence on GCP Cloud Run",
-      "longDescription": "Full-stack AI advisory chatbot streaming responses in real time via SSE. Python FastAPI backend with Rust+PyO3 text processing (50-100x faster than pure Python), Google Gemini 2.5 Flash for generation, PostgreSQL (Neon) for persistent cross-device chat history, and HMAC-signed Bearer tokens for cross-origin auth. Next.js 16 PWA frontend with TailwindCSS v4, live status dashboard with latency charts and PyO3 benchmarks. Deployed on Cloud Run africa-south1 + Fly.io JNB with Terraform IaC.",
-      "technologies": [
-        "Python",
-        "FastAPI",
-        "Rust",
-        "PyO3",
-        "Gemini AI",
-        "Next.js",
-        "TailwindCSS",
-        "PostgreSQL",
-        "Google Cloud",
-        "Cloud Run",
-        "Terraform",
-        "Docker",
-        "Vercel",
-        "OAuth"
-      ],
-      "category": "AI/ML",
-      "year": 2026,
-      "github": "https://github.com/ericgitangu/pawa-cloud",
-      "demo": "https://pawacloud-web.vercel.app",
       "featured": false
     },
     {

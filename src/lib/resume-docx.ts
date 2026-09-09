@@ -92,6 +92,11 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
           link: resume.contact.github,
           children: [new TextRun({ text: "github.com/ericgitangu", size: 18, color: "1A4EA3", underline: {} })],
         }),
+        new TextRun({ text: " · ", size: 18, color: "555555" }),
+        new ExternalHyperlink({
+          link: resume.resumeUrl,
+          children: [new TextRun({ text: "resume.ericgitangu.com", size: 18, color: "1A4EA3", underline: {} })],
+        }),
       ],
       spacing: { after: 200 },
     }),
@@ -165,7 +170,7 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
 
   // Skills
   children.push(sectionHeader("Core Technical Skills"));
-  for (const cat of skills.categories.filter((c) => c.name !== "Web3 & Blockchain" && c.name !== ".NET / Microsoft Platform" && c.name !== "Observability" && c.name !== "Domains" && c.name !== "Frontend & Mobile")) {
+  for (const cat of skills.categories.filter((c) => c.name !== "Web3 & Blockchain" && c.name !== ".NET / Microsoft Platform" && c.name !== "Observability" && c.name !== "Domains")) {
     children.push(
       new Paragraph({
         children: [
