@@ -175,7 +175,7 @@ export async function buildResumeDocxBuffer(): Promise<Buffer> {
       new Paragraph({
         children: [
           new TextRun({ text: `${cat.name}: `, bold: true, size: 19 }),
-          new TextRun({ text: cat.skills.slice(0, 10).map((s) => s.name).join(" · "), size: 19 }),
+          new TextRun({ text: cat.skills.slice(0, 16).map((s) => s.name).join(" · "), size: 19 }),
         ],
         spacing: { after: 60 },
       }),

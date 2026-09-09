@@ -175,7 +175,7 @@ export function ResumeDocument() {
         {skills.categories.filter((cat) => !RESUME_SKIP_SKILL_CATEGORIES.has(cat.name)).map((cat) => (
           <View key={cat.name} style={styles.skillCategory} wrap={false}>
             <Text style={styles.skillCategoryName}>{cat.name}</Text>
-            <Text style={styles.skillList}>{cat.skills.slice(0, 10).map((s) => s.name).join(" · ")}</Text>
+            <Text style={styles.skillList}>{cat.skills.slice(0, 16).map((s) => s.name).join(" · ")}</Text>
           </View>
         ))}
 
