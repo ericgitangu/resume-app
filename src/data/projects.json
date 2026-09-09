@@ -3,7 +3,7 @@
     {
       "id": "pesacore-api",
       "name": "PesaCore, a .NET 10 core banking platform",
-      "description": "Core banking platform on ASP.NET Core 10 with a Blazor front end. CQRS with idempotent transfers, PostgreSQL and Redis, OpenTelemetry into Prometheus, Grafana and Jaeger, a hardened nginx edge. Runs on GCP Cloud Run with 67 tests in CI.",
+      "description": "Core banking platform on ASP.NET Core 10 with a Blazor front end: CQRS with idempotent transfers, PostgreSQL and Redis, OpenTelemetry, a hardened nginx edge, deployed on GCP Cloud Run.",
       "longDescription": "A deployed, full-stack core-banking platform that began as a modern-.NET fluency signal and grew into a live cloud-native app. A Blazor WebAssembly SPA is fronted by an ASP.NET Core BFF (YARP reverse-proxy) that keeps the API URL and secrets server-side; because GCP Cloud Run scales to zero, durable state lives in Neon Postgres and shared/ephemeral state (distributed idempotency + cache-aside) in Upstash Redis — both serverless and swappable behind EF Core / IDistributedCache, so the vendor is a deployment choice, not a code dependency. CQRS via MediatR with a pipeline behavior enforcing an X-Idempotency-Key on every mutation (no double-debits across instances), FluentValidation at the request boundary, RFC 7807 problem responses, Polly resilience, OpenTelemetry (→ Collector → Prometheus → Grafana) and Serilog with correlation IDs, and a ReDoc/OpenAPI reference at /docs. One container, three front doors: Kestrel in a Linux container (Cloud Run), IIS + ANCM on-prem Windows (web.config, IISProfile.pubxml), or Azure — the same binary — bridging the .NET 4.5 / Windows Server era at Veracode to the current .NET LTS ecosystem. Secrets live only in GCP Secret Manager and are read at runtime; 67 tests (xUnit + WebApplicationFactory) gate CI; Husky.Net enforces pre-commit/pre-push. Operability and security are demonstrated end-to-end locally (make + docker): a hardened nginx edge acting as reverse-proxy / API gateway (TLS 1.2/1.3, HSTS, Content-Security-Policy and security headers, rate-limiting, gzip, and an upstream load-balancer across replicas); full observability (OpenTelemetry → Collector → Jaeger for distributed traces/APM, Prometheus + Grafana dashboards); and a local Kubernetes cluster (k3d/Kind + ingress-nginx + Horizontal Pod Autoscaler). Cloud infrastructure is captured as Terraform for GCP — authored and cost-gated so spend stays ~$0 (scale-to-zero; the managed load balancer + Web Application Firewall are behind a default-off flag).",
       "technologies": [
         "C#",
@@ -52,7 +52,7 @@
     {
       "id": "lendstream",
       "name": "LendStream",
-      "description": "Micro-lending reference platform. Java 21 Spring Boot and Clojure services on Kafka with CQRS, event sourcing and a transactional outbox. React front end.",
+      "description": "Micro-lending reference platform: Java 21 Spring Boot and Clojure services on Kafka with CQRS, event sourcing and a transactional outbox.",
       "longDescription": "Event-driven micro-lending platform with CQRS, transactional outbox, and dual-mode event broker (Kafka locally, QStash in cloud). Java 21 handles loan lifecycle and SOAP/CBS integration. Clojure handles credit scoring through pure functional pipelines. React/TypeScript dashboard with portfolio analytics. Runs on Docker Compose (15 containers with full APM) or GCP Cloud Run at $0-3/month.",
       "technologies": [
         "Java 21",
@@ -74,12 +74,12 @@
       "year": 2026,
       "github": "https://github.com/ericgitangu/lendstream",
       "demo": "https://nanolend-app.vercel.app",
-      "featured": true
+      "featured": false
     },
     {
       "id": "unicorns",
       "name": "UniCorns, multi-tenant SaaS",
-      "description": "Multi-tenant SaaS for clinics, pharmacies and retail in Kenya. Eight Rust services on AWS Lambda, DynamoDB tenant isolation keyed on Cognito claims, offline-first web, Android and iOS clients, and four payment rails: M-Pesa, Airtel Money, Stripe and SHA insurance claims over FHIR. 2,450 automated tests.",
+      "description": "Multi-tenant SaaS for clinics, pharmacies and retail in Kenya: eight Rust services on AWS Lambda, tenant isolation on Cognito claims, offline-first web and mobile clients, M-Pesa, Airtel, Stripe and SHA claims rails.",
       "longDescription": "Full-stack super-app supporting healthcare, retail, and professional services with Rust Lambda backend, Next.js frontend, native Android app, Claude AI integration, and M-Pesa/Airtel Money payments.",
       "technologies": [
         "Rust",
@@ -98,7 +98,7 @@
     {
       "id": "vunachain",
       "name": "Vunachain, agricultural traceability",
-      "description": "Supply chain compliance and traceability for tea and coffee exports (EU deforestation regulation, Kenya Tea Act). Django and PostGIS for geospatial checks, an event pipeline that anchors harvest records on Celo, Merkle-batched allocation of export contracts to farmers, M-Pesa payouts. Demo stage.",
+      "description": "Supply chain traceability for tea and coffee exports under EU deforestation rules: Django and PostGIS geospatial checks, harvest records anchored on Celo, M-Pesa payouts. Demo stage.",
       "longDescription": "Event-driven agricultural supply chain platform enabling contract farming agreements, crop traceability from farm to market, and transparent payment settlement. Rust Lambda functions on ARM64/Graviton for cost-efficient compute, EventBridge for workflow orchestration, SQS with DLQs for reliable message processing, S3 for document storage, and RDS PostgreSQL for transactional data. Solidity smart contracts on Celo for immutable contract records. React/TypeScript dashboard for farmers, aggregators, and buyers.",
       "technologies": [
         "Rust",
@@ -124,7 +124,7 @@
     {
       "id": "swarmbench-research",
       "name": "SwarmBench, multi-agent LLM study",
-      "description": "Empirical study of single-agent versus multi-agent LLM performance on software tasks, written as a Harbor benchmark. Six iterations, two verifier types, codebases up to 303K lines. Result: no multi-agent advantage for tool-using agents, reported as found.",
+      "description": "Empirical study of single-agent versus multi-agent LLM performance on software tasks, written as a Harbor benchmark across codebases up to 303K lines. No multi-agent advantage found for tool-using agents.",
       "longDescription": "Designed and executed a seven-attempt empirical investigation of when multi-agent LLM decomposition beats single-agent execution. Tested three pre-registered hypotheses (codebase size, bug count, per-item research load) against Kimi K2.5 via Fireworks AI through the Harbor evaluation harness, spanning Python OSS bug-fix tasks (Click, Werkzeug, Apache Airflow at 303K LOC) and per-item structured CVE extraction (16 GitHub Security Advisories). Two hypotheses falsified outright; the third produced a 0.05 gap before the unified-authority pivot recovered the wedge mechanism. Headline finding: multi-agent decomposition cures context overflow on independent items, not capability ceilings or authority-disambiguation noise. Submitted attempt 7 under the assessment's oracle-only validation regime with reward = 1.0 confirmed via Harbor; produced a 5,129-word IMRAD-format preprint with 16 references for LinkedIn longform distribution.",
       "technologies": [
         "Kimi K2.5",
@@ -142,7 +142,7 @@
       "year": 2026,
       "github": "https://github.com/ericgitangu/swarmbench-submission",
       "demo": "https://developer.ericgitangu.com/pdf/research-paper.pdf",
-      "featured": true
+      "featured": false
     },
     {
       "id": "agent-plane",
@@ -173,7 +173,7 @@
       "category": "AI/ML",
       "year": 2026,
       "demo": "https://agent-plane.ericgitangu.com",
-      "featured": true
+      "featured": false
     },
     {
       "id": "paygohub",

@@ -13,20 +13,21 @@
       "primary": "+254 708 078 997",
       "secondary": "+1 (978) 710-9475"
     },
-    "email": "deveric@unicorns.run",
+    "email": "developer.ericgitangu@gmail.com",
     "linkedin": "https://linkedin.com/in/ericgitangu",
     "github": "https://github.com/ericgitangu",
-    "portfolio": "https://developer.ericgitangu.com"
+    "portfolio": "https://developer.ericgitangu.com",
+    "emailSecondary": "deveric@unicorns.run"
   },
-  "summary": "Software engineer with 11 years in production systems, the last five in African fintech, mobility and energy access. I currently own platform architecture and data security for a mobility and payments company: five web applications and a mobile API on one backend, 6,800 unit tests, 280 architecture decision records, an atomic release process with automatic rollback, and card and mobile money integrations (Mastercard Payment Gateway Services, M-Pesa, MTN, Tigo) built within PCI DSS SAQ-A scope. Before that I ran CI/CD and test automation for a pay-as-you-go solar platform in seven countries, founded an ML security company for medical device software, and led a digital addressing pilot with a county government. I work in TypeScript, Java, PHP, Python, Rust, Go and C#. I design event-driven systems, plan for failure, and instrument what I ship. I set technical direction for the team, review code daily, and have mentored 15 engineers.",
+  "summary": "Software engineer with 11 years in production systems across fintech, healthcare, energy access, logistics and application security. I currently own architecture and security for a multi-surface payments and mobility platform, a Mastercard partner, where I removed an authentication bypass, closed money-correctness defects, mapped the platform to payments compliance requirements, and built card and mobile money rails within PCI DSS scope. Before that I led platform and quality engineering for a pay-as-you-go solar company in seven African countries, founded an ML security company for medical device software, and led the team behind a digital addressing pilot with the Nairobi County Government. I design event-driven systems, plan for failure, instrument what I ship, and lead teams through review, mentoring and clear technical direction. TypeScript, Java, PHP, Python, Rust, Go and C#.",
   "highlights": [
-    "11 years in production systems, 5 in African fintech and mobility",
-    "Card and mobile money integrations within PCI DSS SAQ-A scope: Mastercard MPGS, M-Pesa, MTN, Tigo",
-    "Atomic release process with automatic rollback for a live payments platform",
-    "Trust score engine with a hash-chained ledger and signed partner event ingestion",
-    "6,800 unit tests, 280 architecture decision records, 5 web applications on one backend",
-    "TypeScript, Java, PHP, Python, Rust, Go, C#",
-    "80 certifications, 15 engineers mentored"
+    "11 years in production systems: fintech, healthcare, energy access, logistics, application security",
+    "Architecture and security owner for a Mastercard-partner payments and mobility platform",
+    "Card and mobile money rails within PCI DSS scope: Mastercard MPGS, M-Pesa, MTN, Tigo",
+    "Event-driven payment architecture across seven African markets; release cadence from 2 to 12 deploys a week",
+    "Founded an ML security company for medical device software",
+    "Led a digital addressing pilot with the Nairobi County Government serving 2.3 million residents",
+    "TypeScript, Java, PHP, Python, Rust, Go, C#; 80 certifications; 15 engineers mentored"
   ],
   "yearsOfExperience": 11,
   "certificationsCount": 80,
