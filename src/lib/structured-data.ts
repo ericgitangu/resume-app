@@ -31,6 +31,9 @@ export function personSchema() {
     sameAs: [
       resume.contact.linkedin,
       resume.contact.github,
+      resume.contact.x,
+      resume.contact.devto,
+      resume.contact.quora,
       resume.contact.portfolio,
     ].filter(Boolean),
     knowsAbout: allTechSkills,
