@@ -21,26 +21,43 @@ export default function Footer() {
         </div>
 
         <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs">
+          {/* Crawlable rel="me" social links. TODO(social): add Reddit, Quora, Discord once provided — do not guess handles. */}
           <a
-            href="https://linkedin.com/in/ericgitangu"
+            href={resumeData.contact.linkedin}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener noreferrer"
             className="hover:text-foreground transition-colors"
           >
             LinkedIn
           </a>
           <a
-            href="https://github.com/ericgitangu"
+            href={resumeData.contact.github}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener noreferrer"
             className="hover:text-foreground transition-colors"
           >
             GitHub
           </a>
           <a
-            href="https://developer.ericgitangu.com"
+            href={resumeData.contact.x}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener noreferrer"
+            className="hover:text-foreground transition-colors"
+          >
+            X
+          </a>
+          <a
+            href={resumeData.contact.devto}
+            target="_blank"
+            rel="me noopener noreferrer"
+            className="hover:text-foreground transition-colors"
+          >
+            dev.to
+          </a>
+          <a
+            href={resumeData.contact.portfolio}
+            target="_blank"
+            rel="me noopener noreferrer"
             className="hover:text-foreground transition-colors"
           >
             Portfolio

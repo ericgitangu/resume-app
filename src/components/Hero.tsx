@@ -3,12 +3,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Globe, Mail, MapPin, MessageCircle, Plane, Phone } from "lucide-react";
+import { FaXTwitter, FaDev, FaQuora } from "react-icons/fa6";
+import type { ElementType } from "react";
 import { Button } from "@/components/ui/button";
 import resumeData from "@/data/resume.json";
 
-const socialLinks = [
+// Crawlable rel="me" social links (identity for search/SEO).
+const socialLinks: { icon: ElementType; href: string; label: string }[] = [
   { icon: Linkedin, href: resumeData.contact.linkedin, label: "LinkedIn" },
   { icon: Github, href: resumeData.contact.github, label: "GitHub" },
+  { icon: FaXTwitter as ElementType, href: resumeData.contact.x, label: "X" },
+  { icon: FaDev as ElementType, href: resumeData.contact.devto, label: "dev.to" },
+  { icon: FaQuora as ElementType, href: resumeData.contact.quora, label: "Quora" },
   { icon: Globe, href: resumeData.contact.portfolio, label: "Portfolio" },
   { icon: Mail, href: `mailto:${resumeData.contact.email}`, label: "Email" },
 ];
@@ -147,7 +153,7 @@ export default function Hero() {
                 key={link.label}
                 href={link.href}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener noreferrer"
                 className="p-2.5 sm:p-3 rounded-full bg-secondary/50 hover:bg-secondary text-secondary-foreground transition-colors"
                 aria-label={link.label}
               >
